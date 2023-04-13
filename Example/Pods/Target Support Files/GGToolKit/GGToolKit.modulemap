@@ -1,0 +1,6 @@
+framework module GGToolKit {
+  umbrella header "GGToolKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

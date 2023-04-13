@@ -1,0 +1,6 @@
+framework module Pods_GGToolKit_Example {
+  umbrella header "Pods-GGToolKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
