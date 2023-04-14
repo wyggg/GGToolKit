@@ -1,29 +1,24 @@
 # GGToolKit
 
-[![CI Status](https://img.shields.io/travis/yyyggg/GGToolKit.svg?style=flat)](https://travis-ci.org/yyyggg/GGToolKit)
-[![Version](https://img.shields.io/cocoapods/v/GGToolKit.svg?style=flat)](https://cocoapods.org/pods/GGToolKit)
-[![License](https://img.shields.io/cocoapods/l/GGToolKit.svg?style=flat)](https://cocoapods.org/pods/GGToolKit)
-[![Platform](https://img.shields.io/cocoapods/p/GGToolKit.svg?style=flat)](https://cocoapods.org/pods/GGToolKit)
+## 描述
 
-## Example
+个人项目用到类库
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## 安装
 
-## Requirements
-
-## Installation
-
-GGToolKit is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+GGToolKit可通过[CocoaaPods](https://cocoapods.org)获得，要安装它，只需在Podfile中添加以下行：
 
 ```ruby
 pod 'GGToolKit'
 ```
 
-## Author
+如果找到到类库，请执行
+
+```ruby
+pod repo update
+```
+
+## 作者
 
 yyyggg, 773678819@qq.com
 
-## License
-
-GGToolKit is available under the MIT license. See the LICENSE file for more info.
