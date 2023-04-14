@@ -2,20 +2,14 @@
 
 ## 描述
 
-个人项目用到类库
+个人开发工具包使用到的类库，方便快速开发。
 
 ## 安装
 
-GGToolKit可通过[CocoaaPods](https://cocoapods.org)获得，要安装它，只需在Podfile中添加以下行：
+在Podfile中添加以下行：
 
 ```ruby
 pod 'GGToolKit'
-```
-
-如果找到到类库，请执行
-
-```ruby
-pod repo update
 ```
 
 ## 作者
