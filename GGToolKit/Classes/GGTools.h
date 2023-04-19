@@ -21,6 +21,7 @@
 #import "UIView+GGScrollComponent.h"
 #import "NSArray+GGMasonryLayout.h"
 #import "UIWindow+GG.h"
+#import "CALayer+GG.h"
 
 #define GGSafeAreaBottom (GGTools.safeAreaBottom)
 #define GGSafeAreaTop (GGTools.safeAreaTop)

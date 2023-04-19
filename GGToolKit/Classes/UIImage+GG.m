@@ -26,6 +26,13 @@
 	return newImage;
 }
 
+- (UIImage *)gg_setWidth:(CGFloat)width scale:(CGFloat)scale{
+	CGSize size = self.size;
+	size.width = width;
+	size.height = self.size.height / self.size.width * width;
+	return [self gg_setSize:size scale:scale];
+}
+
 - (UIImage *)gg_setTintColor:(UIColor *)tintColor{
 	UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
 	CGContextRef context = UIGraphicsGetCurrentContext() ;
@@ -47,7 +54,7 @@
 }
 
 + (UIImage *)gg_gradientImageWithColors:(NSArray<UIColor *> *)colors
-							  direction:(GGGradientDirection)direction
+							  direction:(GGImageGradientDirection)direction
 							  imageSize:(CGSize)imageSize
 							   location:(NSArray <NSNumber *>*)location {
 
@@ -70,22 +77,22 @@
 
 	CGPoint startPoint, endPoint;
 	switch (direction) {
-		case GGGradientDirectionVertical:{
+		case GGImageGradientDirectionTopToBottom:{
 			startPoint = CGPointMake(size.width / 2.0, 0.0);
 			endPoint = CGPointMake(size.width / 2.0, size.height);
 			break;
 		}
-		case GGGradientDirectionHorizontal:{
+		case GGImageGradientDirectionLeftToRight:{
 			startPoint = CGPointMake(0.0, size.height / 2.0);
 			endPoint = CGPointMake(size.width, size.height / 2.0);
 			break;
 		}
-		case GGGradientDirectionTopLeftToBottomRight:{
+		case GGImageGradientDirectionTopLeftToBottomRight:{
 			startPoint = CGPointMake(0.0, 0.0);
 			endPoint = CGPointMake(size.width, size.height);
 			break;
 		}
-		case GGGradientDirectionBottomLeftToTopRight:{
+		case GGImageGradientDirectionBottomLeftToTopRight:{
 			startPoint = CGPointMake(0.0, size.height);
 			endPoint = CGPointMake(size.width, 0.0);
 			break;

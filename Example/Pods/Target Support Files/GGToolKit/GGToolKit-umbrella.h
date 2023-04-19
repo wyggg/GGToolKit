@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CALayer+GG.h"
 #import "GGTools.h"
 #import "NSArray+GGMasonryLayout.h"
 #import "NSAttributedString+GG.h"

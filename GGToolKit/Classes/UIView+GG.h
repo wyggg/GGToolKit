@@ -30,9 +30,15 @@
 
 - (UIImage *)gg_imageWithIsScroll:(BOOL)isScroll;
 
-
+//设置View.layer本身的边框
 - (void)gg_layerBorderWidth:(CGFloat )width
 				 color:(UIColor *)color;
+
+//设置View.layer本身的阴影
+-(void)gg_layerShadowColor: (UIColor *)color offset:(CGSize)offset opacity: (CGFloat)opacity radius: (CGFloat)radius;
+
+//设置View.layer本身的圆角
+- (void)gg_layerCornerRadius:(CGFloat)radius masksToBounds:(BOOL)masksToBounds;
 
 
 @end
@@ -50,14 +56,6 @@ typedef void (^GestureActionBlock)(UIGestureRecognizer *gestureRecoginzer);
 
 @end
 
-
-
-@interface GGLineView : UIView
-
-@property (nonatomic, strong) UIColor *lineColor;
-@property (nonatomic, copy)   NSArray *dashArray;
-
-@end
 
 
 #pragma mark - 渐变背景
@@ -82,35 +80,11 @@ typedef NS_ENUM(NSInteger, GradientDirection) {
 
 @end
 
-#pragma mark - 阴影
 
-@interface UIView (GGShadow)
+@interface GGLineView : UIView
 
-@property (nonatomic, strong, readonly) CAShapeLayer * shadowLayer;
-
-//通过向View同层级Layer插入一个阴影Layer，不会被masksToBounds裁剪，但是设置之前要确定View的frame
-- (void)gg_setShadowWithColor: (UIColor *)color horizontalAxisOffset:(CGFloat)horizontalAxisOffset longitudinalAxisOffset:(CGFloat)longitudinalAxisOffset alpha:(CGFloat)alpha radius:(CGFloat)radius cornerRadius:(CGFloat)cornerRadius;
-
-////设置View.layer本身的阴影
--(void)gg_layerShadowColor: (UIColor *)color offset:(CGSize)offset opacity: (CGFloat)opacity radius: (CGFloat)radius;
-
-@end
-
-#pragma mark - 圆角
-
-@interface UIView (GGCornerRadius)
-
-
-@property (nonatomic, strong, readonly) CAShapeLayer * cornerRadiusLayer;
-
-//通过Mask属性裁剪出圆角，设置之前要确定View的frame
-- (void)gg_setCornerRadius:(CGFloat)radius;
-- (void)gg_setCornerRadius:(CGFloat)radius byRoundingCorners:(UIRectCorner)byRoundingCorners;
-- (void)gg_setCornerRadius:(CGFloat)radius byRoundingCorners:(UIRectCorner)byRoundingCorners width:(CGFloat)width height:(CGFloat)height;
-
-//设置View.layer本身的圆角
-- (void)gg_layerCornerRadius: (CGFloat)radius masksToBounds:(BOOL)masksToBounds;
-
+@property (nonatomic, strong) UIColor *lineColor;
+@property (nonatomic, copy)   NSArray *dashArray;
 
 @end
 
@@ -122,8 +96,6 @@ typedef NS_ENUM(NSInteger, GGLineViewDirection) {
 	GGLineViewDirectionRight = 2,
 	GGLineViewDirectionBottom = 3
 };
-
-
 @interface UIView (GGList)
 
 - (GGLineView *)gg_addBottomLineWithColor:(UIColor *)color margin:(CGFloat)margin;

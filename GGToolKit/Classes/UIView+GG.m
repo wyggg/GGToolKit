@@ -183,6 +183,26 @@
 	self.layer.borderWidth = width;
 }
 
+/**
+ *  设置阴影
+ */
+-(void)gg_layerShadowColor: (UIColor *)color
+					offset: (CGSize)offset
+				   opacity: (CGFloat)opacity
+					radius: (CGFloat)radius
+{
+	self.clipsToBounds = NO;
+	self.layer.shadowColor = color.CGColor;
+	self.layer.shadowOffset = offset;
+	self.layer.shadowOpacity = opacity;
+	self.layer.shadowRadius = radius;
+}
+
+- (void)gg_layerCornerRadius: (CGFloat)radius masksToBounds:(BOOL)masksToBounds{
+	self.layer.cornerRadius = radius;
+	self.layer.masksToBounds = masksToBounds;
+}
+
 @end
 
 
@@ -243,50 +263,6 @@ static char kActionHandlerLongPressGestureKey;
 
 @end
 
-@implementation GGLineView
-
-- (void)setLineColor:(UIColor *)lineColor{
-	_lineColor = lineColor;
-	[self layoutIfNeeded];
-	[self setNeedsDisplayInRect:self.bounds];
-}
-
-- (void)setDashArray:(NSArray *)dashArray{
-	_dashArray = dashArray;
-	[self layoutIfNeeded];
-	[self setNeedsDisplayInRect:self.bounds];
-}
-
-- (void)drawRect:(CGRect)rect{
-
-	int direction = (int)(rect.size.width > rect.size.height);//1横向 0纵向
-	CGFloat lineWidth = rect.size.width > rect.size.height ? rect.size.width : rect.size.height;
-
-	CGContextRef context = UIGraphicsGetCurrentContext();
-
-	CGContextSetLineWidth(context, lineWidth);
-
-	CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
-
-	CGFloat dashArray[self.dashArray.count];
-	for (int i=0; i<_dashArray.count; i++) {
-		dashArray[i] = [self.dashArray[i] intValue];
-	}
-	CGContextSetLineDash(context, 0, dashArray, self.dashArray.count);
-
-	if (direction == 1) {
-		CGContextMoveToPoint(context, 0, rect.size.height / 2);
-		CGContextAddQuadCurveToPoint(context, 0, rect.size.height / 2, rect.size.width, rect.size.height / 2);
-	}else{
-		CGContextMoveToPoint(context, rect.size.width / 2, 0);
-		CGContextAddQuadCurveToPoint(context, rect.size.width / 2, 0, rect.size.width / 2, rect.size.height);
-	}
-
-	CGContextStrokePath(context);
-}
-
-
-@end
 
 
 @implementation UIView (GGGradientBackground)
@@ -363,109 +339,52 @@ static char kGradientLayerKey;
 
 @end
 
-@implementation UIView (GGShadow)
+@implementation GGLineView
 
-
-static char kShadowLayerKey;
-
-- (void)setShadowLayer:(CAShapeLayer *)gradientLayer {
-	objc_setAssociatedObject(self, &kShadowLayerKey, gradientLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setLineColor:(UIColor *)lineColor{
+	_lineColor = lineColor;
+	[self layoutIfNeeded];
+	[self setNeedsDisplayInRect:self.bounds];
 }
 
-- (CAShapeLayer *)shadowLayer {
-	return objc_getAssociatedObject(self, &kShadowLayerKey);
+- (void)setDashArray:(NSArray *)dashArray{
+	_dashArray = dashArray;
+	[self layoutIfNeeded];
+	[self setNeedsDisplayInRect:self.bounds];
 }
 
-- (void)gg_setShadowWithColor: (UIColor *_Nullable)color horizontalAxisOffset:(CGFloat)horizontalAxisOffset longitudinalAxisOffset:(CGFloat)longitudinalAxisOffset alpha:(CGFloat)alpha radius:(CGFloat)radius cornerRadius:(CGFloat)cornerRadius{
-	
-	if (self.frame.size.width == 0 || self.frame.size.height == 0){
-		return;
+- (void)drawRect:(CGRect)rect{
+
+	int direction = (int)(rect.size.width > rect.size.height);//1横向 0纵向
+	CGFloat lineWidth = rect.size.width > rect.size.height ? rect.size.width : rect.size.height;
+
+	CGContextRef context = UIGraphicsGetCurrentContext();
+
+	CGContextSetLineWidth(context, lineWidth);
+
+	CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
+
+	CGFloat dashArray[self.dashArray.count];
+	for (int i=0; i<_dashArray.count; i++) {
+		dashArray[i] = [self.dashArray[i] intValue];
 	}
+	CGContextSetLineDash(context, 0, dashArray, self.dashArray.count);
 
-	[self addObserver:self forKeyPath:@"frame" options:0 context:NULL];
-
-	// 创建CAShapeLayer对象
-	if (!self.shadowLayer){
-		self.shadowLayer = [CAShapeLayer layer];
-	}
-
-	// 创建圆角矩形的path
-	UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:cornerRadius];
-
-	// 为CAShapeLayer对象设置参数
-
-	self.shadowLayer.path = path.CGPath;
-	self.shadowLayer.shadowColor = color.CGColor;
-	self.shadowLayer.shadowOffset = CGSizeMake(horizontalAxisOffset, longitudinalAxisOffset);
-	self.shadowLayer.shadowOpacity = alpha;
-	self.shadowLayer.shadowRadius = radius;
-	[self.superview.layer insertSublayer:self.shadowLayer below:self.layer];
-	self.shadowLayer.frame = self.frame;
-}
-
-/**
- *  设置阴影
- */
--(void)gg_layerShadowColor: (UIColor *)color
-			   offset: (CGSize)offset
-			  opacity: (CGFloat)opacity
-			   radius: (CGFloat)radius
-{
-	self.clipsToBounds = NO;
-	self.layer.shadowColor = color.CGColor;
-	self.layer.shadowOffset = offset;
-	self.layer.shadowOpacity = opacity;
-	self.layer.shadowRadius = radius;
-}
-
-@end
-
-@implementation UIView (GGCornerRadius)
-
-static char kCornerRadiusKey;
-
-- (void)setCornerRadiusLayer:(CAShapeLayer * _Nullable)cornerRadiusLayer{
-	objc_setAssociatedObject(self, &kCornerRadiusKey, cornerRadiusLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CAShapeLayer *)cornerRadiusLayer{
-	return objc_getAssociatedObject(self, &kCornerRadiusKey);
-}
-
-- (void)gg_setCornerRadius:(CGFloat)radius{
-	[self gg_setCornerRadius:radius byRoundingCorners:UIRectCornerAllCorners];
-}
-
-- (void)gg_setCornerRadius:(CGFloat)radius byRoundingCorners:(UIRectCorner)byRoundingCorners{
-	if (self.bounds.size.width == 0 && self.bounds.size.height == 0){
-		return;
-	}
-	[self gg_setCornerRadius:radius byRoundingCorners:byRoundingCorners width:self.bounds.size.width height:self.bounds.size.height];
-}
-
-- (void)gg_setCornerRadius:(CGFloat)radius byRoundingCorners:(UIRectCorner)byRoundingCorners width:(CGFloat)width height:(CGFloat)height{
-
-	UIBezierPath *path = nil;
-	if (byRoundingCorners == UIRectCornerAllCorners){
-		path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, width, height)
-										  cornerRadius:radius];
+	if (direction == 1) {
+		CGContextMoveToPoint(context, 0, rect.size.height / 2);
+		CGContextAddQuadCurveToPoint(context, 0, rect.size.height / 2, rect.size.width, rect.size.height / 2);
 	}else{
-		path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, width, height)
-									 byRoundingCorners:byRoundingCorners
-										   cornerRadii:CGSizeMake(radius, radius)];
+		CGContextMoveToPoint(context, rect.size.width / 2, 0);
+		CGContextAddQuadCurveToPoint(context, rect.size.width / 2, 0, rect.size.width / 2, rect.size.height);
 	}
 
-	CAShapeLayer *maskLayer = [CAShapeLayer layer];
-	maskLayer.path = path.CGPath;
-	self.layer.mask = maskLayer;
+	CGContextStrokePath(context);
 }
 
-- (void)gg_layerCornerRadius: (CGFloat)radius masksToBounds:(BOOL)masksToBounds{
-	self.layer.cornerRadius = radius;
-	self.layer.masksToBounds = masksToBounds;
-}
 
 @end
+
+
 
 @implementation UIView (GGList)
 

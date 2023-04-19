@@ -7,219 +7,214 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039909594FDF725B6DC0E61A06357310 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D12E9F350C1C8076BE92719B89951AD8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		059F9AD889E59FE281B37D5CB16E5A39 /* UITextField+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E01B1F5E1DBB125EB780B4CAE688092 /* UITextField+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		004697A12D79B1CD0CE43FABDFC787A2 /* UIColor+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 49155D11320DFCE41A30ED8169D38472 /* UIColor+GG.m */; };
+		01117E8081939C074F3F208107086D6E /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */; };
 		0624CF1AF991751033A974D9E30F11CD /* Pods-GGToolKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF9DF3E897DB3235BABA409B3683009 /* Pods-GGToolKit_Tests-dummy.m */; };
-		094407F20E2B4D4182FD5CF820C8B05C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E17443EA85E103F4DD0553AB6BB942A /* MASLayoutConstraint.m */; };
-		0B83DC421D963093A5B5C7287726DED6 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF4AF21902029EC43C354AC0978CE49 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12E63539F6FB4FDBFAC404C0AC2BEDB6 /* NSObject+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 21068501B8D90B7DB56ECBD0DA42BCC4 /* NSObject+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115A67AB6EC391BD834B3D3B2BBEB4FF /* NSArray+GGMasonryLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9694DAE249150692839BBA506C3CF7 /* NSArray+GGMasonryLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11952AF0D1AF8571225A7B4A57658915 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7CC7527FD599A1064055C060E14B43 /* MASCompositeConstraint.m */; };
 		13F3F9341041C9EF95FE9E422CC0CF94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		141CBADB07B611F0E35CC56D94BC80A3 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7CC7527FD599A1064055C060E14B43 /* MASCompositeConstraint.m */; };
-		16FFBB4C789F6707C893ECB13AA4C82F /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B145ED61F81B39E7F40E0DE762E9263 /* UIColor+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 602E03563D6412BF8FDB294A01DA6AA1 /* UIColor+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D600EE32699755835635658B38B0453 /* NSArray+GGMasonryLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEA2390AC702DCBB528A4E97B64273B /* NSArray+GGMasonryLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F6E47FA4AB82250C33AB0AC1FD8D865 /* UINavigationController+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADCEB2077099723BEBC02E4152CF64D /* UINavigationController+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1602F59737552962152C6F2399E47CFC /* GGTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 053C4376DDEA688DD88ED80E55C1F060 /* GGTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C73B8B4E7D30BE70758CB9DA9407758 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22BE53D880CDA6E023977085152082BE /* Pods-GGToolKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53183BBBC389DA3BB048EE2C503DF09C /* Pods-GGToolKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28B6C5BE8726FF77EB3E7EFD9B261B2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		2A5EF21B98F48E8BFCC733351B40D197 /* UITextField+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 30335AFDF9E1482DE2EACCB2D79A6242 /* UITextField+GG.m */; };
-		2A87A82BB21C7CCDC0C636A169B27CB2 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */; };
-		2AE40A75A21D2340DF66681568FBA8A6 /* NSObject+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC7B0252C1036C30A56F3F87ADAA1E /* NSObject+GG.m */; };
+		27B3393B5F56CF023D9E0F21CC0921EC /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A9CBDA12C2692761CC819E55CFB590F /* GGTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461CA290B4959F9F4CD8D6B65099400 /* GGTools.m */; };
+		2D79ECA7CA0352AA3903B62259037DDA /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */; };
+		2F8F803E6AAAF3FEE72166F04C26520C /* UITextField+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E36764C6C7EA4F36FA9071209599FB /* UITextField+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		344FC8E0F7A510A5A746E93928C2E004 /* Pods-GGToolKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD2F7DBD8AEDC0542D283ADAFF499C9 /* Pods-GGToolKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3536CA0E66B555272F82156A1FCCF69B /* NSString+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 527E2EC4B5DD1652C2C007539AB60FCD /* NSString+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A7CD62B0B1621BF33394ED6B3F9BAD2 /* UIView+GGScrollComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = CD811C20837B23225E0DCC6DFB7A44C3 /* UIView+GGScrollComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BDEFD296B10265DC4AA2CC08238A9FE /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		459BAFBB27E0BA94C02B0032AB6D24E5 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = B28EC2F4C626ED77509645BE3805CB29 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		483681520224CE354C8B744B3307E011 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */; };
+		36709D0FE9A110003B75616F1752F180 /* UIWindow+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 06660AF74B29890FE14161E68EC726BE /* UIWindow+GG.m */; };
+		36EE3461EBF6C3C22CFE0906099A45D7 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4497913DB548AE2E03103D3A97F34F /* View+MASAdditions.m */; };
+		3A9AD6A3A72602F14A5D3707AACA95E1 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40C51E8646D1EB03739EF50508432142 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4187E2E481088E90C0417BB967305190 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */; };
+		43C985B40B386C122F1F9B4F319BDE77 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		461C829E439A6C8B9DC809C8BC9053B2 /* UIView+GGScrollComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDB71F9704042E25D397C9B1F6A8026 /* UIView+GGScrollComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4794277B880A193FE57F9223D90A5026 /* GGToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ED43F4AAB6543D75FD0BA6AE3B00F1 /* GGToolKit-dummy.m */; };
+		47F6E510CC3903D0480AAC56D759F8A7 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */; };
+		49EEEDF7BBCCA3C2B16A5D11954C4E49 /* CALayer+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1F7F2A0C2AF27B8F4D523F3470FC9E /* CALayer+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ADE065A87C8C29D8723E0F0027C0F43 /* Pods-GGToolKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA488943924F65543B3D53987A8D6 /* Pods-GGToolKit_Example-dummy.m */; };
-		4CA1C0764BB192F3CC13457B701CFD28 /* UIWindow+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = BA71CB1998721E2283DEE4F4BACF80EA /* UIWindow+GG.m */; };
-		4CE6C7364C73E175CD9707B6631CDA62 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DB34CD6CFE785D2D3729915DB640320 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4497913DB548AE2E03103D3A97F34F /* View+MASAdditions.m */; };
-		4E2A22543205A8B002C5F6BA9B88E552 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53BDF9C7348BA9BBF83195C78DCDBE55 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53F90F8CBD21AEE0418EAD39F183E2C6 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		587A6B71A7FC4368837D8E0357648D82 /* GGToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE4A5764DD1A1285DB26F82B35DDE5 /* GGToolKit-dummy.m */; };
-		5D6E7880B8F07F93E1493506BEB1A470 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F80E55EEB341AEFFF9CB2A7AC3307AE /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BCCE8C6C17F326AFEDF4357C62ADAF /* MASViewAttribute.m */; };
-		632A95CAA094C34EE62AEC85F469331C /* UIControl+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F7BACFA32FA0052901E8B52717180F /* UIControl+GG.m */; };
-		66FB2BA1F2760E77364131CAD5A6925E /* UIButton+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF6574FB602CB6830AA9AA1B935D142 /* UIButton+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A98E4AA89B23122F1BAE601C541F7AB /* NSArray+GGMasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92BA6CF3F3A0486140F69F9FC279DC /* NSArray+GGMasonryLayout.m */; };
-		6B1F709F7D3BC456CC06DCE59EFCCA81 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55960467D1B758EC688A18A171012E78 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715607179F4BCD9E8ABBD739024D7616 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */; };
-		71F3F20CED1A19CC160A566FA5849582 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73E8BE946647E58574A9284424B4525B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		7BD0700E65E4336212010A74561C8C10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		7C37C8F5527D52C6BAE0E1FD4191EC29 /* UIView+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 13378A83911C16CE656CA43A5057D93B /* UIView+GG.m */; };
-		86E5E25ABB67488D1BC71E056DA2F792 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 837834476F3329FA118B081516D4FC28 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DCEB88EADFAB81A3F8360246821B303 /* UIImage+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = AA30BA65333366EBA8DEBC52A558A501 /* UIImage+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B6EAE7A077746511DC38A7EBBE65AF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		A0F8E3BA14A90DE47823226C01215636 /* UIControl+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = D5892D303C5C1C135647AA2640DCA121 /* UIControl+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A18F5F2C94D6C681D45F1F299549A46E /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 86765B456E483806C4E13D2DD50E40A4 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8C80AE9CD6BA94FCD5F346573E43460 /* UIView+GGScrollComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5148D85A0BAD983C5BC5FD063EA97 /* UIView+GGScrollComponent.m */; };
-		AA3FFCD7DF72D54B5C35043C5FD9D02F /* UINavigationController+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = C916D6B1B935234C21FE36644E2E14D6 /* UINavigationController+GG.m */; };
-		AEFC397325C961A0C01F914C7CFAF806 /* UIColor+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA6C55545C0D96633BEF4A39986B141 /* UIColor+GG.m */; };
-		B6E0C75B3B3F311660CBF1FE8448E7E6 /* NSAttributedString+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 46888767BDB5FAB75C2DC1BF0C8414BC /* NSAttributedString+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B85242F6439894E7AF18961FA2F9788E /* GGTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF742345F3864F42719A87439BE570B /* GGTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B885692E235A4B42471736B34F4280AF /* NSAttributedString+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C7EFC1B62C371FA646CD2CFECE115D /* NSAttributedString+GG.m */; };
-		C0C059C6790B246139FBF72F0FDEF90B /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */; };
-		C1DFA420F8C3C31D0AC6E23A33F1EEDB /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A95F8027E3EB86CB9AE2D7539201FE /* MASViewConstraint.m */; };
-		C7547A475EFDB297250E987528C19080 /* NSString+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C83F0E89ADB3A194F55FC325FC3CCF /* NSString+GG.m */; };
+		4EC9BBAFE80277170C9AEAFE3A4CD047 /* NSObject+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6A3AEFEA884A186260EA88D48EEC34 /* NSObject+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54AA7669B9EBDC1EAD0A5046128E9B73 /* NSAttributedString+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 152A4995680DC2FB4D0991A8A6AB4920 /* NSAttributedString+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59435889E7145A45011F6FE5DA33D810 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D723FFB7BA315B1F84DCAF7B4D3F071 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 837834476F3329FA118B081516D4FC28 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8131BE470EDC1E033BA03FCFBCA9A6 /* NSString+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = E81263B659CF3117FBE82DB95EB2B081 /* NSString+GG.m */; };
+		6A4DA3EBAB81E632EF33D9F3DDECB88F /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 55960467D1B758EC688A18A171012E78 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74DCAB784E061F8FE481C47C2CE9AD9C /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF4AF21902029EC43C354AC0978CE49 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75C0E172D38BCC72542EE275AB6F96F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		75DB4553F8108F1CBD0A624F8A92C1E8 /* UIColor+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE8E79D558B964D8672043FB6915FDB /* UIColor+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77CAF27578211E8DB4902A5FF04B0FBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		7CD1C1718D7682860725DF49364FBA87 /* UIView+GGScrollComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1F688C197B5F022E666F5D3493848 /* UIView+GGScrollComponent.m */; };
+		7E48D63F2C8776CADE7D03FC049702B8 /* GGToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3583246801D3BA52EDABE97D5C5711 /* GGToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		810A1D82CF2B7A2B0D3E70CA5CBCFB47 /* CALayer+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4388BF52DAA25F3D76268D7C8EDCB /* CALayer+GG.m */; };
+		863058E0BD15F3F018AD17E54D10B251 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		887D09245D0E435FC09A4A1C91E3A97B /* UIControl+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = A373F5E17E37E823DD34B2F2546C66B5 /* UIControl+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89285DDFAC6C0F3ED65FB07F0AF38800 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D12E9F350C1C8076BE92719B89951AD8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A6311573CA70102513C90508A056EE8 /* UIImage+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 267B67E33EB01811B5DE4DF6BFF72E7D /* UIImage+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FC46EEA8E34123B7E03A208F2B460FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		966372B1F4E4FB10907896C156C99AD5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E17443EA85E103F4DD0553AB6BB942A /* MASLayoutConstraint.m */; };
+		9687310AE5F0A8C4799C85B4B4B91418 /* NSObject+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BA8A34D2FD4FD721DAD0B27C21DF92 /* NSObject+GG.m */; };
+		A4A3DFB83F1D173B8A0E99B9761AB621 /* UIView+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB771A16DE692665F5CDA6F086FA0FF /* UIView+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A52DD9DBE45C45DD016AAE2F91FE22DE /* UIView+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415551AEDBDF3A3AF9B014005545E6E /* UIView+GG.m */; };
+		A9747123C32DF8044F05AE6AA6DE71C1 /* NSAttributedString+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FD4FEAF4538EE5B43FFE90D55DFDA6 /* NSAttributedString+GG.m */; };
+		B35DFED6954C8695929B1E4C69754765 /* NSArray+GGMasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C44CDB46228F2813641846D0F0F138A /* NSArray+GGMasonryLayout.m */; };
+		B5BAA389A8F15768EE850B042510CF8B /* UIButton+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = B10FEA9D5FA48B0FC318B5242FF24BF4 /* UIButton+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5FBA1F080D2C6FBBA2DEB82E432CB6E /* UIButton+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 861F5771B1194FD044CA1B0FBD84F8F9 /* UIButton+GG.m */; };
+		B87BE24697B6C13EB8714966C1D36DB3 /* UIWindow+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FB55437FE561D8A9E678DC6B029562 /* UIWindow+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C21858B1EBD952C06269B3D33836382E /* UIImage+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = C71B99908AEC5F971CEBED1E32E0C7D7 /* UIImage+GG.m */; };
+		C31D1E917F665332E4E7BFFC59178B52 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A95F8027E3EB86CB9AE2D7539201FE /* MASViewConstraint.m */; };
+		C3F067E7FD2EF435EB9F6659E3B74D38 /* UINavigationController+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 3764C90932748485D12DEF5701C7940B /* UINavigationController+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9B7A088EFC2A42D63932F09CB17EC3A /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFEA46E6905CFB99928D4543B6C786EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		D24FE062CE24C15D0874C05AACFC578C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		D66F4897035B5ACF56C41E3404B09E0C /* UIImage+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFA2117386449F57421B13B20A05E9 /* UIImage+GG.m */; };
-		DEAB86065EF42C07ED62A29EBCE5F119 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA8A3885BC33F25CB32442EB2449111 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA3B4D6E7D24E2B6FA098C3563D07CCA /* GGToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE25122CB1A3F1B3E233C731BD9012C1 /* GGToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB005B615DD36AB1E71A6164F3B9C37E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3D057F98E08DD849B4D6493C9D5F439 /* UIView+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6EF323C99B81543A9819CBB61BBC29 /* UIView+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F62D0B3A575608DC0570EC853796444F /* UIWindow+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDE99041F094A3C8822876819BE4C5A /* UIWindow+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7DCC82990A154CD0DB3F36EB27CE68C /* UIButton+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD3732083E0B0185378FB96B3BF1D5C /* UIButton+GG.m */; };
-		FB8CC9A54B808B7340777F7EF764A1E9 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */; };
-		FD2471D6D4463540F668434424A11E63 /* GGTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 53279A809A575FF49B2733BEB67ABEE9 /* GGTools.m */; };
+		D697EEBDF0C688A9E0C733BED4798975 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7D846C215E1F15C04634A66C457F11B /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9EE6B506B3C3C41299CF4E396E5543C /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA8A3885BC33F25CB32442EB2449111 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB526A3E6A8A25495C6849C1608D5ECB /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */; };
+		E098C122740C2E5E35747BC2A1AAFC98 /* UINavigationController+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E562C3BAFC22520AA6C222942FA405 /* UINavigationController+GG.m */; };
+		E0E2B05D0284E2A1CA336B525CEB917B /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = B28EC2F4C626ED77509645BE3805CB29 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2159A9FE511565EAB81A5D9377A41E3 /* UIControl+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D538E68122060A35B5958AFE4133049 /* UIControl+GG.m */; };
+		EB0D6FED43C5127A4A9C8780296011F8 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 86765B456E483806C4E13D2DD50E40A4 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6667D6D5AAD086BC27BD292A4E30630 /* UITextField+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A466C3322370B67D72C1DE0DDDF75 /* UITextField+GG.m */; };
+		F9CA923484A8392EDE1A8F7E9781A218 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		FB4BD7DB78168028C6B39E3196A5A1D9 /* NSString+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 083734C5CF6EA75619901014C406DB01 /* NSString+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9169B76D784F63BAE6DAB97DECF653 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BCCE8C6C17F326AFEDF4357C62ADAF /* MASViewAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E6AB30C2F272EBF60931A8AAE649F98 /* PBXContainerItemProxy */ = {
+		138CC2DC7B42D334EB65430D8F553444 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E09D2C24D8F27730B4E8F2BCBC3A91DB;
 			remoteInfo = "Pods-GGToolKit_Example";
 		};
-		8E10FE7BDE31988322C807BA8E2ABE7C /* PBXContainerItemProxy */ = {
+		6A7AB2F92B491F6BB7A8ADBF139A0690 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		786983AE9AD85FCE34D552BA3DC62C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		951AD6438E8C38D32A2DC8878302D4BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3654A516977DD4AA7EB0CE630E057427;
 			remoteInfo = GGToolKit;
 		};
-		EF62FAD9FE84A28302AA05E138F1F901 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
-		F6B835529E9FAF3F97D93F0D7B6CD131 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00FB55437FE561D8A9E678DC6B029562 /* UIWindow+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+GG.h"; path = "GGToolKit/Classes/UIWindow+GG.h"; sourceTree = "<group>"; };
 		02C2FD731ECF3D68AC1A87F4B9B11237 /* Pods-GGToolKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGToolKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		053C4376DDEA688DD88ED80E55C1F060 /* GGTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGTools.h; path = GGToolKit/Classes/GGTools.h; sourceTree = "<group>"; };
+		06660AF74B29890FE14161E68EC726BE /* UIWindow+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+GG.m"; path = "GGToolKit/Classes/UIWindow+GG.m"; sourceTree = "<group>"; };
 		071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		11C7EFC1B62C371FA646CD2CFECE115D /* NSAttributedString+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+GG.m"; path = "GGToolKit/Classes/NSAttributedString+GG.m"; sourceTree = "<group>"; };
-		13378A83911C16CE656CA43A5057D93B /* UIView+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GG.m"; path = "GGToolKit/Classes/UIView+GG.m"; sourceTree = "<group>"; };
-		1BD3732083E0B0185378FB96B3BF1D5C /* UIButton+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+GG.m"; path = "GGToolKit/Classes/UIButton+GG.m"; sourceTree = "<group>"; };
-		1E7FC54197C4D54111C3681189E65B47 /* GGToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGToolKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1F682B6C5DCFD201E08746D3B62A3532 /* GGToolKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.release.xcconfig; sourceTree = "<group>"; };
+		083734C5CF6EA75619901014C406DB01 /* NSString+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+GG.h"; path = "GGToolKit/Classes/NSString+GG.h"; sourceTree = "<group>"; };
+		0C14E26701B6A58A89813CFB1929AE97 /* GGToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-prefix.pch"; sourceTree = "<group>"; };
+		152A4995680DC2FB4D0991A8A6AB4920 /* NSAttributedString+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+GG.h"; path = "GGToolKit/Classes/NSAttributedString+GG.h"; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21068501B8D90B7DB56ECBD0DA42BCC4 /* NSObject+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+GG.h"; path = "GGToolKit/Classes/NSObject+GG.h"; sourceTree = "<group>"; };
+		21FD4FEAF4538EE5B43FFE90D55DFDA6 /* NSAttributedString+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+GG.m"; path = "GGToolKit/Classes/NSAttributedString+GG.m"; sourceTree = "<group>"; };
+		267B67E33EB01811B5DE4DF6BFF72E7D /* UIImage+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GG.h"; path = "GGToolKit/Classes/UIImage+GG.h"; sourceTree = "<group>"; };
 		27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		2E2A8D188D686324356267A150BCC346 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		30335AFDF9E1482DE2EACCB2D79A6242 /* UITextField+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+GG.m"; path = "GGToolKit/Classes/UITextField+GG.m"; sourceTree = "<group>"; };
 		30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		32C83F0E89ADB3A194F55FC325FC3CCF /* NSString+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+GG.m"; path = "GGToolKit/Classes/NSString+GG.m"; sourceTree = "<group>"; };
 		342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		347E49EAD3CA5F123036E8D93F9BCCD0 /* GGToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGToolKit.modulemap; sourceTree = "<group>"; };
-		34EC7B0252C1036C30A56F3F87ADAA1E /* NSObject+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+GG.m"; path = "GGToolKit/Classes/NSObject+GG.m"; sourceTree = "<group>"; };
+		374B0A96DAC94F671ED260BC3D78F579 /* GGToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGToolKit.modulemap; sourceTree = "<group>"; };
+		3764C90932748485D12DEF5701C7940B /* UINavigationController+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+GG.h"; path = "GGToolKit/Classes/UINavigationController+GG.h"; sourceTree = "<group>"; };
+		3C44CDB46228F2813641846D0F0F138A /* NSArray+GGMasonryLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+GGMasonryLayout.m"; path = "GGToolKit/Classes/NSArray+GGMasonryLayout.m"; sourceTree = "<group>"; };
+		3D1C94C0CB5F1CC44EF08EBF7873AE49 /* GGToolKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.debug.xcconfig; sourceTree = "<group>"; };
 		3E537C1F47DA8B06DA4A71E3D14F4DE4 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
-		46888767BDB5FAB75C2DC1BF0C8414BC /* NSAttributedString+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+GG.h"; path = "GGToolKit/Classes/NSAttributedString+GG.h"; sourceTree = "<group>"; };
+		43E36764C6C7EA4F36FA9071209599FB /* UITextField+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+GG.h"; path = "GGToolKit/Classes/UITextField+GG.h"; sourceTree = "<group>"; };
+		4636C926EA74331EF73CD51196A57D30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		48F7BACFA32FA0052901E8B52717180F /* UIControl+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+GG.m"; path = "GGToolKit/Classes/UIControl+GG.m"; sourceTree = "<group>"; };
+		49155D11320DFCE41A30ED8169D38472 /* UIColor+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+GG.m"; path = "GGToolKit/Classes/UIColor+GG.m"; sourceTree = "<group>"; };
 		4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		4D538E68122060A35B5958AFE4133049 /* UIControl+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+GG.m"; path = "GGToolKit/Classes/UIControl+GG.m"; sourceTree = "<group>"; };
+		4D6A3AEFEA884A186260EA88D48EEC34 /* NSObject+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+GG.h"; path = "GGToolKit/Classes/NSObject+GG.h"; sourceTree = "<group>"; };
 		4E28D6FD96F61233144B9B122B9AF7F0 /* GGToolKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGToolKit; path = GGToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		527E2EC4B5DD1652C2C007539AB60FCD /* NSString+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+GG.h"; path = "GGToolKit/Classes/NSString+GG.h"; sourceTree = "<group>"; };
 		52F3B1F6C4C57B6F9C746811BFA124C3 /* Pods-GGToolKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Example-Info.plist"; sourceTree = "<group>"; };
 		53183BBBC389DA3BB048EE2C503DF09C /* Pods-GGToolKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGToolKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		53279A809A575FF49B2733BEB67ABEE9 /* GGTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GGTools.m; path = GGToolKit/Classes/GGTools.m; sourceTree = "<group>"; };
-		54AC458527EA0E254BC6AA8B841C2C4B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		55960467D1B758EC688A18A171012E78 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5B02D7B5F279E6E2AFE34412D6D91590 /* Pods-GGToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5BDE99041F094A3C8822876819BE4C5A /* UIWindow+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+GG.h"; path = "GGToolKit/Classes/UIWindow+GG.h"; sourceTree = "<group>"; };
-		5ED5148D85A0BAD983C5BC5FD063EA97 /* UIView+GGScrollComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GGScrollComponent.m"; path = "GGToolKit/Classes/UIView+GGScrollComponent.m"; sourceTree = "<group>"; };
+		5CDB71F9704042E25D397C9B1F6A8026 /* UIView+GGScrollComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GGScrollComponent.h"; path = "GGToolKit/Classes/UIView+GGScrollComponent.h"; sourceTree = "<group>"; };
 		5FB1D552DCE390B7E59B2C7DFE3E43D2 /* Pods-GGToolKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		5FEA2390AC702DCBB528A4E97B64273B /* NSArray+GGMasonryLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+GGMasonryLayout.h"; path = "GGToolKit/Classes/NSArray+GGMasonryLayout.h"; sourceTree = "<group>"; };
-		5FF742345F3864F42719A87439BE570B /* GGTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGTools.h; path = GGToolKit/Classes/GGTools.h; sourceTree = "<group>"; };
-		602E03563D6412BF8FDB294A01DA6AA1 /* UIColor+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+GG.h"; path = "GGToolKit/Classes/UIColor+GG.h"; sourceTree = "<group>"; };
 		607937A372913475EE7EAE532760ACD4 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		6415551AEDBDF3A3AF9B014005545E6E /* UIView+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GG.m"; path = "GGToolKit/Classes/UIView+GG.m"; sourceTree = "<group>"; };
+		672F443DA9F4428F0346C6A3B1940A7C /* GGToolKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.release.xcconfig; sourceTree = "<group>"; };
 		6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		6E17443EA85E103F4DD0553AB6BB942A /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		6E1F7F2A0C2AF27B8F4D523F3470FC9E /* CALayer+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+GG.h"; path = "GGToolKit/Classes/CALayer+GG.h"; sourceTree = "<group>"; };
 		6FF4AF21902029EC43C354AC0978CE49 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		71BB4BFDA42B738C22865B9D55E4EF09 /* Pods-GGToolKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		72A95F8027E3EB86CB9AE2D7539201FE /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		736310909F7329D81AD36A258F99988F /* GGToolKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGToolKit-Info.plist"; sourceTree = "<group>"; };
-		7601CBFF394E0FF3D1EB2C0A6A5AD883 /* GGToolKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.debug.xcconfig; sourceTree = "<group>"; };
-		7ADCEB2077099723BEBC02E4152CF64D /* UINavigationController+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+GG.h"; path = "GGToolKit/Classes/UINavigationController+GG.h"; sourceTree = "<group>"; };
+		75BA8A34D2FD4FD721DAD0B27C21DF92 /* NSObject+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+GG.m"; path = "GGToolKit/Classes/NSObject+GG.m"; sourceTree = "<group>"; };
 		7DBDDE2E99B340E4858BB35B7CC0EB23 /* Pods-GGToolKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E01B1F5E1DBB125EB780B4CAE688092 /* UITextField+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+GG.h"; path = "GGToolKit/Classes/UITextField+GG.h"; sourceTree = "<group>"; };
 		7FB4D16CFBFB266BB31E13B9F5F5394A /* Pods-GGToolKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGToolKit_Example"; path = Pods_GGToolKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837834476F3329FA118B081516D4FC28 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		83E562C3BAFC22520AA6C222942FA405 /* UINavigationController+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+GG.m"; path = "GGToolKit/Classes/UINavigationController+GG.m"; sourceTree = "<group>"; };
+		861F5771B1194FD044CA1B0FBD84F8F9 /* UIButton+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+GG.m"; path = "GGToolKit/Classes/UIButton+GG.m"; sourceTree = "<group>"; };
 		86765B456E483806C4E13D2DD50E40A4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		87B8AA71E37CE4D203AFCDFB4514E07B /* Pods-GGToolKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGToolKit_Tests.modulemap"; sourceTree = "<group>"; };
 		8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		8BD2F7DBD8AEDC0542D283ADAFF499C9 /* Pods-GGToolKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGToolKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9073C3B74BC30C55B4EB5B2A596EAD72 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		9461CA290B4959F9F4CD8D6B65099400 /* GGTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GGTools.m; path = GGToolKit/Classes/GGTools.m; sourceTree = "<group>"; };
+		9C5FEA6DC7815DF1BB1C805B476241EE /* GGToolKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGToolKit-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E4FA488943924F65543B3D53987A8D6 /* Pods-GGToolKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGToolKit_Example-dummy.m"; sourceTree = "<group>"; };
-		A0BE4A5764DD1A1285DB26F82B35DDE5 /* GGToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGToolKit-dummy.m"; sourceTree = "<group>"; };
+		A373F5E17E37E823DD34B2F2546C66B5 /* UIControl+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+GG.h"; path = "GGToolKit/Classes/UIControl+GG.h"; sourceTree = "<group>"; };
 		A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		A8BCCE8C6C17F326AFEDF4357C62ADAF /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		AA30BA65333366EBA8DEBC52A558A501 /* UIImage+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GG.h"; path = "GGToolKit/Classes/UIImage+GG.h"; sourceTree = "<group>"; };
-		AD6EF323C99B81543A9819CBB61BBC29 /* UIView+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GG.h"; path = "GGToolKit/Classes/UIView+GG.h"; sourceTree = "<group>"; };
-		AE25122CB1A3F1B3E233C731BD9012C1 /* GGToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-umbrella.h"; sourceTree = "<group>"; };
+		ADE8E79D558B964D8672043FB6915FDB /* UIColor+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+GG.h"; path = "GGToolKit/Classes/UIColor+GG.h"; sourceTree = "<group>"; };
 		AF4497913DB548AE2E03103D3A97F34F /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		AFC2D8330A2596845A603D9BFA3DF677 /* GGToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGToolKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B10FEA9D5FA48B0FC318B5242FF24BF4 /* UIButton+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+GG.h"; path = "GGToolKit/Classes/UIButton+GG.h"; sourceTree = "<group>"; };
 		B28EC2F4C626ED77509645BE3805CB29 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		BA71CB1998721E2283DEE4F4BACF80EA /* UIWindow+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+GG.m"; path = "GGToolKit/Classes/UIWindow+GG.m"; sourceTree = "<group>"; };
-		BC92BA6CF3F3A0486140F69F9FC279DC /* NSArray+GGMasonryLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+GGMasonryLayout.m"; path = "GGToolKit/Classes/NSArray+GGMasonryLayout.m"; sourceTree = "<group>"; };
+		B2ED43F4AAB6543D75FD0BA6AE3B00F1 /* GGToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGToolKit-dummy.m"; sourceTree = "<group>"; };
+		B32F01A47D5F7EC8EC2EC2814FF87331 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BC3583246801D3BA52EDABE97D5C5711 /* GGToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-umbrella.h"; sourceTree = "<group>"; };
+		BC9694DAE249150692839BBA506C3CF7 /* NSArray+GGMasonryLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+GGMasonryLayout.h"; path = "GGToolKit/Classes/NSArray+GGMasonryLayout.h"; sourceTree = "<group>"; };
 		BCF9DF3E897DB3235BABA409B3683009 /* Pods-GGToolKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGToolKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		BDB676D9D5D3AFD89D8DDCE3369D4BAC /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		BF67DD8FA4B46985563D3EB9CAC9DB12 /* Pods-GGToolKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C35498CD8805A39D56A297A7FA60111F /* Pods-GGToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C458534E41C66091167FAFB40E002258 /* GGToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-prefix.pch"; sourceTree = "<group>"; };
+		C71B99908AEC5F971CEBED1E32E0C7D7 /* UIImage+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GG.m"; path = "GGToolKit/Classes/UIImage+GG.m"; sourceTree = "<group>"; };
 		C7436EB21ECD9073A34FBB9AEDE6976D /* Pods-GGToolKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGToolKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C916D6B1B935234C21FE36644E2E14D6 /* UINavigationController+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+GG.m"; path = "GGToolKit/Classes/UINavigationController+GG.m"; sourceTree = "<group>"; };
-		CD811C20837B23225E0DCC6DFB7A44C3 /* UIView+GGScrollComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GGScrollComponent.h"; path = "GGToolKit/Classes/UIView+GGScrollComponent.h"; sourceTree = "<group>"; };
-		CFA6C55545C0D96633BEF4A39986B141 /* UIColor+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+GG.m"; path = "GGToolKit/Classes/UIColor+GG.m"; sourceTree = "<group>"; };
+		CDB771A16DE692665F5CDA6F086FA0FF /* UIView+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+GG.h"; path = "GGToolKit/Classes/UIView+GG.h"; sourceTree = "<group>"; };
 		D12E9F350C1C8076BE92719B89951AD8 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D5892D303C5C1C135647AA2640DCA121 /* UIControl+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+GG.h"; path = "GGToolKit/Classes/UIControl+GG.h"; sourceTree = "<group>"; };
 		DE8D5F4C5046EF8437DBC38C413D99C1 /* Pods-GGToolKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGToolKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DFA1012B6A8BD076CD9F09831AE37A01 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
+		E3D1F688C197B5F022E666F5D3493848 /* UIView+GGScrollComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+GGScrollComponent.m"; path = "GGToolKit/Classes/UIView+GGScrollComponent.m"; sourceTree = "<group>"; };
 		E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		E81263B659CF3117FBE82DB95EB2B081 /* NSString+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+GG.m"; path = "GGToolKit/Classes/NSString+GG.m"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EB7CC7527FD599A1064055C060E14B43 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		EDA8A3885BC33F25CB32442EB2449111 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		F2F22717DF3B34998DCF4CCA30963CD4 /* Pods-GGToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F48A466C3322370B67D72C1DE0DDDF75 /* UITextField+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+GG.m"; path = "GGToolKit/Classes/UITextField+GG.m"; sourceTree = "<group>"; };
 		F586967780DC65C427EC6DC0531D51DE /* Pods-GGToolKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGToolKit_Example.modulemap"; sourceTree = "<group>"; };
-		FACFA2117386449F57421B13B20A05E9 /* UIImage+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GG.m"; path = "GGToolKit/Classes/UIImage+GG.m"; sourceTree = "<group>"; };
+		FAD4388BF52DAA25F3D76268D7C8EDCB /* CALayer+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+GG.m"; path = "GGToolKit/Classes/CALayer+GG.m"; sourceTree = "<group>"; };
 		FE3412A561E501A6DC0D4C8E2D327148 /* Pods-GGToolKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGToolKit_Tests"; path = Pods_GGToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFF6574FB602CB6830AA9AA1B935D142 /* UIButton+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+GG.h"; path = "GGToolKit/Classes/UIButton+GG.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0A7B53497F56CFFA9B1BAB268F5A936A /* Frameworks */ = {
+		3A0C372098633072B9B0D40DDF2FAB96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6EAE7A077746511DC38A7EBBE65AF5 /* Foundation.framework in Frameworks */,
-				7BD0700E65E4336212010A74561C8C10 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6CB7F1A43B3B565F9B9EE4B0BE4C2721 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				73E8BE946647E58574A9284424B4525B /* Foundation.framework in Frameworks */,
-				28B6C5BE8726FF77EB3E7EFD9B261B2C /* UIKit.framework in Frameworks */,
+				75C0E172D38BCC72542EE275AB6F96F1 /* Foundation.framework in Frameworks */,
+				8FC46EEA8E34123B7E03A208F2B460FD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +223,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEA46E6905CFB99928D4543B6C786EF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA27A64FF7D2731C2C681A6C5C7E45EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9CA923484A8392EDE1A8F7E9781A218 /* Foundation.framework in Frameworks */,
+				77CAF27578211E8DB4902A5FF04B0FBA /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,21 +278,6 @@
 			);
 			name = Masonry;
 			path = Masonry;
-			sourceTree = "<group>";
-		};
-		14D46EC58463F2EE9CBBF040A350C873 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				347E49EAD3CA5F123036E8D93F9BCCD0 /* GGToolKit.modulemap */,
-				A0BE4A5764DD1A1285DB26F82B35DDE5 /* GGToolKit-dummy.m */,
-				736310909F7329D81AD36A258F99988F /* GGToolKit-Info.plist */,
-				C458534E41C66091167FAFB40E002258 /* GGToolKit-prefix.pch */,
-				AE25122CB1A3F1B3E233C731BD9012C1 /* GGToolKit-umbrella.h */,
-				7601CBFF394E0FF3D1EB2C0A6A5AD883 /* GGToolKit.debug.xcconfig */,
-				1F682B6C5DCFD201E08746D3B62A3532 /* GGToolKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GGToolKit";
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -341,6 +330,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		63A1A93BDCA565F4860432D5C0C98E02 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8091F0DA098CECA58A0AF7D885B3B21 /* GGToolKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7529FD53BCE26816CCD46658378AAF1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,22 +366,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A7670CA5F15DF9FDAB20EF63A6FFC22C /* Pod */ = {
+		AED684AEE3E0D8FA1871F78E7F7E45C6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1E7FC54197C4D54111C3681189E65B47 /* GGToolKit.podspec */,
-				54AC458527EA0E254BC6AA8B841C2C4B /* LICENSE */,
-				2E2A8D188D686324356267A150BCC346 /* README.md */,
+				374B0A96DAC94F671ED260BC3D78F579 /* GGToolKit.modulemap */,
+				B2ED43F4AAB6543D75FD0BA6AE3B00F1 /* GGToolKit-dummy.m */,
+				9C5FEA6DC7815DF1BB1C805B476241EE /* GGToolKit-Info.plist */,
+				0C14E26701B6A58A89813CFB1929AE97 /* GGToolKit-prefix.pch */,
+				BC3583246801D3BA52EDABE97D5C5711 /* GGToolKit-umbrella.h */,
+				3D1C94C0CB5F1CC44EF08EBF7873AE49 /* GGToolKit.debug.xcconfig */,
+				672F443DA9F4428F0346C6A3B1940A7C /* GGToolKit.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GGToolKit";
 			sourceTree = "<group>";
 		};
-		B6D560DCB227EF3A681A98DC398E7977 /* Development Pods */ = {
+		C4DA9151E909040A508F6725403E4D53 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EDBCA5BF2285A8100B0023E4DC088241 /* GGToolKit */,
+				AFC2D8330A2596845A603D9BFA3DF677 /* GGToolKit.podspec */,
+				B32F01A47D5F7EC8EC2EC2814FF87331 /* LICENSE */,
+				4636C926EA74331EF73CD51196A57D30 /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C84A449C2DE4F91F0620A5147DD42E0F /* Support Files */ = {
@@ -406,7 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B6D560DCB227EF3A681A98DC398E7977 /* Development Pods */,
+				63A1A93BDCA565F4860432D5C0C98E02 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				7529FD53BCE26816CCD46658378AAF1B /* Pods */,
 				8B04634DEAD9983EBA759AE3B19B0C29 /* Products */,
@@ -414,39 +418,41 @@
 			);
 			sourceTree = "<group>";
 		};
-		EDBCA5BF2285A8100B0023E4DC088241 /* GGToolKit */ = {
+		D8091F0DA098CECA58A0AF7D885B3B21 /* GGToolKit */ = {
 			isa = PBXGroup;
 			children = (
-				5FF742345F3864F42719A87439BE570B /* GGTools.h */,
-				53279A809A575FF49B2733BEB67ABEE9 /* GGTools.m */,
-				5FEA2390AC702DCBB528A4E97B64273B /* NSArray+GGMasonryLayout.h */,
-				BC92BA6CF3F3A0486140F69F9FC279DC /* NSArray+GGMasonryLayout.m */,
-				46888767BDB5FAB75C2DC1BF0C8414BC /* NSAttributedString+GG.h */,
-				11C7EFC1B62C371FA646CD2CFECE115D /* NSAttributedString+GG.m */,
-				21068501B8D90B7DB56ECBD0DA42BCC4 /* NSObject+GG.h */,
-				34EC7B0252C1036C30A56F3F87ADAA1E /* NSObject+GG.m */,
-				527E2EC4B5DD1652C2C007539AB60FCD /* NSString+GG.h */,
-				32C83F0E89ADB3A194F55FC325FC3CCF /* NSString+GG.m */,
-				FFF6574FB602CB6830AA9AA1B935D142 /* UIButton+GG.h */,
-				1BD3732083E0B0185378FB96B3BF1D5C /* UIButton+GG.m */,
-				602E03563D6412BF8FDB294A01DA6AA1 /* UIColor+GG.h */,
-				CFA6C55545C0D96633BEF4A39986B141 /* UIColor+GG.m */,
-				D5892D303C5C1C135647AA2640DCA121 /* UIControl+GG.h */,
-				48F7BACFA32FA0052901E8B52717180F /* UIControl+GG.m */,
-				AA30BA65333366EBA8DEBC52A558A501 /* UIImage+GG.h */,
-				FACFA2117386449F57421B13B20A05E9 /* UIImage+GG.m */,
-				7ADCEB2077099723BEBC02E4152CF64D /* UINavigationController+GG.h */,
-				C916D6B1B935234C21FE36644E2E14D6 /* UINavigationController+GG.m */,
-				7E01B1F5E1DBB125EB780B4CAE688092 /* UITextField+GG.h */,
-				30335AFDF9E1482DE2EACCB2D79A6242 /* UITextField+GG.m */,
-				AD6EF323C99B81543A9819CBB61BBC29 /* UIView+GG.h */,
-				13378A83911C16CE656CA43A5057D93B /* UIView+GG.m */,
-				CD811C20837B23225E0DCC6DFB7A44C3 /* UIView+GGScrollComponent.h */,
-				5ED5148D85A0BAD983C5BC5FD063EA97 /* UIView+GGScrollComponent.m */,
-				5BDE99041F094A3C8822876819BE4C5A /* UIWindow+GG.h */,
-				BA71CB1998721E2283DEE4F4BACF80EA /* UIWindow+GG.m */,
-				A7670CA5F15DF9FDAB20EF63A6FFC22C /* Pod */,
-				14D46EC58463F2EE9CBBF040A350C873 /* Support Files */,
+				6E1F7F2A0C2AF27B8F4D523F3470FC9E /* CALayer+GG.h */,
+				FAD4388BF52DAA25F3D76268D7C8EDCB /* CALayer+GG.m */,
+				053C4376DDEA688DD88ED80E55C1F060 /* GGTools.h */,
+				9461CA290B4959F9F4CD8D6B65099400 /* GGTools.m */,
+				BC9694DAE249150692839BBA506C3CF7 /* NSArray+GGMasonryLayout.h */,
+				3C44CDB46228F2813641846D0F0F138A /* NSArray+GGMasonryLayout.m */,
+				152A4995680DC2FB4D0991A8A6AB4920 /* NSAttributedString+GG.h */,
+				21FD4FEAF4538EE5B43FFE90D55DFDA6 /* NSAttributedString+GG.m */,
+				4D6A3AEFEA884A186260EA88D48EEC34 /* NSObject+GG.h */,
+				75BA8A34D2FD4FD721DAD0B27C21DF92 /* NSObject+GG.m */,
+				083734C5CF6EA75619901014C406DB01 /* NSString+GG.h */,
+				E81263B659CF3117FBE82DB95EB2B081 /* NSString+GG.m */,
+				B10FEA9D5FA48B0FC318B5242FF24BF4 /* UIButton+GG.h */,
+				861F5771B1194FD044CA1B0FBD84F8F9 /* UIButton+GG.m */,
+				ADE8E79D558B964D8672043FB6915FDB /* UIColor+GG.h */,
+				49155D11320DFCE41A30ED8169D38472 /* UIColor+GG.m */,
+				A373F5E17E37E823DD34B2F2546C66B5 /* UIControl+GG.h */,
+				4D538E68122060A35B5958AFE4133049 /* UIControl+GG.m */,
+				267B67E33EB01811B5DE4DF6BFF72E7D /* UIImage+GG.h */,
+				C71B99908AEC5F971CEBED1E32E0C7D7 /* UIImage+GG.m */,
+				3764C90932748485D12DEF5701C7940B /* UINavigationController+GG.h */,
+				83E562C3BAFC22520AA6C222942FA405 /* UINavigationController+GG.m */,
+				43E36764C6C7EA4F36FA9071209599FB /* UITextField+GG.h */,
+				F48A466C3322370B67D72C1DE0DDDF75 /* UITextField+GG.m */,
+				CDB771A16DE692665F5CDA6F086FA0FF /* UIView+GG.h */,
+				6415551AEDBDF3A3AF9B014005545E6E /* UIView+GG.m */,
+				5CDB71F9704042E25D397C9B1F6A8026 /* UIView+GGScrollComponent.h */,
+				E3D1F688C197B5F022E666F5D3493848 /* UIView+GGScrollComponent.m */,
+				00FB55437FE561D8A9E678DC6B029562 /* UIWindow+GG.h */,
+				06660AF74B29890FE14161E68EC726BE /* UIWindow+GG.m */,
+				C4DA9151E909040A508F6725403E4D53 /* Pod */,
+				AED684AEE3E0D8FA1871F78E7F7E45C6 /* Support Files */,
 			);
 			name = GGToolKit;
 			path = ../..;
@@ -471,48 +477,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEDAD745F5B26E4BCCC2D4B1A0FDFC66 /* Headers */ = {
+		DF157256F729DD5A6551DC4CB9F3E8E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3B4D6E7D24E2B6FA098C3563D07CCA /* GGToolKit-umbrella.h in Headers */,
-				B85242F6439894E7AF18961FA2F9788E /* GGTools.h in Headers */,
-				1D600EE32699755835635658B38B0453 /* NSArray+GGMasonryLayout.h in Headers */,
-				B6E0C75B3B3F311660CBF1FE8448E7E6 /* NSAttributedString+GG.h in Headers */,
-				12E63539F6FB4FDBFAC404C0AC2BEDB6 /* NSObject+GG.h in Headers */,
-				3536CA0E66B555272F82156A1FCCF69B /* NSString+GG.h in Headers */,
-				66FB2BA1F2760E77364131CAD5A6925E /* UIButton+GG.h in Headers */,
-				1B145ED61F81B39E7F40E0DE762E9263 /* UIColor+GG.h in Headers */,
-				A0F8E3BA14A90DE47823226C01215636 /* UIControl+GG.h in Headers */,
-				8DCEB88EADFAB81A3F8360246821B303 /* UIImage+GG.h in Headers */,
-				1F6E47FA4AB82250C33AB0AC1FD8D865 /* UINavigationController+GG.h in Headers */,
-				059F9AD889E59FE281B37D5CB16E5A39 /* UITextField+GG.h in Headers */,
-				F3D057F98E08DD849B4D6493C9D5F439 /* UIView+GG.h in Headers */,
-				3A7CD62B0B1621BF33394ED6B3F9BAD2 /* UIView+GGScrollComponent.h in Headers */,
-				F62D0B3A575608DC0570EC853796444F /* UIWindow+GG.h in Headers */,
+				863058E0BD15F3F018AD17E54D10B251 /* MASCompositeConstraint.h in Headers */,
+				D7D846C215E1F15C04634A66C457F11B /* MASConstraint.h in Headers */,
+				5D723FFB7BA315B1F84DCAF7B4D3F071 /* MASConstraint+Private.h in Headers */,
+				E0E2B05D0284E2A1CA336B525CEB917B /* MASConstraintMaker.h in Headers */,
+				74DCAB784E061F8FE481C47C2CE9AD9C /* MASLayoutConstraint.h in Headers */,
+				D9EE6B506B3C3C41299CF4E396E5543C /* Masonry.h in Headers */,
+				C9B7A088EFC2A42D63932F09CB17EC3A /* Masonry-umbrella.h in Headers */,
+				59435889E7145A45011F6FE5DA33D810 /* MASUtilities.h in Headers */,
+				3A9AD6A3A72602F14A5D3707AACA95E1 /* MASViewAttribute.h in Headers */,
+				89285DDFAC6C0F3ED65FB07F0AF38800 /* MASViewConstraint.h in Headers */,
+				1C73B8B4E7D30BE70758CB9DA9407758 /* NSArray+MASAdditions.h in Headers */,
+				D697EEBDF0C688A9E0C733BED4798975 /* NSArray+MASShorthandAdditions.h in Headers */,
+				27B3393B5F56CF023D9E0F21CC0921EC /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				40C51E8646D1EB03739EF50508432142 /* View+MASAdditions.h in Headers */,
+				EB0D6FED43C5127A4A9C8780296011F8 /* View+MASShorthandAdditions.h in Headers */,
+				6A4DA3EBAB81E632EF33D9F3DDECB88F /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3DCC55591BC2E02D1757EC64FBC60CF /* Headers */ = {
+		FC2E5A1853E958D2F77A080B07DCB77D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDEFD296B10265DC4AA2CC08238A9FE /* MASCompositeConstraint.h in Headers */,
-				53BDF9C7348BA9BBF83195C78DCDBE55 /* MASConstraint.h in Headers */,
-				86E5E25ABB67488D1BC71E056DA2F792 /* MASConstraint+Private.h in Headers */,
-				459BAFBB27E0BA94C02B0032AB6D24E5 /* MASConstraintMaker.h in Headers */,
-				0B83DC421D963093A5B5C7287726DED6 /* MASLayoutConstraint.h in Headers */,
-				DEAB86065EF42C07ED62A29EBCE5F119 /* Masonry.h in Headers */,
-				4CE6C7364C73E175CD9707B6631CDA62 /* Masonry-umbrella.h in Headers */,
-				53F90F8CBD21AEE0418EAD39F183E2C6 /* MASUtilities.h in Headers */,
-				4E2A22543205A8B002C5F6BA9B88E552 /* MASViewAttribute.h in Headers */,
-				039909594FDF725B6DC0E61A06357310 /* MASViewConstraint.h in Headers */,
-				EB005B615DD36AB1E71A6164F3B9C37E /* NSArray+MASAdditions.h in Headers */,
-				16FFBB4C789F6707C893ECB13AA4C82F /* NSArray+MASShorthandAdditions.h in Headers */,
-				5D6E7880B8F07F93E1493506BEB1A470 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				71F3F20CED1A19CC160A566FA5849582 /* View+MASAdditions.h in Headers */,
-				A18F5F2C94D6C681D45F1F299549A46E /* View+MASShorthandAdditions.h in Headers */,
-				6B1F709F7D3BC456CC06DCE59EFCCA81 /* ViewController+MASAdditions.h in Headers */,
+				49EEEDF7BBCCA3C2B16A5D11954C4E49 /* CALayer+GG.h in Headers */,
+				7E48D63F2C8776CADE7D03FC049702B8 /* GGToolKit-umbrella.h in Headers */,
+				1602F59737552962152C6F2399E47CFC /* GGTools.h in Headers */,
+				115A67AB6EC391BD834B3D3B2BBEB4FF /* NSArray+GGMasonryLayout.h in Headers */,
+				54AA7669B9EBDC1EAD0A5046128E9B73 /* NSAttributedString+GG.h in Headers */,
+				4EC9BBAFE80277170C9AEAFE3A4CD047 /* NSObject+GG.h in Headers */,
+				FB4BD7DB78168028C6B39E3196A5A1D9 /* NSString+GG.h in Headers */,
+				B5BAA389A8F15768EE850B042510CF8B /* UIButton+GG.h in Headers */,
+				75DB4553F8108F1CBD0A624F8A92C1E8 /* UIColor+GG.h in Headers */,
+				887D09245D0E435FC09A4A1C91E3A97B /* UIControl+GG.h in Headers */,
+				8A6311573CA70102513C90508A056EE8 /* UIImage+GG.h in Headers */,
+				C3F067E7FD2EF435EB9F6659E3B74D38 /* UINavigationController+GG.h in Headers */,
+				2F8F803E6AAAF3FEE72166F04C26520C /* UITextField+GG.h in Headers */,
+				A4A3DFB83F1D173B8A0E99B9761AB621 /* UIView+GG.h in Headers */,
+				461C829E439A6C8B9DC809C8BC9053B2 /* UIView+GGScrollComponent.h in Headers */,
+				B87BE24697B6C13EB8714966C1D36DB3 /* UIWindow+GG.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,17 +528,17 @@
 /* Begin PBXNativeTarget section */
 		3654A516977DD4AA7EB0CE630E057427 /* GGToolKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83481C33A4F781F66B15B9A92E65EAE3 /* Build configuration list for PBXNativeTarget "GGToolKit" */;
+			buildConfigurationList = A1DA38DBA3B4880665D86A3C581C2D79 /* Build configuration list for PBXNativeTarget "GGToolKit" */;
 			buildPhases = (
-				BEDAD745F5B26E4BCCC2D4B1A0FDFC66 /* Headers */,
-				53D4C05E630A4B88DF3AA5A04CD8657E /* Sources */,
-				6CB7F1A43B3B565F9B9EE4B0BE4C2721 /* Frameworks */,
-				43D346E93551848396E17BEDF70FE986 /* Resources */,
+				FC2E5A1853E958D2F77A080B07DCB77D /* Headers */,
+				7249D1F5BF5F7095E0796B8D538B84D3 /* Sources */,
+				DA27A64FF7D2731C2C681A6C5C7E45EE /* Frameworks */,
+				82BF3AD512D89B7AA9C1C0B3377FC6FD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E1DD5F7F65791E59BD161A7895B48E82 /* PBXTargetDependency */,
+				8723300D15E31FF3C05CEF51AFF03319 /* PBXTargetDependency */,
 			);
 			name = GGToolKit;
 			productName = GGToolKit;
@@ -540,12 +547,12 @@
 		};
 		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C0180D66D9B0D61205C0B2E0CC22A42 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = 0572E3F284D3761E79BD6886F0033078 /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				E3DCC55591BC2E02D1757EC64FBC60CF /* Headers */,
-				7FFEF1B1229B282FB2E95378957D4E88 /* Sources */,
-				0A7B53497F56CFFA9B1BAB268F5A936A /* Frameworks */,
-				8E63B2558ABB12BD389B899E8CDA8A04 /* Resources */,
+				DF157256F729DD5A6551DC4CB9F3E8E6 /* Headers */,
+				B490D5F3D5B9A34E9309BD2846794878 /* Sources */,
+				3A0C372098633072B9B0D40DDF2FAB96 /* Frameworks */,
+				C0C57CB5D3403CBF23AFDDF023467538 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -568,7 +575,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BCFE1A24EAA5C1013A91A8862731C714 /* PBXTargetDependency */,
+				7E6B1FD21CEF82C351978319EC893A02 /* PBXTargetDependency */,
 			);
 			name = "Pods-GGToolKit_Tests";
 			productName = Pods_GGToolKit_Tests;
@@ -587,8 +594,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				0BD3F2F657B14D63D8B3A61F40035903 /* PBXTargetDependency */,
-				A54CC952FB15B9A98CC91B2E79F225AA /* PBXTargetDependency */,
+				F2B1DF86FB0A170A6B96D79170146FD6 /* PBXTargetDependency */,
+				50335D386CC19884B15CCA8837072FC0 /* PBXTargetDependency */,
 			);
 			name = "Pods-GGToolKit_Example";
 			productName = Pods_GGToolKit_Example;
@@ -601,8 +608,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -626,13 +633,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		43D346E93551848396E17BEDF70FE986 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E0C1FA94932DEF83DBA15C9CE7B3210 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,7 +640,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E63B2558ABB12BD389B899E8CDA8A04 /* Resources */ = {
+		82BF3AD512D89B7AA9C1C0B3377FC6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C57CB5D3403CBF23AFDDF023467538 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -657,43 +664,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53D4C05E630A4B88DF3AA5A04CD8657E /* Sources */ = {
+		7249D1F5BF5F7095E0796B8D538B84D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587A6B71A7FC4368837D8E0357648D82 /* GGToolKit-dummy.m in Sources */,
-				FD2471D6D4463540F668434424A11E63 /* GGTools.m in Sources */,
-				6A98E4AA89B23122F1BAE601C541F7AB /* NSArray+GGMasonryLayout.m in Sources */,
-				B885692E235A4B42471736B34F4280AF /* NSAttributedString+GG.m in Sources */,
-				2AE40A75A21D2340DF66681568FBA8A6 /* NSObject+GG.m in Sources */,
-				C7547A475EFDB297250E987528C19080 /* NSString+GG.m in Sources */,
-				F7DCC82990A154CD0DB3F36EB27CE68C /* UIButton+GG.m in Sources */,
-				AEFC397325C961A0C01F914C7CFAF806 /* UIColor+GG.m in Sources */,
-				632A95CAA094C34EE62AEC85F469331C /* UIControl+GG.m in Sources */,
-				D66F4897035B5ACF56C41E3404B09E0C /* UIImage+GG.m in Sources */,
-				AA3FFCD7DF72D54B5C35043C5FD9D02F /* UINavigationController+GG.m in Sources */,
-				2A5EF21B98F48E8BFCC733351B40D197 /* UITextField+GG.m in Sources */,
-				7C37C8F5527D52C6BAE0E1FD4191EC29 /* UIView+GG.m in Sources */,
-				A8C80AE9CD6BA94FCD5F346573E43460 /* UIView+GGScrollComponent.m in Sources */,
-				4CA1C0764BB192F3CC13457B701CFD28 /* UIWindow+GG.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FFEF1B1229B282FB2E95378957D4E88 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				141CBADB07B611F0E35CC56D94BC80A3 /* MASCompositeConstraint.m in Sources */,
-				C0C059C6790B246139FBF72F0FDEF90B /* MASConstraint.m in Sources */,
-				715607179F4BCD9E8ABBD739024D7616 /* MASConstraintMaker.m in Sources */,
-				094407F20E2B4D4182FD5CF820C8B05C /* MASLayoutConstraint.m in Sources */,
-				483681520224CE354C8B744B3307E011 /* Masonry-dummy.m in Sources */,
-				5F80E55EEB341AEFFF9CB2A7AC3307AE /* MASViewAttribute.m in Sources */,
-				C1DFA420F8C3C31D0AC6E23A33F1EEDB /* MASViewConstraint.m in Sources */,
-				FB8CC9A54B808B7340777F7EF764A1E9 /* NSArray+MASAdditions.m in Sources */,
-				D24FE062CE24C15D0874C05AACFC578C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				4DB34CD6CFE785D2D3729915DB640320 /* View+MASAdditions.m in Sources */,
-				2A87A82BB21C7CCDC0C636A169B27CB2 /* ViewController+MASAdditions.m in Sources */,
+				810A1D82CF2B7A2B0D3E70CA5CBCFB47 /* CALayer+GG.m in Sources */,
+				4794277B880A193FE57F9223D90A5026 /* GGToolKit-dummy.m in Sources */,
+				2A9CBDA12C2692761CC819E55CFB590F /* GGTools.m in Sources */,
+				B35DFED6954C8695929B1E4C69754765 /* NSArray+GGMasonryLayout.m in Sources */,
+				A9747123C32DF8044F05AE6AA6DE71C1 /* NSAttributedString+GG.m in Sources */,
+				9687310AE5F0A8C4799C85B4B4B91418 /* NSObject+GG.m in Sources */,
+				5F8131BE470EDC1E033BA03FCFBCA9A6 /* NSString+GG.m in Sources */,
+				B5FBA1F080D2C6FBBA2DEB82E432CB6E /* UIButton+GG.m in Sources */,
+				004697A12D79B1CD0CE43FABDFC787A2 /* UIColor+GG.m in Sources */,
+				E2159A9FE511565EAB81A5D9377A41E3 /* UIControl+GG.m in Sources */,
+				C21858B1EBD952C06269B3D33836382E /* UIImage+GG.m in Sources */,
+				E098C122740C2E5E35747BC2A1AAFC98 /* UINavigationController+GG.m in Sources */,
+				F6667D6D5AAD086BC27BD292A4E30630 /* UITextField+GG.m in Sources */,
+				A52DD9DBE45C45DD016AAE2F91FE22DE /* UIView+GG.m in Sources */,
+				7CD1C1718D7682860725DF49364FBA87 /* UIView+GGScrollComponent.m in Sources */,
+				36709D0FE9A110003B75616F1752F180 /* UIWindow+GG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +692,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ADE065A87C8C29D8723E0F0027C0F43 /* Pods-GGToolKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B490D5F3D5B9A34E9309BD2846794878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11952AF0D1AF8571225A7B4A57658915 /* MASCompositeConstraint.m in Sources */,
+				01117E8081939C074F3F208107086D6E /* MASConstraint.m in Sources */,
+				47F6E510CC3903D0480AAC56D759F8A7 /* MASConstraintMaker.m in Sources */,
+				966372B1F4E4FB10907896C156C99AD5 /* MASLayoutConstraint.m in Sources */,
+				2D79ECA7CA0352AA3903B62259037DDA /* Masonry-dummy.m in Sources */,
+				FF9169B76D784F63BAE6DAB97DECF653 /* MASViewAttribute.m in Sources */,
+				C31D1E917F665332E4E7BFFC59178B52 /* MASViewConstraint.m in Sources */,
+				DB526A3E6A8A25495C6849C1608D5ECB /* NSArray+MASAdditions.m in Sources */,
+				43C985B40B386C122F1F9B4F319BDE77 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				36EE3461EBF6C3C22CFE0906099A45D7 /* View+MASAdditions.m in Sources */,
+				4187E2E481088E90C0417BB967305190 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,34 +724,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BD3F2F657B14D63D8B3A61F40035903 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GGToolKit;
-			target = 3654A516977DD4AA7EB0CE630E057427 /* GGToolKit */;
-			targetProxy = 8E10FE7BDE31988322C807BA8E2ABE7C /* PBXContainerItemProxy */;
-		};
-		A54CC952FB15B9A98CC91B2E79F225AA /* PBXTargetDependency */ = {
+		50335D386CC19884B15CCA8837072FC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = EF62FAD9FE84A28302AA05E138F1F901 /* PBXContainerItemProxy */;
+			targetProxy = 786983AE9AD85FCE34D552BA3DC62C10 /* PBXContainerItemProxy */;
 		};
-		BCFE1A24EAA5C1013A91A8862731C714 /* PBXTargetDependency */ = {
+		7E6B1FD21CEF82C351978319EC893A02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GGToolKit_Example";
 			target = E09D2C24D8F27730B4E8F2BCBC3A91DB /* Pods-GGToolKit_Example */;
-			targetProxy = 0E6AB30C2F272EBF60931A8AAE649F98 /* PBXContainerItemProxy */;
+			targetProxy = 138CC2DC7B42D334EB65430D8F553444 /* PBXContainerItemProxy */;
 		};
-		E1DD5F7F65791E59BD161A7895B48E82 /* PBXTargetDependency */ = {
+		8723300D15E31FF3C05CEF51AFF03319 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = F6B835529E9FAF3F97D93F0D7B6CD131 /* PBXContainerItemProxy */;
+			targetProxy = 6A7AB2F92B491F6BB7A8ADBF139A0690 /* PBXContainerItemProxy */;
+		};
+		F2B1DF86FB0A170A6B96D79170146FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GGToolKit;
+			target = 3654A516977DD4AA7EB0CE630E057427 /* GGToolKit */;
+			targetProxy = 951AD6438E8C38D32A2DC8878302D4BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		070D78B7A5FBF98B7157DA5000F60F1E /* Debug */ = {
+		1F2F3B03CCD8958C40B478A91B145E23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F287598D192FA586BD4AECCD85B988A4 /* Masonry.debug.xcconfig */;
 			buildSettings = {
@@ -763,37 +771,6 @@
 				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				PRODUCT_MODULE_NAME = Masonry;
 				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1DD90B8F4F341D8BC01A596AB3441E24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7601CBFF394E0FF3D1EB2C0A6A5AD883 /* GGToolKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
-				PRODUCT_MODULE_NAME = GGToolKit;
-				PRODUCT_NAME = GGToolKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -836,37 +813,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		62CC40DD0FC4FC97A1909E55F0DF9F28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -964,11 +910,10 @@
 			};
 			name = Release;
 		};
-		A31FFD41B323F89D6C06885E3EE4AC84 /* Release */ = {
+		8D48A3FEF94AF2EA0115BD0CFFAD6497 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F682B6C5DCFD201E08746D3B62A3532 /* GGToolKit.release.xcconfig */;
+			baseConfigurationReference = 419A961AD957E23BAB6A998ED7623134 /* Masonry.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -977,14 +922,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
-				PRODUCT_MODULE_NAME = GGToolKit;
-				PRODUCT_NAME = GGToolKit;
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1062,6 +1007,37 @@
 			};
 			name = Debug;
 		};
+		D98EA258A82EE591C16DE752800D8525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1C94C0CB5F1CC44EF08EBF7873AE49 /* GGToolKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
+				PRODUCT_MODULE_NAME = GGToolKit;
+				PRODUCT_NAME = GGToolKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DFF9AB74F4C8C3C9EE4A1E503B17F025 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2F22717DF3B34998DCF4CCA30963CD4 /* Pods-GGToolKit_Example.debug.xcconfig */;
@@ -1094,6 +1070,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		E733A3A63C311FF9FD677B053B8A1F1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 672F443DA9F4428F0346C6A3B1940A7C /* GGToolKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
+				PRODUCT_MODULE_NAME = GGToolKit;
+				PRODUCT_NAME = GGToolKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		EBE3405A762E15F659AF7D670D252453 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1132,11 +1140,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C0180D66D9B0D61205C0B2E0CC22A42 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+		0572E3F284D3761E79BD6886F0033078 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				070D78B7A5FBF98B7157DA5000F60F1E /* Debug */,
-				62CC40DD0FC4FC97A1909E55F0DF9F28 /* Release */,
+				1F2F3B03CCD8958C40B478A91B145E23 /* Debug */,
+				8D48A3FEF94AF2EA0115BD0CFFAD6497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1150,20 +1158,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83481C33A4F781F66B15B9A92E65EAE3 /* Build configuration list for PBXNativeTarget "GGToolKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DD90B8F4F341D8BC01A596AB3441E24 /* Debug */,
-				A31FFD41B323F89D6C06885E3EE4AC84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8F3DE52597B60AB15EC8F63F55468E11 /* Build configuration list for PBXNativeTarget "Pods-GGToolKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFF9AB74F4C8C3C9EE4A1E503B17F025 /* Debug */,
 				EBE3405A762E15F659AF7D670D252453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DA38DBA3B4880665D86A3C581C2D79 /* Build configuration list for PBXNativeTarget "GGToolKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D98EA258A82EE591C16DE752800D8525 /* Debug */,
+				E733A3A63C311FF9FD677B053B8A1F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
