@@ -30,9 +30,9 @@ typedef void (^UIControlActionBlock)(__kindof UIControl *weakSender);
 ///移除点击Block
 -  (void)gg_removeActionBlocksForControlEvents:(UIControlEvents)controlEvents;
 
-///设置按钮点击冷却时间
-@property (nonatomic, assign) NSTimeInterval gg_acceptEventInterval;//点击事件冷却
-@property (nonatomic, assign) BOOL gg_isIgnoreEvent;//是否忽略点击事件
+/////设置按钮点击冷却时间
+//@property (nonatomic, assign) NSTimeInterval gg_acceptEventInterval;//点击事件冷却
+//@property (nonatomic, assign) BOOL gg_isIgnoreEvent;//是否忽略点击事件
 
 @end
 

@@ -80,79 +80,79 @@ static const void *UIControlActionBlockDictionary = &UIControlActionBlockDiction
 
 #pragma mark - 防止按钮重复点击
 
-static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";
-
-- (NSTimeInterval)gg_acceptEventInterval{
-	return [objc_getAssociatedObject(self, UIControl_acceptEventInterval) doubleValue];
-}
-
-- (void)setGg_acceptEventInterval:(NSTimeInterval)gg_acceptEventInterval{
-	objc_setAssociatedObject(self, UIControl_acceptEventInterval, @(gg_acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (void)setGg_isIgnoreEvent:(BOOL)gg_isIgnoreEvent{
-	objc_setAssociatedObject(self, @selector(gg_isIgnoreEvent), @(gg_isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)gg_isIgnoreEvent{
-	return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-	///注册AcceptEventInterval属性 否则不可用
-+ (void)load{
-
-		//确保只执行一次
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-			//替换系统方法
-		SEL    oldSel  = @selector(sendAction:to:forEvent:);
-		SEL    newSel  = @selector(newSendAction:to:forEvent:);
-
-		Method oldMet  = class_getInstanceMethod(self, oldSel);
-		Method newMet  = class_getInstanceMethod(self, newSel);
-
-		IMP    oldImp  = method_getImplementation(oldMet);
-		IMP    newImp  = method_getImplementation(newMet);
-
-		const char * oldType = method_getTypeEncoding(oldMet);
-		const char * newType = method_getTypeEncoding(newMet);
-
-			//动态添加Method
-		BOOL isAdd = class_addMethod(self, newSel, newImp, newType);
-		if (isAdd) {
-				//替换
-			class_replaceMethod(self, newSel, oldImp, oldType);
-		}else{
-				//交换
-			method_exchangeImplementations(oldMet, newMet);
-		}
-	});
-}
-
-	//替换的方法
-- (void)newSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-
-		//    NSLog(@"按钮冷却中...");
-	if ([NSStringFromClass(self.class) isEqualToString:@"UIButton"]) {
-
-		self.gg_acceptEventInterval = self.gg_acceptEventInterval ==0?0.3:self.gg_acceptEventInterval;
-		if (self.gg_isIgnoreEvent){
-			return;
-		}else if (self.gg_acceptEventInterval > 0){
-			[self performSelector:@selector(resetState) withObject:nil afterDelay:self.gg_acceptEventInterval];
-		}
-	}
-
-	self.gg_isIgnoreEvent = YES;
-
-		//这里实际执行的是系统的 sendAction 方法
-	[self newSendAction:action to:target forEvent:event];
-}
-
-	//解除限制
-- (void)resetState{
-	[self setGg_isIgnoreEvent:NO];
-}
+//static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";
+//
+//- (NSTimeInterval)gg_acceptEventInterval{
+//	return [objc_getAssociatedObject(self, UIControl_acceptEventInterval) doubleValue];
+//}
+//
+//- (void)setGg_acceptEventInterval:(NSTimeInterval)gg_acceptEventInterval{
+//	objc_setAssociatedObject(self, UIControl_acceptEventInterval, @(gg_acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+//
+//- (void)setGg_isIgnoreEvent:(BOOL)gg_isIgnoreEvent{
+//	objc_setAssociatedObject(self, @selector(gg_isIgnoreEvent), @(gg_isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+//
+//- (BOOL)gg_isIgnoreEvent{
+//	return [objc_getAssociatedObject(self, _cmd) boolValue];
+//}
+//
+//	///注册AcceptEventInterval属性 否则不可用
+//+ (void)load{
+//
+//		//确保只执行一次
+//	static dispatch_once_t onceToken;
+//	dispatch_once(&onceToken, ^{
+//			//替换系统方法
+//		SEL    oldSel  = @selector(sendAction:to:forEvent:);
+//		SEL    newSel  = @selector(newSendAction:to:forEvent:);
+//
+//		Method oldMet  = class_getInstanceMethod(self, oldSel);
+//		Method newMet  = class_getInstanceMethod(self, newSel);
+//
+//		IMP    oldImp  = method_getImplementation(oldMet);
+//		IMP    newImp  = method_getImplementation(newMet);
+//
+//		const char * oldType = method_getTypeEncoding(oldMet);
+//		const char * newType = method_getTypeEncoding(newMet);
+//
+//			//动态添加Method
+//		BOOL isAdd = class_addMethod(self, newSel, newImp, newType);
+//		if (isAdd) {
+//				//替换
+//			class_replaceMethod(self, newSel, oldImp, oldType);
+//		}else{
+//				//交换
+//			method_exchangeImplementations(oldMet, newMet);
+//		}
+//	});
+//}
+//
+//	//替换的方法
+//- (void)newSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
+//
+//		//    NSLog(@"按钮冷却中...");
+//	if ([NSStringFromClass(self.class) isEqualToString:@"UIButton"]) {
+//
+//		self.gg_acceptEventInterval = self.gg_acceptEventInterval ==0?0.3:self.gg_acceptEventInterval;
+//		if (self.gg_isIgnoreEvent){
+//			return;
+//		}else if (self.gg_acceptEventInterval > 0){
+//			[self performSelector:@selector(resetState) withObject:nil afterDelay:self.gg_acceptEventInterval];
+//		}
+//	}
+//
+//	self.gg_isIgnoreEvent = YES;
+//
+//		//这里实际执行的是系统的 sendAction 方法
+//	[self newSendAction:action to:target forEvent:event];
+//}
+//
+//	//解除限制
+//- (void)resetState{
+//	[self setGg_isIgnoreEvent:NO];
+//}
 
 
 
