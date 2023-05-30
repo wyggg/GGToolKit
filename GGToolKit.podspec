@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
 	s.name             = 'GGToolKit'
-	s.version          = '1.0.1'
-	s.summary          = 'A short description of GGToolKit.'
+	s.version          = '1.0.2'
+	s.summary          = '自用工具类'
 
 	# This description is used to generate tags and improve search results.
 	#   * Think: What does it do? Why did you write it? What is the focus?
