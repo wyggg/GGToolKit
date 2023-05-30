@@ -22,6 +22,7 @@
 #import "NSArray+GGMasonryLayout.h"
 #import "UIWindow+GG.h"
 #import "CALayer+GG.h"
+#import "GGGridView.h"
 
 #define GGSafeAreaBottom (GGTools.safeAreaBottom)
 #define GGSafeAreaTop (GGTools.safeAreaTop)

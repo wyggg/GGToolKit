@@ -21,10 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 数组排序
 ///根据数组内对象某个key的值 将数组内数据进行分类 @[@[obj],@[obj]]
 - (NSArray *)classificationWithKey:(NSString *)key;
-///冒泡排序 从小到大
-- (NSMutableArray *)sortASWithKey:(NSString *)key;
-///冒泡排序 从大到小
-- (NSMutableArray *)sortDesWithKey:(NSString *)key;
 ///取一组对象中某个值 单独组成数组
 - (NSMutableArray <NSString *>*)stringArrayWithKey:(NSString *)key;
 ///将一组字符串数组合并为一个string用符号隔开

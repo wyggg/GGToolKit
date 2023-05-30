@@ -32,6 +32,20 @@
 
 	CAShapeLayer *layer3 = [CALayer gg_lineLayerWithFrame:CGRectMake(100, 215, 100, 1) lineColor:UIColor.redColor isHorizonal:YES lineDashPattern:nil];
 	[self.view.layer addSublayer:layer3];
+    
+    GGGridView *gridView = [[GGGridView alloc] init];
+    gridView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:gridView];
+    [gridView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.offset(0);
+        make.width.height.offset(300);
+    }];
+    
+    for (int i=0; i<25; i++) {
+        UIView *item = [[UIView alloc] init];
+        item.backgroundColor = [UIColor gg_randomColor];
+        [gridView insertItem:item];
+    }
 
 }
 
