@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat itemHeight;//高度
 
 - (void)insertItem:(UIView *)item;
+- (void)removeItem:(UIView *)item;
+- (void)removeAllItems;
 
 @end
 

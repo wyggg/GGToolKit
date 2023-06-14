@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D8B5ECC02A36A82800433615 /* GGRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B5ECBE2A36A82700433615 /* GGRichTextView.m */; };
 		D8D3AAF4A0CFAD46E58B6AC9 /* Pods_GGToolKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF03653D7D3A0045552C2D1 /* Pods_GGToolKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		A2B8E321C06193F4C9CC54CD /* Pods_GGToolKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGToolKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55BED48824B9511E6855961 /* Pods-GGToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGToolKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGToolKit_Tests/Pods-GGToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8691C77981B1A3A139234B7 /* Pods-GGToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGToolKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-GGToolKit_Example/Pods-GGToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D8B5ECBE2A36A82700433615 /* GGRichTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRichTextView.m; sourceTree = "<group>"; };
+		D8B5ECBF2A36A82700433615 /* GGRichTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRichTextView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* GGViewController.h */,
 				6003F5A6195388D20070C39A /* GGViewController.m */,
+				D8B5ECBF2A36A82700433615 /* GGRichTextView.h */,
+				D8B5ECBE2A36A82700433615 /* GGRichTextView.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -372,6 +377,7 @@
 				6003F59E195388D20070C39A /* GGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* GGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				D8B5ECC02A36A82800433615 /* GGRichTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

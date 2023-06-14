@@ -75,6 +75,13 @@
     }
 }
 
+- (void)removeAllItems{
+    for (UIView *item in _itemArray) {
+        [item removeFromSuperview];
+    }
+    [_itemArray removeAllObjects];
+}
+
 
 
 @end

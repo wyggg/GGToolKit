@@ -1,5 +1,5 @@
 PODS:
-  - GGToolKit (1.0.1):
+  - GGToolKit (1.0.2):
     - Masonry (~> 1.0)
   - Masonry (1.1.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGToolKit: 0b63676312a1cee44097dc690686127a8bdb4f76
+  GGToolKit: 37a5b28f3ba5be93ef720ce379a85400b3f0fb44
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: fa45b9048c1ea61bf70b2b16f47815d3ce7173d8
