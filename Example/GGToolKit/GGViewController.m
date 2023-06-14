@@ -108,7 +108,7 @@
     [self.view gg_showLoading];
     GGWeakSelf
     [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [weakSelf.view gg_dismissAllBlackPage];
+        [weakSelf.view gg_dismissAllBlankPage];
         [timer invalidate];
     }];
 }

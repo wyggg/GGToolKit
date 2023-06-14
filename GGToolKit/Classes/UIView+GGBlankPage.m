@@ -61,7 +61,7 @@
     [self.gg_blankPageEmpty removeFromSuperview];
 }
 
-- (void)gg_dismissAllBlackPage{
+- (void)gg_dismissAllBlankPage{
     for (GGBlankPageComponent *temp in self.subviews) {
         [temp removeFromSuperview];
     }

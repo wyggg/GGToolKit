@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)gg_dismissLoading;
 - (void)gg_showEmpty;
 - (void)gg_dismissEmpty;
-- (void)gg_dismissAllBlackPage;
+- (void)gg_dismissAllBlankPage;
 
 @end
 
