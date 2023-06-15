@@ -18,6 +18,9 @@
 
 - (void)setGg_blankPageLoading:(GGBlankPageComponent *)gg_blankPageLoading
 {
+    if (self.gg_blankPageLoading){
+        [self.gg_blankPageLoading removeFromSuperview];
+    }
     objc_setAssociatedObject(self, @selector(gg_blankPageLoading), gg_blankPageLoading, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -28,6 +31,9 @@
 
 - (void)setGg_blankPageEmpty:(GGBlankPageComponent *)gg_blankPageEmpty
 {
+    if (self.gg_blankPageEmpty){
+        [self.gg_blankPageEmpty removeFromSuperview];
+    }
     objc_setAssociatedObject(self, @selector(gg_blankPageEmpty), gg_blankPageEmpty, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

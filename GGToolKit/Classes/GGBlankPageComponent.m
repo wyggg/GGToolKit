@@ -10,19 +10,6 @@
 
 @implementation GGBlankPageComponent
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self configUI];
-    }
-    return self;
-}
-
-- (void)configUI{
-    
-}
-
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.frame = self.superview.bounds;
