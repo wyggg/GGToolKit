@@ -300,18 +300,24 @@
     if (imageSize.width > 0 && imageSize.height > 0){
         self.imageView.frame = CGRectMake(CGRectGetWidth(self.bounds)/2 - imageSize.width/2 , 0, imageSize.width, imageSize.height);
         totalHeight += CGRectGetMaxY(self.imageView.frame) + config.titleSpacing;
+    }else{
+        self.imageView.frame = CGRectMake(-100, 0, 0, 0);
     }
     
     if (self.titleLabel.text.length != 0){
         CGSize titleSize = [self.titleLabel sizeThatFits:CGSizeMake(viewWidth, CGFLOAT_MAX)];
         self.titleLabel.frame = CGRectMake(leftRightSpacing, totalHeight, viewWidth, titleSize.height);
         totalHeight += CGRectGetHeight(self.titleLabel.frame) + config.subTitleSpacing;
+    }else{
+        self.titleLabel.frame = CGRectMake(-100, 0, 0, 0);
     }
     
     if (self.messageLabel.text.length != 0){
         CGSize subTitleSize = [self.messageLabel sizeThatFits:CGSizeMake(viewWidth, CGFLOAT_MAX)];
         self.messageLabel.frame = CGRectMake(leftRightSpacing, totalHeight, viewWidth, subTitleSize.height);
         totalHeight += CGRectGetHeight(self.messageLabel.frame) + config.buttonSpacing;
+    }else{
+        self.messageLabel.frame = CGRectMake(-100, 0, 0, 0);
     }
     
     if (self.button.titleLabel.text.length > 0){
@@ -323,6 +329,8 @@
         }
         self.button.frame = CGRectMake(CGRectGetWidth(self.bounds)/2 - buttonSize.width/2 , totalHeight, buttonSize.width, buttonSize.height);
         totalHeight += CGRectGetHeight(self.button.frame);
+    }else{
+        self.button.frame = CGRectMake(-100, 0, 0, 0);
     }
     
     // 将整个视图垂直居中
@@ -380,13 +388,13 @@
     if (self = [super init]){
         _image = nil;
         _imageSize = CGSizeMake(0, 0);
-        _title = @"加载失败";
+        _title = nil;
         _titleFont = [UIFont boldSystemFontOfSize:20];
         _titleColor = [UIColor blackColor];
-        _message = @"加载失败，点击按钮重试";
+        _message = nil;
         _messageColor = [UIColor systemGrayColor];
         _messageFont = [UIFont systemFontOfSize:14];
-        _restartButtonTitle = @"重试";
+        _restartButtonTitle = nil;
         _restartButtonFont = [UIFont systemFontOfSize:14];
         _restartButtonTitleColor = [UIColor blackColor];
         _restartButtonBackgroundColor = [UIColor whiteColor];
