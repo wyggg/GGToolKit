@@ -14,7 +14,6 @@
 #import "GGBlankPage.h"
 #import "GGGridView.h"
 #import "GGTools.h"
-#import "NSArray+GGMasonryLayout.h"
 #import "NSAttributedString+GG.h"
 #import "NSObject+GG.h"
 #import "NSString+GG.h"

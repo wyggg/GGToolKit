@@ -7,7 +7,6 @@
 //
 
 #import "GGViewController.h"
-#import <Masonry/Masonry.h>
 #import <GGToolKit/GGTools.h>
 #import "GGRichTextView.h"
 
@@ -91,12 +90,8 @@
 //
 //    [textView confitContentWithHtml:@"<h1>This is a title</h1><p>Here is some <strong>formatted</strong> text and an <img src=\"https://img2.woyaogexing.com/2023/06/11/39e604291dcc639c0172b7980d5f344d.jpg\" alt=\"example image\" /> image.</p><ul><li>List item 1</li><li>List item 2</li></ul>"];
     
-    self.contetnView = [[UIView alloc] init];
+    self.contetnView = [[UIView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.contetnView];
-    [self.contetnView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.offset(0);
-        make.bottom.offset(-150);
-    }];
     
 //    self.dataSource = [NSMutableArray array];
     

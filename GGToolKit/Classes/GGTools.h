@@ -19,7 +19,6 @@
 #import "UIColor+GG.h"
 #import "UIImage+GG.h"
 #import "UIView+GGScrollComponent.h"
-#import "NSArray+GGMasonryLayout.h"
 #import "UIWindow+GG.h"
 #import "CALayer+GG.h"
 #import "GGGridView.h"

@@ -1,23 +1,16 @@
 PODS:
-  - GGToolKit (1.0.3):
-    - Masonry (~> 1.0)
-  - Masonry (1.1.0)
+  - GGToolKit (1.0.4)
 
 DEPENDENCIES:
   - GGToolKit (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - Masonry
 
 EXTERNAL SOURCES:
   GGToolKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGToolKit: 64a3ecf892e5e0ab3ec626d60963c8d1ec5d4c67
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  GGToolKit: 1638e3891d6ae6e4deacc3fbf92dfcfabb330786
 
-PODFILE CHECKSUM: fa45b9048c1ea61bf70b2b16f47815d3ce7173d8
+PODFILE CHECKSUM: cec49a09986658c4f01b05325fb7e118b392918d
 
 COCOAPODS: 1.12.1
