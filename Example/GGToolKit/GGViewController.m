@@ -13,6 +13,9 @@
 
 @interface GGViewController ()
 
+@property (nonatomic, strong) UIView *contetnView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
+
 @end
 
 @implementation GGViewController
@@ -20,6 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    GGWeakSelf
     
 //    GGBlankPageLoading *view = [[GGBlankPageLoading alloc] init];
 //    view.positionOffset = CGPointMake(0, 100);
@@ -87,28 +91,71 @@
 //
 //    [textView confitContentWithHtml:@"<h1>This is a title</h1><p>Here is some <strong>formatted</strong> text and an <img src=\"https://img2.woyaogexing.com/2023/06/11/39e604291dcc639c0172b7980d5f344d.jpg\" alt=\"example image\" /> image.</p><ul><li>List item 1</li><li>List item 2</li></ul>"];
     
-    GGWeakSelf
-    self.view.gg_blankPageEmpty = [GGBlankPageEmpty emptyWithImage:nil title:nil subTitle:@"未查询到数据，请更换搜索条件后再试~" buttonTitle:@"重试" click:^{
-        [weakSelf requestError];
+    self.contetnView = [[UIView alloc] init];
+    [self.view addSubview:self.contetnView];
+    [self.contetnView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.offset(0);
+        make.bottom.offset(-150);
     }];
-    self.view.gg_blankPageLoading = [GGBlankPageLoading loadingWithWithMessage:@"加载中" position:GGBlankPageLoadingPositionCenter offset:0];
+    
+//    self.dataSource = [NSMutableArray array];
+    
+//    UIButton *addDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [addDataButton setTitle:@"添加数据" forState:UIControlStateNormal];
+//    [self.view addSubview:addDataButton];
+//    [addDataButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.offset(-100);
+//        make.left.offset(45);
+//    }];
+//    [addDataButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
+//        [weakSelf.dataSource addObject:@""];
+//    }];
+//
+//    UIButton *removeDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [removeDataButton setTitle:@"移除数据" forState:UIControlStateNormal];
+//    [self.view addSubview:removeDataButton];
+//    [removeDataButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.offset(-100);
+//        make.right.offset(-45);
+//    }];
+//    [removeDataButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
+//        [weakSelf.dataSource removeAllObjects];
+//    }];
+//    [self requestError];
+    
     [self requestError];
+    
 }
 
 - (void)requestError{
-    [self.view gg_showLoading];
+    
+    [GGBlankPage showLoadingInView:self.contetnView config:^GGBlankPageLoadingConfig *(GGBlankPageLoadingConfig *config) {
+        config.message = @"加载中";
+        return config;
+    }];
     GGWeakSelf
-    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [weakSelf.view gg_showEmpty];
+    [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [GGBlankPage showEmptyPageInView:weakSelf.contetnView config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
+            config.image = [UIImage imageNamed:@"nullImage"];
+            config.title = @"网络请求失败";
+            config.message = @"请重试";
+            config.restartButtonClick = ^{
+                [weakSelf requestError];
+            };
+            return config;
+        }];
         [timer invalidate];
     }];
 }
 
 - (void)requestSucc{
-    [self.view gg_showLoading];
+    [GGBlankPage showLoadingInView:self.contetnView config:^GGBlankPageLoadingConfig *(GGBlankPageLoadingConfig *config) {
+        config.message = @"加载中";
+        return config;
+    }];
     GGWeakSelf
-    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [weakSelf.view gg_dismissAllBlankPage];
+    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [GGBlankPage dismissInView:weakSelf.contetnView];
         [timer invalidate];
     }];
 }

@@ -11,9 +11,7 @@
 #endif
 
 #import "CALayer+GG.h"
-#import "GGBlankPageComponent.h"
-#import "GGBlankPageEmpty.h"
-#import "GGBlankPageLoading.h"
+#import "GGBlankPage.h"
 #import "GGGridView.h"
 #import "GGTools.h"
 #import "NSArray+GGMasonryLayout.h"
@@ -27,7 +25,6 @@
 #import "UINavigationController+GG.h"
 #import "UITextField+GG.h"
 #import "UIView+GG.h"
-#import "UIView+GGBlankPage.h"
 #import "UIView+GGScrollComponent.h"
 #import "UIWindow+GG.h"
 
