@@ -156,55 +156,44 @@
 
 - (void)setState:(GGBlankPageState)state animate:(BOOL)animate{
     _state = state;
-    [self updateFrames];
+    [self addSubview:self.customLoadingView];
+    [self addSubview:self.customEmptyPageView];
     if (_state == GGBlankPageStateHidden){
-        [self.customLoadingView removeFromSuperview];
-        [self.customEmptyPageView removeFromSuperview];
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.customLoadingView.alpha = 0;
+            self.customEmptyPageView.alpha = 0;
+        } completion:^(BOOL finished) {
+            
+        }];
     }else if (_state == GGBlankPageStateLoding){
         if (animate){
             [self addSubview:self.customLoadingView];
-            self.customLoadingView.alpha = 0;
-            self.customLoadingView.transform = CGAffineTransformMakeScale(0.7, 0.7);
-            [UIView animateWithDuration:0.4 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 self.customLoadingView.alpha = 1;
-                self.customLoadingView.transform = CGAffineTransformMakeScale(1, 1);
+                self.customEmptyPageView.alpha = 0;
             } completion:^(BOOL finished) {
                 
             }];
-            
-            [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.customEmptyPageView.alpha = 0;
-            } completion:^(BOOL finished) {
-                self.customEmptyPageView.alpha = 1;
-                [self.customEmptyPageView removeFromSuperview];
-            }];
-            
         }else{
-            [self addSubview:self.customLoadingView];
-            [self.customEmptyPageView removeFromSuperview];
+            self.customLoadingView.alpha = 1;
+            self.customEmptyPageView.alpha = 0;
         }
         
     }else if (_state == GGBlankPageStateEmptyPage){
         if (animate){
-            [self addSubview:self.customEmptyPageView];
             [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.customLoadingView.alpha = 0;
+                self.emptyPageView.alpha = 1;
+                self.loadingView.alpha = 0;
             } completion:^(BOOL finished) {
                 self.customLoadingView.alpha = 1;
                 [self.customLoadingView removeFromSuperview];
             }];
-            
-            self.customEmptyPageView.alpha = 0;
-            [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.customEmptyPageView.alpha = 1;
-            } completion:^(BOOL finished) {
-                
-            }];
         }else{
-            [self addSubview:self.customEmptyPageView];
-            [self.customLoadingView removeFromSuperview];
+            self.emptyPageView.alpha = 1;
+            self.loadingView.alpha = 0;
         }
     }
+    [self updateFrames];
 }
 
 - (void)setcustomEmptyPageView:(GGBlankPageEmpty *)customEmptyPageView{
