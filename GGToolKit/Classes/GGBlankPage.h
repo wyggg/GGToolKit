@@ -21,17 +21,23 @@ typedef NS_ENUM(NSUInteger, GGBlankPagePosition) {
     GGBlankPagePositionBottom,
 };
 
+typedef NS_ENUM(NSUInteger, GGBlankPageBindMode) {
+    GGBlankPageBindModeSectionsTotal,
+    GGBlankPageBindModeCellTotal
+};
+
 @class GGBlankPageEmptyConfig,GGBlankPageLoadingConfig;
 
 @interface GGBlankPage : UIView
 
 //默认
-@property (nonatomic, strong) GGBlankPageEmpty *emptyPageView;
-@property (nonatomic, strong) GGBlankPageLoading *loadingView;
+@property (nonatomic, strong ,readonly) GGBlankPageEmpty *emptyPageView;
+@property (nonatomic, strong ,readonly) GGBlankPageLoading *loadingView;
 
 @property (nonatomic, assign) GGBlankPageState state;
+@property (nonatomic, assign) GGBlankPageBindMode *bindMode;
 
-+ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
 + (void)unBingScrollViewInView:(UIView *)view;
 + (void)showLoadingInView:(UIView *)view;
 + (void)showLoadingInView:(UIView *)view message:(NSString *)message;

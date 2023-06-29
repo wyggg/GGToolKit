@@ -26,10 +26,11 @@
 
 #pragma mark - Public Methods
 
-+ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
     GGBlankPage *pageView = [self queryPageViewInView:view];
-    [pageView bindScrollView:scrollView config:config];
+    [pageView bindScrollView:scrollView mode:mode config:config];
 }
+
 
 + (void)unBingScrollViewInView:(UIView *)view{
     GGBlankPage *pageView = [self queryPageViewInView:view];
@@ -96,16 +97,28 @@
     GGBlankPage *pageView = view.gg_blankPage;
     if (pageView == nil){
         pageView = [[GGBlankPage alloc] init];
-        pageView.customLoadingView = nil;
-        pageView.customEmptyPageView = nil;
         view.gg_blankPage = pageView;
     }
     return pageView;;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]){
+        self.customEmptyPageView = [[GGBlankPageEmpty alloc] init];
+        self.emptyPageView.config = [[GGBlankPageEmptyConfig alloc] init];
+        
+        self.customLoadingView = [[GGBlankPageLoading alloc] init];
+        self.loadingView.config = [[GGBlankPageLoadingConfig alloc] init];
+        
+        _state = -1;
+        [self setState:GGBlankPageStateHidden animate:NO];
+    }
+    return self;
+}
+
 #pragma mark - Private Methods
 
-- (void)bindScrollView:(UIScrollView *)scrollView config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
+- (void)bindScrollView:(UIScrollView *)scrollView mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
     if (scrollView == nil){
         return;
     }
@@ -114,6 +127,7 @@
     }
     if ([scrollView isKindOfClass:[UITableView class]] || [scrollView isKindOfClass:[UICollectionView class]]){
         _bindScrollView = scrollView;
+        self.bindMode = mode;
         [self.bindScrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         GGBlankPage *pageView = [self.class queryPageViewInView:_bindScrollView];
         if (config){
@@ -122,6 +136,7 @@
         pageView.state = GGBlankPageStateHidden;
         [_bindScrollView addSubview:pageView];
         [_bindScrollView setNeedsLayout];
+        [self configBindState];
     }else{
         NSLog(@"绑定无效，传入的对象不是UITableView或UICollectionView");
     }
@@ -134,27 +149,70 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"contentSize"]) {
-        if ([self numberOfSections] <= 0){
-            if (self.state == GGBlankPageStateHidden){
-                self.state = GGBlankPageStateEmptyPage;
-            }
-        }else{
-            self.state = GGBlankPageStateHidden;
+        [self configBindState];
+    }
+}
+
+- (void)configBindState{
+    if ([self isThereContent] == NO){
+        if (self.state == GGBlankPageStateHidden){
+            self.state = GGBlankPageStateEmptyPage;
         }
+    }else{
+        self.state = GGBlankPageStateHidden;
     }
 }
 
 //查询绑定的视图数据源
-- (NSInteger)numberOfSections{
-    NSInteger count = 0;
-    if ([self.bindScrollView isKindOfClass:[UITableView class]]){
-        UITableView *tableView = (UITableView *)self.bindScrollView;
-        count = [tableView numberOfSections];
-    }else if ([self.bindScrollView isKindOfClass:[UICollectionView class]]){
-        UICollectionView *collectionView = (UICollectionView *)self.bindScrollView;
-        count = [collectionView numberOfSections];
+- (BOOL)isThereContent{
+    if (self.bindMode == GGBlankPageBindModeSectionsTotal){
+        if ([self.bindScrollView isKindOfClass:[UITableView class]]){
+            UITableView *tableView = (UITableView *)self.bindScrollView;
+            if ([tableView numberOfSections]){
+                return YES;
+            }
+        }else if ([self.bindScrollView isKindOfClass:[UICollectionView class]]){
+            UICollectionView *collectionView = (UICollectionView *)self.bindScrollView;
+            if ([collectionView numberOfSections]){
+                return YES;
+            }
+        }
+    }else if (self.bindMode == GGBlankPageBindModeCellTotal){
+        if ([self.bindScrollView isKindOfClass:[UITableView class]]){
+            UITableView *tableView = (UITableView *)self.bindScrollView;
+            NSInteger sections  = [tableView numberOfSections];
+            for (int i=0; i<sections; i++) {
+                if (tableView.dataSource && [tableView.dataSource respondsToSelector:@selector(tableView:numberOfRowsInSection:)]){
+                    NSInteger rowCount = [tableView.dataSource tableView:tableView numberOfRowsInSection:i];
+                    if (rowCount > 0){
+                        return YES;
+                    }
+                }
+            }
+        }else if ([self.bindScrollView isKindOfClass:[UICollectionView class]]){
+            UICollectionView *collectionView = (UICollectionView *)self.bindScrollView;
+            NSInteger sections  = [collectionView numberOfSections];
+            for (int i=0; i<sections; i++) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:sections];
+                if (collectionView.dataSource && [collectionView.dataSource respondsToSelector:@selector(collectionView:numberOfItemsInSection:)]){
+                    NSInteger rowCount = [collectionView.dataSource collectionView:collectionView numberOfItemsInSection:i];
+                    if (rowCount > 0){
+                        return YES;
+                    }
+                }
+            }
+        }
     }
-    return count;
+    return NO;
+}
+
+- (BOOL)isCellExistAtIndexPath:(NSIndexPath *)indexPath inTableView:(UITableView *)tableView {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (void)dealloc{
@@ -168,13 +226,11 @@
 
 - (void)updateFrames{
     if (self.state == GGBlankPageStateHidden){
-        
-    }else if (self.state == GGBlankPageStateEmptyPage){
-        self.frame = CGRectMake(_emptyPageView.config.leftOffset, _emptyPageView.config.topOffset, self.superview.bounds.size.width - _emptyPageView.config.leftOffset - _emptyPageView.config.rightOffset, self.superview.bounds.size.height - _emptyPageView.config.topOffset - _emptyPageView.config.bottomOffset);
-    }else if (self.state == GGBlankPageStateLoding){
-        self.frame = CGRectMake(_loadingView.config.leftOffset, _loadingView.config.topOffset, self.superview.bounds.size.width - _loadingView.config.leftOffset - _loadingView.config.rightOffset, self.superview.bounds.size.height - _loadingView.config.topOffset - _loadingView.config.bottomOffset);
-    }else{
         self.frame = CGRectMake(self.superview.bounds.size.width * 2, 0, 0, 0);
+    }else if (self.state == GGBlankPageStateEmptyPage){
+        self.frame = CGRectMake(self.emptyPageView.config.leftOffset, self.emptyPageView.config.topOffset, self.superview.bounds.size.width - self.emptyPageView.config.leftOffset - self.emptyPageView.config.rightOffset, self.superview.bounds.size.height - self.emptyPageView.config.topOffset - self.emptyPageView.config.bottomOffset);
+    }else if (self.state == GGBlankPageStateLoding){
+        self.frame = CGRectMake(self.loadingView.config.leftOffset, self.loadingView.config.topOffset, self.superview.bounds.size.width - self.loadingView.config.leftOffset - self.loadingView.config.rightOffset, self.superview.bounds.size.height - self.loadingView.config.topOffset - self.loadingView.config.bottomOffset);
     }
     [self.superview bringSubviewToFront:self];
     self.customLoadingView.frame = self.bounds;
@@ -187,15 +243,8 @@
 }
 
 - (void)setState:(GGBlankPageState)state animate:(BOOL)animate{
-    [self.customLoadingView.layer removeAllAnimations];
-    [self.customEmptyPageView.layer removeAllAnimations];
-    //如果绑定了TableView或CollectionView，则检查数据源
-    if (state == GGBlankPageStateEmptyPage){
-        if (self.bindScrollView != nil){
-            if ([self numberOfSections] > 0){
-                state = GGBlankPageStateHidden;
-            }
-        }
+    if (_state == state){
+        return;
     }
     _state = state;
     [self addSubview:self.customLoadingView];

@@ -72,7 +72,7 @@
         [weakSelf requestError];
     }];
     
-    [GGBlankPage bindScrollView:self.tableView inView:self.tableView config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
+    [GGBlankPage bindScrollView:self.tableView inView:self.tableView mode:GGBlankPageBindModeCellTotal config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
         config.title = @"网络请求失败";
         config.message = @"请重试";
         config.restartButtonTitle = @"重试";
