@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UIView *customEmptyPageView;
 @property (nonatomic, strong) UIView *customLoadingView;
+@property (nonatomic, weak) UIScrollView *bindScrollView;
 
 @end
 
@@ -22,6 +23,18 @@
 
 @synthesize customEmptyPageView = _customEmptyPageView;
 @synthesize customLoadingView = _customLoadingView;
+
+#pragma mark - Public Methods
+
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView bindScrollView:scrollView config:config];
+}
+
++ (void)unBingScrollViewInView:(UIView *)view{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView unBingScrollView];
+}
 
 + (void)showLoadingInView:(UIView *)view customView:(UIView *)customView{
     GGBlankPage *pageView = [self queryPageViewInView:view];
@@ -76,13 +89,7 @@
 }
 
 + (void)dismissInView:(UIView *)view{
-    NSArray *subViews = view.subviews;
-    for (UIView *temp in subViews) {
-        if ([temp isKindOfClass:[self class]]){
-            [temp removeFromSuperview];
-        }
-    }
-    view.gg_blankPage = nil;
+    view.gg_blankPage.state = GGBlankPageStateHidden;
 }
 
 + (GGBlankPage *)queryPageViewInView:(UIView *)view{
@@ -95,6 +102,145 @@
     }
     return pageView;;
 }
+
+#pragma mark - Private Methods
+
+- (void)bindScrollView:(UIScrollView *)scrollView config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
+    if (scrollView == nil){
+        return;
+    }
+    if (_bindScrollView){
+        [self unBingScrollView];
+    }
+    if ([scrollView isKindOfClass:[UITableView class]] || [scrollView isKindOfClass:[UICollectionView class]]){
+        _bindScrollView = scrollView;
+        [self.bindScrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+        GGBlankPage *pageView = [self.class queryPageViewInView:_bindScrollView];
+        if (config){
+            pageView.emptyPageView.config = config(pageView.emptyPageView.config);
+        }
+        pageView.state = GGBlankPageStateHidden;
+        [_bindScrollView addSubview:pageView];
+        [_bindScrollView setNeedsLayout];
+    }else{
+        NSLog(@"绑定无效，传入的对象不是UITableView或UICollectionView");
+    }
+}
+
+- (void)unBingScrollView{
+    [self.bindScrollView removeObserver:self forKeyPath:@"contentSize"];
+    _bindScrollView = nil;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"contentSize"]) {
+        if ([self numberOfSections] <= 0){
+            if (self.state == GGBlankPageStateHidden){
+                self.state = GGBlankPageStateEmptyPage;
+            }
+        }else{
+            self.state = GGBlankPageStateHidden;
+        }
+    }
+}
+
+//查询绑定的视图数据源
+- (NSInteger)numberOfSections{
+    NSInteger count = 0;
+    if ([self.bindScrollView isKindOfClass:[UITableView class]]){
+        UITableView *tableView = (UITableView *)self.bindScrollView;
+        count = [tableView numberOfSections];
+    }else if ([self.bindScrollView isKindOfClass:[UICollectionView class]]){
+        UICollectionView *collectionView = (UICollectionView *)self.bindScrollView;
+        count = [collectionView numberOfSections];
+    }
+    return count;
+}
+
+- (void)dealloc{
+    [self unBingScrollView];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self updateFrames];
+}
+
+- (void)updateFrames{
+    if (self.state == GGBlankPageStateHidden){
+        
+    }else if (self.state == GGBlankPageStateEmptyPage){
+        self.frame = CGRectMake(_emptyPageView.config.leftOffset, _emptyPageView.config.topOffset, self.superview.bounds.size.width - _emptyPageView.config.leftOffset - _emptyPageView.config.rightOffset, self.superview.bounds.size.height - _emptyPageView.config.topOffset - _emptyPageView.config.bottomOffset);
+    }else if (self.state == GGBlankPageStateLoding){
+        self.frame = CGRectMake(_loadingView.config.leftOffset, _loadingView.config.topOffset, self.superview.bounds.size.width - _loadingView.config.leftOffset - _loadingView.config.rightOffset, self.superview.bounds.size.height - _loadingView.config.topOffset - _loadingView.config.bottomOffset);
+    }else{
+        self.frame = CGRectMake(self.superview.bounds.size.width * 2, 0, 0, 0);
+    }
+    [self.superview bringSubviewToFront:self];
+    self.customLoadingView.frame = self.bounds;
+    self.customEmptyPageView.frame = self.bounds;
+    
+}
+
+- (void)setState:(GGBlankPageState)state{
+    [self setState:state animate:YES];
+}
+
+- (void)setState:(GGBlankPageState)state animate:(BOOL)animate{
+    [self.customLoadingView.layer removeAllAnimations];
+    [self.customEmptyPageView.layer removeAllAnimations];
+    //如果绑定了TableView或CollectionView，则检查数据源
+    if (state == GGBlankPageStateEmptyPage){
+        if (self.bindScrollView != nil){
+            if ([self numberOfSections] > 0){
+                state = GGBlankPageStateHidden;
+            }
+        }
+    }
+    _state = state;
+    [self addSubview:self.customLoadingView];
+    [self addSubview:self.customEmptyPageView];
+    if (_state == GGBlankPageStateHidden){
+        self.hidden = YES;
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.customLoadingView.alpha = 0;
+            self.customEmptyPageView.alpha = 0;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }else if (_state == GGBlankPageStateLoding){
+        self.hidden = NO;
+        if (animate){
+            [self addSubview:self.customLoadingView];
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.customLoadingView.alpha = 1;
+                self.customEmptyPageView.alpha = 0;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }else{
+            self.customLoadingView.alpha = 1;
+            self.customEmptyPageView.alpha = 0;
+        }
+        
+    }else if (_state == GGBlankPageStateEmptyPage){
+        self.hidden = NO;
+        if (animate){
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.emptyPageView.alpha = 1;
+                self.loadingView.alpha = 0;
+            } completion:^(BOOL finished) {
+                self.customLoadingView.alpha = 1;
+                [self.customLoadingView removeFromSuperview];
+            }];
+        }else{
+            self.emptyPageView.alpha = 1;
+            self.loadingView.alpha = 0;
+        }
+    }
+    [self updateFrames];
+}
+
 
 - (GGBlankPageEmpty *)emptyPageView{
     if ([self.customEmptyPageView isKindOfClass:[GGBlankPageEmpty class]]){
@@ -120,10 +266,6 @@
     return _customLoadingView;
 }
 
-- (void)setCustomLoadingView:(UIView *)customLoadingView{
-    [_customLoadingView removeFromSuperview];
-    _customLoadingView = customLoadingView;
-}
 
 - (UIView *)customEmptyPageView{
     if (_customEmptyPageView == nil){
@@ -133,70 +275,7 @@
     return _customEmptyPageView;
 }
 
-- (void)setCustomEmptyPageView:(UIView *)customEmptyPageView{
-    [_customEmptyPageView removeFromSuperview];
-    _customEmptyPageView = customEmptyPageView;
-}
-
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    [self updateFrames];
-}
-
-- (void)updateFrames{
-    self.frame = CGRectMake(_leftOffset, _topOffset, self.superview.bounds.size.width - _leftOffset - _rightOffset, self.superview.bounds.size.height - _topOffset - _bottomOffset);
-    [self.superview bringSubviewToFront:self];
-    self.customLoadingView.frame = self.bounds;
-    self.customEmptyPageView.frame = self.bounds;
-}
-
-- (void)setState:(GGBlankPageState)state{
-    [self setState:state animate:YES];
-}
-
-- (void)setState:(GGBlankPageState)state animate:(BOOL)animate{
-    _state = state;
-    [self addSubview:self.customLoadingView];
-    [self addSubview:self.customEmptyPageView];
-    if (_state == GGBlankPageStateHidden){
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.customLoadingView.alpha = 0;
-            self.customEmptyPageView.alpha = 0;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }else if (_state == GGBlankPageStateLoding){
-        if (animate){
-            [self addSubview:self.customLoadingView];
-            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.customLoadingView.alpha = 1;
-                self.customEmptyPageView.alpha = 0;
-            } completion:^(BOOL finished) {
-                
-            }];
-        }else{
-            self.customLoadingView.alpha = 1;
-            self.customEmptyPageView.alpha = 0;
-        }
-        
-    }else if (_state == GGBlankPageStateEmptyPage){
-        if (animate){
-            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.emptyPageView.alpha = 1;
-                self.loadingView.alpha = 0;
-            } completion:^(BOOL finished) {
-                self.customLoadingView.alpha = 1;
-                [self.customLoadingView removeFromSuperview];
-            }];
-        }else{
-            self.emptyPageView.alpha = 1;
-            self.loadingView.alpha = 0;
-        }
-    }
-    [self updateFrames];
-}
-
-- (void)setcustomEmptyPageView:(GGBlankPageEmpty *)customEmptyPageView{
+- (void)setCustomEmptyPageView:(GGBlankPageEmpty *)customEmptyPageView{
     if (self.customEmptyPageView){
         [self.customEmptyPageView removeFromSuperview];
     }
@@ -205,7 +284,7 @@
     [self setState:_state];
 }
 
-- (void)setcustomLoadingView:(GGBlankPageLoading *)customLoadingView{
+- (void)setCustomLoadingView:(GGBlankPageLoading *)customLoadingView{
     if (self.customLoadingView){
         [self.customLoadingView removeFromSuperview];
     }
@@ -213,6 +292,7 @@
     [self updateFrames];
     [self setState:_state];
 }
+
 
 
 @end
@@ -275,7 +355,6 @@
 
 - (void)updateFrames{
     GGBlankPageEmptyConfig *config = self.config;
-    
     // 计算视图高度
     CGFloat totalHeight = 0;
     CGFloat leftRightSpacing = 35;
@@ -339,6 +418,7 @@
 
 - (void)setConfig:(GGBlankPageEmptyConfig *)config{
     _config = config;
+    self.backgroundColor = config.backgroundColor;
     _imageView.image = config.image;
     _titleLabel.text = config.title;
     _titleLabel.font = config.titleFont;
@@ -375,6 +455,7 @@
 
 - (instancetype)init{
     if (self = [super init]){
+        _backgroundColor = [UIColor clearColor];
         _image = nil;
         _imageSize = CGSizeMake(0, 0);
         _title = nil;
@@ -461,6 +542,8 @@
 
 - (void)setConfig:(GGBlankPageLoadingConfig *)config{
     _config = config;
+    self.backgroundColor = config.backgroundColor;
+    _activityIndicator.activityIndicatorViewStyle = config.activityIndicatorViewStyle;
     _messageLabel.text = config.message;
     _messageLabel.textColor = config.messageColor;
     _messageLabel.font = config.messageFont;
@@ -480,11 +563,11 @@
 
 - (instancetype)init{
     if (self = [super init]){
-        
+        _activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+        _backgroundColor = [UIColor clearColor];
         _messageSpacing = 5;
         _messageColor = [UIColor systemGrayColor];
         _messageFont = [UIFont systemFontOfSize:12];
-        
     }
     return self;
 }

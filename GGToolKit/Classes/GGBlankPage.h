@@ -25,17 +25,14 @@ typedef NS_ENUM(NSUInteger, GGBlankPagePosition) {
 
 @interface GGBlankPage : UIView
 
-@property (nonatomic, assign) CGFloat topOffset;
-@property (nonatomic, assign) CGFloat leftOffset;
-@property (nonatomic, assign) CGFloat rightOffset;
-@property (nonatomic, assign) CGFloat bottomOffset;
-
 //默认
 @property (nonatomic, strong) GGBlankPageEmpty *emptyPageView;
 @property (nonatomic, strong) GGBlankPageLoading *loadingView;
 
 @property (nonatomic, assign) GGBlankPageState state;
 
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
++ (void)unBingScrollViewInView:(UIView *)view;
 + (void)showLoadingInView:(UIView *)view;
 + (void)showLoadingInView:(UIView *)view message:(NSString *)message;
 + (void)showLoadingInView:(UIView *)view customView:(UIView *)customView;
@@ -44,6 +41,7 @@ typedef NS_ENUM(NSUInteger, GGBlankPagePosition) {
 + (void)showEmptyPageInView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
 + (void)showEmptyPageInView:(UIView *)view customView:(UIView *)customView;
 + (void)dismissInView:(UIView *)view;
++ (GGBlankPage *)queryPageViewInView:(UIView *)view;
 
 @end
 
@@ -60,6 +58,12 @@ typedef NS_ENUM(NSUInteger, GGBlankPagePosition) {
 @end
 
 @interface GGBlankPageEmptyConfig : NSObject
+
+@property (nonatomic, assign) CGFloat topOffset;
+@property (nonatomic, assign) CGFloat leftOffset;
+@property (nonatomic, assign) CGFloat rightOffset;
+@property (nonatomic, assign) CGFloat bottomOffset;
+@property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, assign) CGSize imageSize;
 @property (nonatomic, copy) NSString *title;
@@ -94,6 +98,12 @@ typedef NS_ENUM(NSUInteger, GGBlankPagePosition) {
 
 @interface GGBlankPageLoadingConfig : NSObject
 
+@property (nonatomic, assign) CGFloat topOffset;
+@property (nonatomic, assign) CGFloat leftOffset;
+@property (nonatomic, assign) CGFloat rightOffset;
+@property (nonatomic, assign) CGFloat bottomOffset;
+@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, assign) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
 @property (nonatomic, assign) GGBlankPagePosition position;
 @property (nonatomic, copy) NSString *message;
 @property (nonatomic, strong) UIColor *messageColor;
