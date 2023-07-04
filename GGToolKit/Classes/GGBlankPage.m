@@ -31,10 +31,29 @@
     [pageView bindScrollView:scrollView mode:mode config:config];
 }
 
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView bindScrollView:scrollView mode:mode];
+}
+
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView bindScrollView:scrollView mode:GGBlankPageBindModeCellTotal];
+}
 
 + (void)unBingScrollViewInView:(UIView *)view{
     GGBlankPage *pageView = [self queryPageViewInView:view];
     [pageView unBingScrollView];
+}
+
++ (void)configEmptyPageWithView:(UIView *)view config:(GGBlankPageEmptyConfigBlock)config{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView configEmptyPage:config];
+}
+
++ (void)configLoadingWithView:(UIView *)view config:(GGBlankPageLoadingConfigBlock)config{
+    GGBlankPage *pageView = [self queryPageViewInView:view];
+    [pageView configLoading:config];
 }
 
 + (void)showLoadingInView:(UIView *)view customView:(UIView *)customView{
@@ -119,6 +138,11 @@
 #pragma mark - Private Methods
 
 - (void)bindScrollView:(UIScrollView *)scrollView mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config{
+    [self bindScrollView:scrollView mode:mode];
+    [self configEmptyPage:config];
+}
+
+- (void)bindScrollView:(UIScrollView *)scrollView mode:(GGBlankPageBindMode)mode{
     if (scrollView == nil){
         return;
     }
@@ -130,15 +154,24 @@
         self.bindMode = mode;
         [self.bindScrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         GGBlankPage *pageView = [self.class queryPageViewInView:_bindScrollView];
-        if (config){
-            pageView.emptyPageView.config = config(pageView.emptyPageView.config);
-        }
         pageView.state = GGBlankPageStateHidden;
         [_bindScrollView addSubview:pageView];
         [_bindScrollView setNeedsLayout];
         [self configBindState];
     }else{
         NSLog(@"绑定无效，传入的对象不是UITableView或UICollectionView");
+    }
+}
+
+- (void)configEmptyPage:(GGBlankPageEmptyConfigBlock)block{
+    if (block){
+        self.emptyPageView.config = block(self.emptyPageView.config);
+    }
+}
+
+- (void)configLoading:(GGBlankPageLoadingConfigBlock)block{
+    if (block){
+        self.loadingView.config = block(self.loadingView.config);
     }
 }
 
@@ -193,7 +226,6 @@
             UICollectionView *collectionView = (UICollectionView *)self.bindScrollView;
             NSInteger sections  = [collectionView numberOfSections];
             for (int i=0; i<sections; i++) {
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:sections];
                 if (collectionView.dataSource && [collectionView.dataSource respondsToSelector:@selector(collectionView:numberOfItemsInSection:)]){
                     NSInteger rowCount = [collectionView.dataSource collectionView:collectionView numberOfItemsInSection:i];
                     if (rowCount > 0){
@@ -228,9 +260,15 @@
     if (self.state == GGBlankPageStateHidden){
         self.frame = CGRectMake(self.superview.bounds.size.width * 2, 0, 0, 0);
     }else if (self.state == GGBlankPageStateEmptyPage){
-        self.frame = CGRectMake(self.emptyPageView.config.leftOffset, self.emptyPageView.config.topOffset, self.superview.bounds.size.width - self.emptyPageView.config.leftOffset - self.emptyPageView.config.rightOffset, self.superview.bounds.size.height - self.emptyPageView.config.topOffset - self.emptyPageView.config.bottomOffset);
+        self.frame = CGRectMake(self.emptyPageView.config.leftOffset,
+                                self.emptyPageView.config.topOffset,
+                                self.superview.bounds.size.width - self.emptyPageView.config.leftOffset - self.emptyPageView.config.rightOffset,
+                                self.superview.bounds.size.height - self.emptyPageView.config.topOffset - self.emptyPageView.config.bottomOffset);
     }else if (self.state == GGBlankPageStateLoding){
-        self.frame = CGRectMake(self.loadingView.config.leftOffset, self.loadingView.config.topOffset, self.superview.bounds.size.width - self.loadingView.config.leftOffset - self.loadingView.config.rightOffset, self.superview.bounds.size.height - self.loadingView.config.topOffset - self.loadingView.config.bottomOffset);
+        self.frame = CGRectMake(self.loadingView.config.leftOffset,
+                                self.loadingView.config.topOffset,
+                                self.superview.bounds.size.width - self.loadingView.config.leftOffset - self.loadingView.config.rightOffset,
+                                self.superview.bounds.size.height - self.loadingView.config.topOffset - self.loadingView.config.bottomOffset);
     }
     [self.superview bringSubviewToFront:self];
     self.customLoadingView.frame = self.bounds;
@@ -251,7 +289,7 @@
     [self addSubview:self.customEmptyPageView];
     if (_state == GGBlankPageStateHidden){
         self.hidden = YES;
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.customLoadingView.alpha = 0;
             self.customEmptyPageView.alpha = 0;
         } completion:^(BOOL finished) {
@@ -260,10 +298,9 @@
     }else if (_state == GGBlankPageStateLoding){
         self.hidden = NO;
         if (animate){
-            [self addSubview:self.customLoadingView];
-            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.customEmptyPageView.alpha = 0;
+            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 self.customLoadingView.alpha = 1;
-                self.customEmptyPageView.alpha = 0;
             } completion:^(BOOL finished) {
                 
             }];
@@ -271,19 +308,18 @@
             self.customLoadingView.alpha = 1;
             self.customEmptyPageView.alpha = 0;
         }
-        
     }else if (_state == GGBlankPageStateEmptyPage){
         self.hidden = NO;
         if (animate){
-            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.loadingView.alpha = 0;
+            [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 self.emptyPageView.alpha = 1;
-                self.loadingView.alpha = 0;
+                
             } completion:^(BOOL finished) {
-                self.customLoadingView.alpha = 1;
-                [self.customLoadingView removeFromSuperview];
+                
             }];
         }else{
-            self.emptyPageView.alpha = 1;
+            self.emptyPageView.alpha = 0;
             self.loadingView.alpha = 0;
         }
     }
@@ -330,7 +366,6 @@
     }
     _customEmptyPageView = customEmptyPageView;
     [self updateFrames];
-    [self setState:_state];
 }
 
 - (void)setCustomLoadingView:(GGBlankPageLoading *)customLoadingView{
@@ -339,7 +374,6 @@
     }
     _customLoadingView = customLoadingView;
     [self updateFrames];
-    [self setState:_state];
 }
 
 
@@ -378,11 +412,11 @@
     _messageLabel.numberOfLines = 0;
     [self addSubview:_messageLabel];
     
-    _button = [UIButton buttonWithType:UIButtonTypeSystem];
+    _button = [UIButton buttonWithType:UIButtonTypeCustom];
     [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _button.titleLabel.font = [UIFont systemFontOfSize:14];
+    _button.titleLabel.font = [UIFont boldSystemFontOfSize:12];
     _button.backgroundColor = [UIColor whiteColor];
-    _button.layer.cornerRadius = 8;
+    _button.layer.cornerRadius = 5;
     _button.layer.shadowColor = [UIColor blackColor].CGColor;
     _button.layer.shadowRadius = 2;
     _button.layer.shadowOffset = CGSizeMake(0, 1);

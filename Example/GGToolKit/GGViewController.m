@@ -73,8 +73,8 @@
     }];
     
     [GGBlankPage bindScrollView:self.tableView inView:self.tableView mode:GGBlankPageBindModeCellTotal config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
-        config.title = @"网络请求失败";
-        config.message = @"请重试";
+        config.title = @"默认标题";
+        config.message = @"默认消息";
         config.restartButtonTitle = @"重试";
         config.restartButtonClick = ^{
             [weakSelf requestError];
@@ -96,15 +96,15 @@
     GGWeakSelf
     [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
         [GGBlankPage dismissInView:weakSelf.tableView];
-//        [GGBlankPage showEmptyPageInView:weakSelf.tableView config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
-//            config.image = [UIImage imageNamed:@"nullImage"];
-//            config.title = @"网络请求失败";
-//            config.message = @"请重试";
-//            config.restartButtonClick = ^{
-//                [weakSelf requestError];
-//            };
-//            return config;
-//        }];
+        [GGBlankPage configEmptyPageWithView:weakSelf.tableView config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
+            config.image = [UIImage imageNamed:@"nullImage"];
+            config.title = @"网络请求失败";
+            config.message = @"请重试";
+            config.restartButtonClick = ^{
+                [weakSelf requestError];
+            };
+            return config;
+        }];
         [weakSelf.tableView reloadData];
         [timer invalidate];
     }];

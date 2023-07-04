@@ -28,26 +28,35 @@ typedef NS_ENUM(NSUInteger, GGBlankPageBindMode) {
 
 @class GGBlankPageEmptyConfig,GGBlankPageLoadingConfig;
 
+typedef GGBlankPageEmptyConfig *(^GGBlankPageEmptyConfigBlock)(GGBlankPageEmptyConfig *config);
+typedef GGBlankPageLoadingConfig *(^GGBlankPageLoadingConfigBlock)(GGBlankPageLoadingConfig *config);
+
 @interface GGBlankPage : UIView
 
-//默认
 @property (nonatomic, strong ,readonly) GGBlankPageEmpty *emptyPageView;
 @property (nonatomic, strong ,readonly) GGBlankPageLoading *loadingView;
 
 @property (nonatomic, assign) GGBlankPageState state;
-@property (nonatomic, assign) GGBlankPageBindMode *bindMode;
+@property (nonatomic, assign) GGBlankPageBindMode bindMode;
 
-+ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode config:(GGBlankPageEmptyConfigBlock)config;
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view mode:(GGBlankPageBindMode)mode;
++ (void)bindScrollView:(UIScrollView *)scrollView inView:(UIView *)view;
 + (void)unBingScrollViewInView:(UIView *)view;
+
++ (void)configEmptyPageWithView:(UIView *)view config:(GGBlankPageEmptyConfigBlock)config;
++ (void)configLoadingWithView:(UIView *)view config:(GGBlankPageLoadingConfigBlock)config;
+
 + (void)showLoadingInView:(UIView *)view;
 + (void)showLoadingInView:(UIView *)view message:(NSString *)message;
 + (void)showLoadingInView:(UIView *)view customView:(UIView *)customView;
-+ (void)showLoadingInView:(UIView *)view config:(GGBlankPageLoadingConfig *(^)(GGBlankPageLoadingConfig *config))config;
++ (void)showLoadingInView:(UIView *)view config:(GGBlankPageLoadingConfigBlock)config;
+
 + (void)showEmptyPageInView:(UIView *)view;
-+ (void)showEmptyPageInView:(UIView *)view config:(GGBlankPageEmptyConfig *(^)(GGBlankPageEmptyConfig *config))config;
++ (void)showEmptyPageInView:(UIView *)view config:(GGBlankPageEmptyConfigBlock)config;
 + (void)showEmptyPageInView:(UIView *)view customView:(UIView *)customView;
+
 + (void)dismissInView:(UIView *)view;
-+ (GGBlankPage *)queryPageViewInView:(UIView *)view;
 
 @end
 
