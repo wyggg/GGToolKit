@@ -18,99 +18,98 @@
 }
 
 - (CGFloat)gg_left {
-	return self.frame.origin.x;
+    return self.frame.origin.x;
 }
 - (void)setGg_left:(CGFloat)gg_x {
-	CGRect frame = self.frame;
-	frame.origin.x = gg_x;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.origin.x = gg_x;
+    self.frame = frame;
 }
 
 - (CGFloat)gg_top {
-	return self.frame.origin.y;
+    return self.frame.origin.y;
 }
 
 - (void)setGg_top:(CGFloat)gg_top {
-	CGRect frame = self.frame;
-	frame.origin.y = gg_top;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.origin.y = gg_top;
+    self.frame = frame;
 }
 
 - (CGFloat)gg_right {
-	return self.frame.origin.x + self.gg_width;
+    return self.frame.origin.x + self.gg_width;
 }
 - (void)setGg_right:(CGFloat)gg_right {
-	CGRect frame = self.frame;
-	frame.origin.x = gg_right - frame.size.width;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.origin.x = gg_right - frame.size.width;
+    self.frame = frame;
 }
 
 - (CGFloat)gg_bottom {
-	return self.frame.origin.y + self.frame.size.height;
+    return self.frame.origin.y + self.frame.size.height;
 }
 
 - (void)setGg_bottom:(CGFloat)gg_bottom {
-	CGRect frame = self.frame;
-	frame.origin.y = gg_bottom - frame.size.height;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.origin.y = gg_bottom - frame.size.height;
+    self.frame = frame;
 }
 
 - (CGFloat)gg_centerX {
-	return self.center.x;
+    return self.center.x;
 }
 
 - (void)setGg_centerX:(CGFloat)gg_centerX {
-	self.center = CGPointMake(gg_centerX, self.center.y);
+    self.center = CGPointMake(gg_centerX, self.center.y);
 }
 
 - (CGFloat)gg_centerY {
-	return self.center.y;
+    return self.center.y;
 }
 
 - (void)setGg_centerY:(CGFloat)gg_centerY {
-	self.center = CGPointMake(self.center.x, gg_centerY);
+    self.center = CGPointMake(self.center.x, gg_centerY);
 }
 
 - (CGFloat)gg_width {
-	return self.frame.size.width;
+    return self.frame.size.width;
 }
 
 - (void)setGg_width:(CGFloat)gg_width {
-	CGRect frame = self.frame;
-	frame.size.width = gg_width;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.size.width = gg_width;
+    self.frame = frame;
 }
 
 - (CGFloat)gg_height {
-	return self.frame.size.height;
+    return self.frame.size.height;
 }
 
 - (void)setGg_height:(CGFloat)gg_height {
-	CGRect frame = self.frame;
-	frame.size.height = gg_height;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.size.height = gg_height;
+    self.frame = frame;
 }
 
 - (CGPoint)gg_origin {
-	return self.frame.origin;
+    return self.frame.origin;
 }
 
 - (void)setGg_origin:(CGPoint)gg_origin {
-	CGRect frame = self.frame;
-	frame.origin = gg_origin;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.origin = gg_origin;
+    self.frame = frame;
 }
 
 - (CGSize)gg_size {
-	return self.frame.size;
+    return self.frame.size;
 }
 
 - (void)setGg_size:(CGSize)gg_size {
-	CGRect frame = self.frame;
-	frame.size = gg_size;
-	self.frame = frame;
+    CGRect frame = self.frame;
+    frame.size = gg_size;
+    self.frame = frame;
 }
-
 
 /**
  移除所有子视图
@@ -465,3 +464,188 @@ static char kGradientLayerKey;
 @end
 
 
+@interface UIView (GGTouch)
+
+@property (nonatomic, assign) BOOL gg_isTouched;
+
+
+@end
+
+@implementation UIView (GGTouch)
+
+static char const * const gg_isTouchedKey = "gg_isTouchedKey";
+static char const * const gg_enableTouchHighlightBackgroundKey = "gg_enableTouchHighlightBackgroundKey";
+static char const * const gg_enableTouchZoomingKey = "gg_enableTouchZoomingKey";
+static char const * const gg_originalTransformKey = "gg_originalTransformKey";
+static char const * const gg_highlightZoomingScaleKey = "gg_highlightZoomingScaleKey";
+static char const * const gg_highlightBackgroundViewKey = "gg_highlightBackgroundKey";
+static char const * const gg_highlightBackgroundShowAnimationDurationKey = "gg_highlightBackgroundShowAnimationDurationKey";
+static char const * const gg_highlightBackgroundDismissAnimationDurationKey = "gg_highlightBackgroundDismissAnimationDurationKey";
+static char const * const gg_highlightZoomingScaleShowAnimationDurationKey = "gg_highlightZoomingScaleShowAnimationDurationKey";
+static char const * const gg_highlightZoomingScaleDismissAnimationDurationKey = "gg_highlightZoomingScaleDismissAnimationDurationKey";
+
+- (void)gg_setHighlightBackgroundWithColor:(UIColor *)color showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration{
+    UIView *bgView = [[UIView alloc] init];
+    bgView.backgroundColor = color;
+    self.gg_highlightBackgroundView = bgView;
+    self.gg_enableTouchHighlightBackground = YES;
+    self.gg_highlightBackgroundShowAnimationDuration = showAnimationDuration;
+    self.gg_highlightBackgroundDismissAnimationDuration = showAnimationDuration;
+}
+
+- (void)gg_setHighlightZoomingScaleWithScale:(CGFloat)scale showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration{
+    self.gg_enableTouchZooming = YES;
+    self.gg_highlightZoomingScale = scale;
+    self.gg_highlightZoomingScaleShowAnimationDuration = showAnimationDuration;
+    self.gg_highlightZoomingScaleDismissAnimationDuration = dismissAnimationDuration;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.gg_enableTouchHighlightBackground) {
+        self.gg_isTouched = YES;
+        if (self.gg_highlightBackgroundView != nil){
+            self.gg_highlightBackgroundView.frame = self.bounds;
+            [self insertSubview:self.gg_highlightBackgroundView atIndex:0];
+            if (self.gg_highlightBackgroundShowAnimationDuration > 0){
+                self.gg_highlightBackgroundView.alpha = 0;
+                [UIView animateWithDuration:self.gg_highlightZoomingScaleShowAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    self.gg_highlightBackgroundView.alpha = 1;
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }
+        }
+    }
+    if (self.gg_enableTouchZooming){
+        self.gg_isTouched = YES;
+        self.gg_originalTransform = self.transform;
+        if (self.gg_highlightZoomingScale != 1){
+            if (self.gg_highlightZoomingScaleShowAnimationDuration > 0){
+                [UIView animateWithDuration:self.gg_highlightZoomingScaleShowAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    self.transform = CGAffineTransformMakeScale(self.gg_highlightZoomingScale, self.gg_highlightZoomingScale);
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }else{
+                self.transform = CGAffineTransformMakeScale(self.gg_highlightZoomingScale, self.gg_highlightZoomingScale);
+            }
+            
+        }
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.gg_isTouched){
+        self.gg_isTouched = NO;
+        if (self.gg_enableTouchHighlightBackground) {
+            if (self.gg_highlightZoomingScaleDismissAnimationDuration > 0){
+                [UIView animateWithDuration:self.gg_highlightZoomingScaleShowAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    self.gg_highlightBackgroundView.alpha = 0;
+                } completion:^(BOOL finished) {
+                    [self.gg_highlightBackgroundView removeFromSuperview];
+                }];
+            }else{
+                [self.gg_highlightBackgroundView removeFromSuperview];// 移除渐变背景色的Layer
+            }
+        }
+        if (self.gg_enableTouchZooming){
+            if (self.gg_highlightZoomingScaleDismissAnimationDuration){
+                [UIView animateWithDuration:self.gg_highlightZoomingScaleDismissAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    self.transform = self.gg_originalTransform;
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }else{
+                self.transform = self.gg_originalTransform;
+            }
+        }
+    }
+    [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesCancelled:touches withEvent:event];
+}
+
+- (void)setGg_isTouched:(BOOL)gg_isTouched {
+    objc_setAssociatedObject(self, gg_isTouchedKey, @(gg_isTouched), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)gg_isTouched {
+    return [objc_getAssociatedObject(self, gg_isTouchedKey) boolValue];
+}
+
+- (void)setGg_enableTouchHighlightBackground:(BOOL)gg_enableTouchHighlightBackground {
+    objc_setAssociatedObject(self, gg_enableTouchHighlightBackgroundKey, @(gg_enableTouchHighlightBackground), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)gg_enableTouchHighlightBackground {
+    return [objc_getAssociatedObject(self, gg_enableTouchHighlightBackgroundKey) boolValue];
+}
+
+- (void)setGg_enableTouchZooming:(BOOL)gg_enableTouchZooming {
+    objc_setAssociatedObject(self, gg_enableTouchZoomingKey, @(gg_enableTouchZooming), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)gg_enableTouchZooming {
+    return [objc_getAssociatedObject(self, gg_enableTouchZoomingKey) boolValue];
+}
+
+- (void)setGg_originalTransform:(CGAffineTransform)gg_originalTransform {
+    objc_setAssociatedObject(self, gg_originalTransformKey, [NSValue valueWithCGAffineTransform:gg_originalTransform], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGAffineTransform)gg_originalTransform {
+    return [objc_getAssociatedObject(self, gg_originalTransformKey) CGAffineTransformValue];
+}
+
+- (void)setGg_highlightZoomingScale:(CGFloat)gg_highlightZoomingScale {
+    objc_setAssociatedObject(self, gg_highlightZoomingScaleKey, @(gg_highlightZoomingScale), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)gg_highlightZoomingScale {
+    return [objc_getAssociatedObject(self, gg_highlightZoomingScaleKey) floatValue];
+}
+
+- (void)setGg_highlightBackgroundView:(CALayer *)gg_highlightBackgroundView {
+    objc_setAssociatedObject(self, gg_highlightBackgroundViewKey, gg_highlightBackgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIView *)gg_highlightBackgroundView {
+    return objc_getAssociatedObject(self, gg_highlightBackgroundViewKey);
+}
+
+- (void)setGg_highlightBackgroundShowAnimationDuration:(CGFloat)gg_highlightBackgroundLayerShowAnimationDuration {
+    objc_setAssociatedObject(self, gg_highlightBackgroundShowAnimationDurationKey, @(gg_highlightBackgroundLayerShowAnimationDuration), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)gg_highlightBackgroundShowAnimationDuration {
+    return [objc_getAssociatedObject(self, gg_highlightBackgroundShowAnimationDurationKey) floatValue];
+}
+
+- (void)setGg_highlightBackgroundDismissAnimationDuration:(CGFloat)gg_highlightBackgroundDismissAnimationDuration {
+    objc_setAssociatedObject(self, gg_highlightBackgroundDismissAnimationDurationKey, @(gg_highlightBackgroundDismissAnimationDurationKey), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)gg_highlightBackgroundDismissAnimationDuration {
+    return [objc_getAssociatedObject(self, gg_highlightBackgroundDismissAnimationDurationKey) floatValue];
+}
+
+- (void)setGg_highlightZoomingScaleShowAnimationDuration:(CGFloat)gg_highlightZoomingScaleShowAnimationDuration {
+    objc_setAssociatedObject(self, gg_highlightZoomingScaleShowAnimationDurationKey, @(gg_highlightZoomingScaleShowAnimationDuration), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)gg_highlightZoomingScaleShowAnimationDuration {
+    return [objc_getAssociatedObject(self, gg_highlightZoomingScaleShowAnimationDurationKey) floatValue];
+}
+
+- (void)setGg_highlightZoomingScaleDismissAnimationDuration:(CGFloat)gg_highlightZoomingScaleDismissAnimationDuration {
+    objc_setAssociatedObject(self, gg_highlightZoomingScaleDismissAnimationDurationKey, @(gg_highlightZoomingScaleDismissAnimationDuration), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CGFloat)gg_highlightZoomingScaleDismissAnimationDuration {
+    return [objc_getAssociatedObject(self, gg_highlightZoomingScaleDismissAnimationDurationKey) floatValue];
+}
+
+@end

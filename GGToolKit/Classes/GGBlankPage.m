@@ -258,13 +258,16 @@
 
 - (void)updateFrames{
     if (self.state == GGBlankPageStateHidden){
-        self.frame = CGRectMake(self.superview.bounds.size.width * 2, 0, 0, 0);
+        self.frame = CGRectMake(0, 0, self.superview.bounds.size.width, self.superview.bounds.size.height);
+        self.hidden = YES;
     }else if (self.state == GGBlankPageStateEmptyPage){
+        self.hidden = NO;
         self.frame = CGRectMake(self.emptyPageView.config.leftOffset,
                                 self.emptyPageView.config.topOffset,
                                 self.superview.bounds.size.width - self.emptyPageView.config.leftOffset - self.emptyPageView.config.rightOffset,
                                 self.superview.bounds.size.height - self.emptyPageView.config.topOffset - self.emptyPageView.config.bottomOffset);
     }else if (self.state == GGBlankPageStateLoding){
+        self.hidden = NO;
         self.frame = CGRectMake(self.loadingView.config.leftOffset,
                                 self.loadingView.config.topOffset,
                                 self.superview.bounds.size.width - self.loadingView.config.leftOffset - self.loadingView.config.rightOffset,
@@ -273,7 +276,6 @@
     [self.superview bringSubviewToFront:self];
     self.customLoadingView.frame = self.bounds;
     self.customEmptyPageView.frame = self.bounds;
-    
 }
 
 - (void)setState:(GGBlankPageState)state{

@@ -13,6 +13,7 @@
 @interface UIView (GG)
 
 @property (nonatomic, readonly) CGRect gg_absoluteFrame;
+
 @property (nonatomic) CGFloat gg_left;    //x
 @property (nonatomic) CGFloat gg_top;     //y
 @property (nonatomic) CGFloat gg_width;   //w
@@ -27,18 +28,15 @@
 - (void)gg_removeAllSubviews;
 
 - (UIViewController *)gg_viewController;
-
 - (UIImage *)gg_imageWithIsScroll:(BOOL)isScroll;
-
-//设置View.layer本身的边框
 - (void)gg_layerBorderWidth:(CGFloat )width
 				 color:(UIColor *)color;
-
-//设置View.layer本身的阴影
--(void)gg_layerShadowColor: (UIColor *)color offset:(CGSize)offset opacity: (CGFloat)opacity radius: (CGFloat)radius;
-
-//设置View.layer本身的圆角
-- (void)gg_layerCornerRadius:(CGFloat)radius masksToBounds:(BOOL)masksToBounds;
+- (void)gg_layerShadowColor:(UIColor *)color
+                    offset:(CGSize)offset
+                   opacity:(CGFloat)opacity
+                    radius:(CGFloat)radius;
+- (void)gg_layerCornerRadius:(CGFloat)radius
+               masksToBounds:(BOOL)masksToBounds;
 
 
 @end
@@ -108,5 +106,26 @@ typedef NS_ENUM(NSInteger, GGLineViewDirection) {
 											  direction:(GGLineViewDirection)direction;
 - (void)gg_removeAllSubLineView;//移除掉所有的线
 - (void)gg_removeSubLineViewBydirection:(GGLineViewDirection)direction;//移除掉指定类型的线
+
+@end
+
+
+@interface UIView (GGTouch)
+
+@property (nonatomic, assign) BOOL gg_enableTouchHighlightBackground;
+@property (nonatomic, strong) UIView *gg_highlightBackgroundView;
+@property (nonatomic, assign) CGFloat gg_highlightBackgroundShowAnimationDuration;
+@property (nonatomic, assign) CGFloat gg_highlightBackgroundDismissAnimationDuration;
+
+@property (nonatomic, assign) BOOL gg_enableTouchZooming;
+@property (nonatomic, assign) CGFloat gg_highlightZoomingScale;
+@property (nonatomic, assign) CGAffineTransform gg_originalTransform;
+
+@property (nonatomic, assign) CGFloat gg_highlightZoomingScaleShowAnimationDuration;
+@property (nonatomic, assign) CGFloat gg_highlightZoomingScaleDismissAnimationDuration;
+
+- (void)gg_setHighlightBackgroundWithColor:(UIColor *)color showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
+
+- (void)gg_setHighlightZoomingScaleWithScale:(CGFloat)scale showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
 
 @end

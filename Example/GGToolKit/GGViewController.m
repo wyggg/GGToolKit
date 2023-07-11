@@ -25,10 +25,17 @@
     [super viewDidLoad];
     GGWeakSelf
     
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = [UIColor grayColor];
+    [view gg_setHighlightBackgroundWithColor:[UIColor redColor] showAnimationDuration:0.1 dismissAnimationDuration:0.15];
+    [view gg_setHighlightZoomingScaleWithScale:0.95 showAnimationDuration:0.1 dismissAnimationDuration:0.15];
+    [view gg_layerCornerRadius:10 masksToBounds:YES];
+    [self.view addSubview:view];
+    
+    return;
     
     self.dataSource = [NSMutableArray array];
     
-
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.delegate  = self;
     _tableView.dataSource = self;
