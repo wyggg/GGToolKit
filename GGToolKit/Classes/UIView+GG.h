@@ -112,20 +112,8 @@ typedef NS_ENUM(NSInteger, GGLineViewDirection) {
 
 @interface UIView (GGTouch)
 
-@property (nonatomic, assign) BOOL gg_enableTouchHighlightBackground;
-@property (nonatomic, strong) UIView *gg_highlightBackgroundView;
-@property (nonatomic, assign) CGFloat gg_highlightBackgroundShowAnimationDuration;
-@property (nonatomic, assign) CGFloat gg_highlightBackgroundDismissAnimationDuration;
+- (void)gg_setHighlightBackgroundColor:(UIColor *)color showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
 
-@property (nonatomic, assign) BOOL gg_enableTouchZooming;
-@property (nonatomic, assign) CGFloat gg_highlightZoomingScale;
-@property (nonatomic, assign) CGAffineTransform gg_originalTransform;
-
-@property (nonatomic, assign) CGFloat gg_highlightZoomingScaleShowAnimationDuration;
-@property (nonatomic, assign) CGFloat gg_highlightZoomingScaleDismissAnimationDuration;
-
-- (void)gg_setHighlightBackgroundWithColor:(UIColor *)color showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
-
-- (void)gg_setHighlightZoomingScaleWithScale:(CGFloat)scale showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
+- (void)gg_setHighlightZoomingScale:(CGFloat)scale showAnimationDuration:(CGFloat)showAnimationDuration dismissAnimationDuration:(CGFloat)dismissAnimationDuration;
 
 @end

@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) UITableView *tableView;
 
-
 @end
 
 @implementation GGViewController
@@ -27,8 +26,8 @@
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     view.backgroundColor = [UIColor grayColor];
-    [view gg_setHighlightBackgroundWithColor:[UIColor redColor] showAnimationDuration:0.1 dismissAnimationDuration:0.15];
-    [view gg_setHighlightZoomingScaleWithScale:0.95 showAnimationDuration:0.1 dismissAnimationDuration:0.15];
+    [view gg_setHighlightBackgroundColor:[UIColor redColor] showAnimationDuration:0.1 dismissAnimationDuration:0.15];
+    [view gg_setHighlightZoomingScale:0.95 showAnimationDuration:0.1 dismissAnimationDuration:0.15];
     [view gg_layerCornerRadius:10 masksToBounds:YES];
     [self.view addSubview:view];
     
@@ -43,7 +42,6 @@
     [self.view addSubview:_tableView];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    
     UIButton *addDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
     addDataButton.frame = CGRectMake(100, 100, 100, 45);
     [addDataButton setTitle:@"添加数据" forState:UIControlStateNormal];
@@ -52,7 +50,7 @@
         [weakSelf.dataSource addObject:@""];
         [weakSelf.tableView reloadData];
     }];
-
+    
     UIButton *removeDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
     removeDataButton.frame = CGRectMake(100, 145, 100, 45);
     [removeDataButton setTitle:@"移除数据" forState:UIControlStateNormal];
@@ -96,7 +94,6 @@
 }
 
 - (void)requestError{
-    
     [GGBlankPage showLoadingInView:self.tableView config:^GGBlankPageLoadingConfig *(GGBlankPageLoadingConfig *config) {
         return config;
     }];
@@ -142,7 +139,6 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
