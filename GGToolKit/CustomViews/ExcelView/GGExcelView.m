@@ -269,5 +269,8 @@
     }];
 }
 
+- (UICollectionView *)collectionView{
+    return _collectionViewBtmRight;
+}
 
 @end

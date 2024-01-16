@@ -38,7 +38,7 @@
 @interface GGExcelView : UIView
 
 @property (nonatomic, weak) id <GGExcelViewDelegate>delegate;
-
+@property (nonatomic, strong, readonly) UICollectionView *collectionView;
 @property (nonatomic, strong, readonly) UIView *contentView;
 @property (nonatomic, assign) CGSize cellSize;
 @property (nonatomic, strong) NSIndexPath *fixedPath;

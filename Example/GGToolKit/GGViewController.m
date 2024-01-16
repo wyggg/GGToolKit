@@ -28,6 +28,8 @@
     excelView.fixedPath = [NSIndexPath indexPathForRow:1 inSection:1];
     [self.view addSubview:excelView];
     [excelView registerClass:[GGExcelTextCell class] forCellWithReuseIdentifier:@"cell"];
+    
+    [GGLoadingView showInView:self.view];
 }
 
 //返回一共有多少行
