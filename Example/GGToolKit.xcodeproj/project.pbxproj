@@ -62,10 +62,10 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DF47E92175B3C58B840C096 /* Pods-GGToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGToolKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-GGToolKit_Tests/Pods-GGToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		97DE7F16460897D3141D9054 /* Pods_GGToolKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGToolKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F5164EA61D46D3591B99F29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9F5164EA61D46D3591B99F29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AB3ECACCCE74B09704F97CBD /* Pods_GGToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAB731B0E3B148548F65AC5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D9DB3F9C3DCFA1D46A8898C3 /* GGToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GGToolKit.podspec; path = ../GGToolKit.podspec; sourceTree = "<group>"; };
+		BAB731B0E3B148548F65AC5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D9DB3F9C3DCFA1D46A8898C3 /* GGToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GGToolKit.podspec; path = ../GGToolKit.podspec; sourceTree = "<group>"; };
 		DEE10960ED5FA35F0CEE7E47 /* Pods-GGToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGToolKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGToolKit_Tests/Pods-GGToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				DEE10960ED5FA35F0CEE7E47 /* Pods-GGToolKit_Tests.debug.xcconfig */,
 				8DF47E92175B3C58B840C096 /* Pods-GGToolKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -497,6 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGToolKit/GGToolKit-Prefix.pch";
 				INFOPLIST_FILE = "GGToolKit/GGToolKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGToolKit/GGToolKit-Prefix.pch";
 				INFOPLIST_FILE = "GGToolKit/GGToolKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
