@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## GGToolKit
 
-Copyright (c) 2023 yyyggg <773678819@qq.com>
+Copyright (c) 2024 yg <773678819>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

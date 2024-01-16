@@ -2,18 +2,14 @@
 //  GGViewController.m
 //  GGToolKit
 //
-//  Created by yyyggg on 04/13/2023.
-//  Copyright (c) 2023 yyyggg. All rights reserved.
+//  Created by yg on 01/16/2024.
+//  Copyright (c) 2024 yg. All rights reserved.
 //
 
 #import "GGViewController.h"
-#import <GGToolKit/GGTools.h>
-#import "GGRichTextView.h"
+#import "GGToolsHeader.h"
 
-@interface GGViewController ()<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, strong) NSMutableArray *dataSource;
-@property (nonatomic, strong) UITableView *tableView;
+@interface GGViewController ()<GGExcelViewDelegate>
 
 @end
 
@@ -22,128 +18,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    GGWeakSelf
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    view.backgroundColor = [UIColor grayColor];
-    [view gg_setHighlightBackgroundColor:[UIColor redColor] showAnimationDuration:0.1 dismissAnimationDuration:0.15];
-    [view gg_setHighlightZoomingScale:0.95 showAnimationDuration:0.1 dismissAnimationDuration:0.15];
-    [view gg_layerCornerRadius:10 masksToBounds:YES];
-    [self.view addSubview:view];
-    
-    return;
-    
-    self.dataSource = [NSMutableArray array];
-    
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    _tableView.delegate  = self;
-    _tableView.dataSource = self;
-    _tableView.rowHeight = 45;
-    [self.view addSubview:_tableView];
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
-    UIButton *addDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    addDataButton.frame = CGRectMake(100, 100, 100, 45);
-    [addDataButton setTitle:@"添加数据" forState:UIControlStateNormal];
-    [self.view addSubview:addDataButton];
-    [addDataButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
-        [weakSelf.dataSource addObject:@""];
-        [weakSelf.tableView reloadData];
-    }];
-    
-    UIButton *removeDataButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    removeDataButton.frame = CGRectMake(100, 145, 100, 45);
-    [removeDataButton setTitle:@"移除数据" forState:UIControlStateNormal];
-    [self.view addSubview:removeDataButton];
-    [removeDataButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
-        [weakSelf.dataSource removeAllObjects];
-        [weakSelf.tableView reloadData];
-    }];
-    
-    UIButton *removeViewButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    removeViewButton.frame = CGRectMake(100, 190, 100, 45);
-    [removeViewButton setTitle:@"移除视图" forState:UIControlStateNormal];
-    [self.view addSubview:removeViewButton];
-    [removeViewButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
-        [weakSelf.tableView removeFromSuperview];
-        weakSelf.tableView = nil;
-    }];
-    
-    UIButton *requestButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    requestButton.frame = CGRectMake(100, 235, 100, 45);
-    [requestButton setTitle:@"模拟请求" forState:UIControlStateNormal];
-    [self.view addSubview:requestButton];
-    [requestButton gg_addActionBlock:^(__kindof UIControl *weakSender) {
-        [weakSelf requestError];
-    }];
-    
-    [GGBlankPage bindScrollView:self.tableView inView:self.tableView mode:GGBlankPageBindModeCellTotal config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
-        config.title = @"默认标题";
-        config.message = @"默认消息";
-        config.restartButtonTitle = @"重试";
-        config.restartButtonClick = ^{
-            [weakSelf requestError];
-        };
-        return config;
-    }];
-    
-//    __weak GGBlankPage *weakPage = weakSelf.tableView.gg_blankPage;
-//    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//        NSLog(@"%@",weakPage);
-//    }];
+    self.view.backgroundColor = [UIColor whiteColor];
+    GGExcelView *excelView = [[GGExcelView alloc] initWithFrame:CGRectMake(10, 50, self.view.frame.size.width - 20, 400)];
+    excelView.contentView.layer.borderWidth = 1;
+    excelView.contentView.layer.borderColor = [UIColor grayColor].CGColor;
+    excelView.contentView.layer.cornerRadius = 7.5;
+    excelView.contentView.layer.masksToBounds = YES;
+    excelView.delegate = self;
+    excelView.fixedPath = [NSIndexPath indexPathForRow:1 inSection:1];
+    [self.view addSubview:excelView];
+    [excelView registerClass:[GGExcelTextCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
-- (void)requestError{
-    [GGBlankPage showLoadingInView:self.tableView config:^GGBlankPageLoadingConfig *(GGBlankPageLoadingConfig *config) {
-        return config;
-    }];
-    GGWeakSelf
-    [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [GGBlankPage dismissInView:weakSelf.tableView];
-        [GGBlankPage configEmptyPageWithView:weakSelf.tableView config:^GGBlankPageEmptyConfig *(GGBlankPageEmptyConfig *config) {
-            config.image = [UIImage imageNamed:@"nullImage"];
-            config.title = @"网络请求失败";
-            config.message = @"请重试";
-            config.restartButtonClick = ^{
-                [weakSelf requestError];
-            };
-            return config;
-        }];
-        [weakSelf.tableView reloadData];
-        [timer invalidate];
-    }];
+//返回一共有多少行
+- (NSInteger)numberOfSectionsInExcelView:(GGExcelView *)excelView{
+    return 100;
 }
 
-- (void)requestSucc{
-    [GGBlankPage showLoadingInView:self.tableView config:^GGBlankPageLoadingConfig *(GGBlankPageLoadingConfig *config) {
-        config.message = @"加载中";
-        return config;
-    }];
-    GGWeakSelf
-    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [GGBlankPage dismissInView:weakSelf.tableView];
-        [timer invalidate];
-    }];
+//返回每一行显示多少个Cell
+- (NSInteger)excelView:(GGExcelView *)excelView numberOfItemsInSection:(NSInteger)section{
+    return 70;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return _dataSource.count;
+- (CGSize)excelView:(GGExcelView *)excelView sizeForCellAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(50, 25);
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataSource.count;
+- (BOOL)excelView:(GGExcelView *)excelView hiddenForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return NO;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+- (GGExcelBaseCell *)excelView:(GGExcelView *)excelView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    GGExcelTextCell *cell = [excelView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld-%ld",(long)indexPath.section,(long)indexPath.row];
+    cell.separatorLeftScale = 0.5;
+    cell.separatorRightScale = 0.5;
+    cell.separatorTopScale = 0.5;
+    cell.separatorBottomScale = 0.5;
     return cell;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)excelView:(GGExcelView *)excelView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"点击了 第%ld行 第%ld列",indexPath.section,indexPath.row);
 }
+
 
 @end
