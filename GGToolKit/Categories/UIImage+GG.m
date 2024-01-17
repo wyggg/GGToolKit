@@ -115,6 +115,42 @@
 	return image;
 }
 
++ (UIImage *)gg_joinImagesVertically:(NSArray<UIImage *> *)images withSpacing:(CGFloat)spacing backgroundColor:(UIColor *)backgroundColor {
+    CGFloat totalHeight = 0;
+    CGFloat maxWidth = 0;
+    
+    // 计算总高度和最大宽度
+    for (UIImage *image in images) {
+        totalHeight += image.size.height;
+        maxWidth = MAX(maxWidth, image.size.width);
+    }
+    
+    totalHeight += (images.count - 1) * spacing;
+    
+    // 创建一个画布，大小为拼接后的图片大小
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(maxWidth, totalHeight), NO, 0.0);
+    
+    // 设置背景色
+    [backgroundColor setFill];
+    UIRectFill(CGRectMake(0, 0, maxWidth, totalHeight));
+    
+    CGFloat currentY = 0;
+    
+    // 将每张图片绘制到画布上
+    for (UIImage *image in images) {
+        [image drawInRect:CGRectMake(0, currentY, maxWidth, image.size.height)];
+        currentY += image.size.height + spacing;
+    }
+    
+    // 获取拼接后的图片
+    UIImage *joinedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 结束画布绘制
+    UIGraphicsEndImageContext();
+    
+    return joinedImage;
+}
+
 - (BOOL)gg_saveToPath:(NSString *)path{
 	BOOL result = [UIImagePNGRepresentation(self) writeToFile:path  atomically:YES];
 	return result;

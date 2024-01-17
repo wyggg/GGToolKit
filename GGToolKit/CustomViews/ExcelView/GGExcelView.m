@@ -250,7 +250,7 @@
     excelView.hidden = YES;
     [self.superview addSubview:excelView];
     __weak GGExcelView * weakExcelView = excelView;
-    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:0.3 repeats:YES block:^(NSTimer * _Nonnull timer) {
         __strong GGExcelView * strongExcelView = weakExcelView;
         
         strongExcelView.hidden = NO;
