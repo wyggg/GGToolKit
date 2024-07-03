@@ -18,8 +18,6 @@ static const char * __gg_textFieldDidEndBlock = "gg_textFieldDidEndBlock";
 static const char * __gg_textFieldDidBegenBlock = "gg_textFieldDidBegenBlock";
 
 
-
-
 @implementation UITextField (GGTextField)
 
 + (UITextField *)gg_textFieldWithInputType:(GGTextFieldInputType)inputType{
@@ -209,39 +207,5 @@ static const char * __gg_textFieldDidBegenBlock = "gg_textFieldDidBegenBlock";
 - (double)gg_maximumNumber{
 	return [objc_getAssociatedObject(self, __gg_maximumNumber) doubleValue];
 }
-
-@end
-
-
-static const char * __gg_inputTextField = "gg_inputTextField";
-
-@implementation UIView (ggAddInput)
-
-- (void)gg_addInputWithText:(NSString *)text inputType:(GGTextFieldInputType)inputType didChangedBlcok:(void(^)(UITextField *tf,UIView *cover))didChangedBlcok didEndBlcok:(void(^)(UITextField *tf,UIView *cover))didEnddBlcok{
-	
-	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(inputTapGesture)];
-	[self addGestureRecognizer:tapGesture];
-	self.userInteractionEnabled = YES;
-	
-	UITextField *tf = [UITextField gg_textFieldWithCover:self text:text inputType:inputType didChangedBlcok:didChangedBlcok didEndBlcok:didEnddBlcok];
-	self.gg_inputTF = tf;
-	[tf removeFromSuperview];
-	
-}
-
-- (void)inputTapGesture{
-	[self.gg_inputTF becomeFirstResponder];
-	[self addSubview:self.gg_inputTF];
-	self.gg_inputTF.frame = self.bounds;
-}
-
-- (void)setgg_inputTF:(UITextField *)gg_inputTF{
-	objc_setAssociatedObject(self, __gg_inputTextField, gg_inputTF, OBJC_ASSOCIATION_RETAIN);
-}
-
-- (UITextField *)gg_inputTF{
-	return objc_getAssociatedObject(self, __gg_inputTextField);
-}
-
 
 @end

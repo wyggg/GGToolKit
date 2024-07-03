@@ -65,7 +65,7 @@
 		9F5164EA61D46D3591B99F29 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AB3ECACCCE74B09704F97CBD /* Pods_GGToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB731B0E3B148548F65AC5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D9DB3F9C3DCFA1D46A8898C3 /* GGToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GGToolKit.podspec; path = ../GGToolKit.podspec; sourceTree = "<group>"; };
+		D9DB3F9C3DCFA1D46A8898C3 /* GGToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GGToolKit.podspec; path = ../GGToolKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DEE10960ED5FA35F0CEE7E47 /* Pods-GGToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGToolKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGToolKit_Tests/Pods-GGToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yg;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 7EC754N826;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -494,6 +497,7 @@
 			baseConfigurationReference = 69AA00686B273E32A61E7C57 /* Pods-GGToolKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7EC754N826;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGToolKit/GGToolKit-Prefix.pch";
 				INFOPLIST_FILE = "GGToolKit/GGToolKit-Info.plist";
@@ -511,6 +515,7 @@
 			baseConfigurationReference = 191DC905CCC681C9A9D75AF7 /* Pods-GGToolKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7EC754N826;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGToolKit/GGToolKit-Prefix.pch";
 				INFOPLIST_FILE = "GGToolKit/GGToolKit-Info.plist";

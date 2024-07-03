@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     GGExcelView *excelView = [[GGExcelView alloc] initWithFrame:CGRectMake(10, 50, self.view.frame.size.width - 20, 400)];
     excelView.contentView.layer.borderWidth = 1;
@@ -29,7 +30,7 @@
     [self.view addSubview:excelView];
     [excelView registerClass:[GGExcelTextCell class] forCellWithReuseIdentifier:@"cell"];
     
-    [GGLoadingView showInView:self.view];
+//    [GGLoadingView showInView:self.view];
 }
 
 //返回一共有多少行

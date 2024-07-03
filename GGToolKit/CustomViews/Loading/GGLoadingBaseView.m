@@ -6,6 +6,7 @@
 //
 
 #import "GGLoadingBaseView.h"
+#import "GGScale.h"
 
 #define QUERY_TAG 1008823133
 
@@ -57,13 +58,7 @@
 }
 
 + (UIWindow *)getCurrentWindow{
-    NSArray *windows = [UIApplication sharedApplication].windows;
-    for (UIWindow *window in [windows reverseObjectEnumerator]) {
-        if ([window isKindOfClass:[UIWindow class]] && CGRectEqualToRect(window.bounds, [UIScreen mainScreen].bounds)) {
-            return window;
-        }
-    }
-    return [UIApplication sharedApplication].keyWindow;
+    return [GGScale mainWindow];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame

@@ -151,9 +151,4 @@
     return joinedImage;
 }
 
-- (BOOL)gg_saveToPath:(NSString *)path{
-	BOOL result = [UIImagePNGRepresentation(self) writeToFile:path  atomically:YES];
-	return result;
-}
-
 @end

@@ -14,7 +14,6 @@
 
 @end
 
-
 #pragma mark - 设置按钮文字和图片的间距
 typedef NS_ENUM(NSInteger, UIButtonImagePosition) {
 	UIButtonImagePositionTop = 0, // 图片在上，标题在下
@@ -27,5 +26,3 @@ typedef NS_ENUM(NSInteger, UIButtonImagePosition) {
 - (void)gg_setPosition:(UIButtonImagePosition)position spacing:(CGFloat)spacing;
 
 @end
-
-

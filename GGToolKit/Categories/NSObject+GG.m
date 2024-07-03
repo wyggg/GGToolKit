@@ -277,24 +277,6 @@
 	return [self.class isClassFormFoundationClasses];
 }
 
-id NOTNIL1(id obj1,id obj2){
-	if (obj1 == nil) {
-		return obj2;
-	}else if ([obj1 isKindOfClass:[NSNull class]]){
-		return obj2;
-	}else{
-		return obj1;
-	}
-}
-
-id NOTNIL2(id obj1,Class class1){
-	if (obj1 == nil) {
-		return [class1 new];
-	}else{
-		return obj1;
-	}
-}
-
 #pragma mark - 数值转换
 //对象转换为数值字符串
 + (NSString *)numberStringWithObject:(id)object roundingMode:(NSRoundingMode)mode scale:(short)scale multiplier:(float)multiplier abnormalStr:(NSString *)abnormalStr unitString:(NSString *)unitString{

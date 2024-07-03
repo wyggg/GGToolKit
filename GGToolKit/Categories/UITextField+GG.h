@@ -1,10 +1,10 @@
-	//
-	//  UITextField+GGTextField.h
-	//  FactoryCollection
-	//
-	//  Created by iOS-吴港 on 2018/5/24.
-	//  Copyright © 2018年 yg. All rights reserved.
-	//
+//
+//  UITextField+GGTextField.h
+//  FactoryCollection
+//
+//  Created by iOS-吴港 on 2018/5/24.
+//  Copyright © 2018年 yg. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
@@ -39,14 +39,3 @@ typedef NS_ENUM(NSUInteger, GGTextFieldInputType){
 
 @end
 
-@interface UIView (GGAddInput)
-
-@property (nonatomic, strong) UITextField *gg_inputTF;
-
-//向一个view动态的添加一个textField，使其支持输入，失去焦点时textField会被移除
-- (void)gg_addInputWithText:(NSString *)text 
-                  inputType:(GGTextFieldInputType)inputType
-            didChangedBlcok:(void(^)(UITextField *tf,UIView *cover))didChangedBlcok
-                didEndBlcok:(void(^)(UITextField *tf,UIView *cover))didEnddBlcok;
-
-@end

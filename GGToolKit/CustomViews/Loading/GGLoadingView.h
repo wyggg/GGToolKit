@@ -54,13 +54,16 @@ typedef NS_ENUM(NSUInteger, GGLoadingViewArrangementMode) {
 @property (nonatomic, assign) CGFloat messageMaxWidth;
 @property (nonatomic, assign) CGFloat messageSpacing;
 
++ (GGLoadingViewConfig *)systemStyleWithTintColor:(UIColor *)tintColor message:(NSString *)message;
++ (GGLoadingViewConfig *)imageStyleWithImage:(UIImage *)image tintColor:(UIColor *)tintColor;
+
 @end
 
 @interface GGLoadingImageStyleView : UIView
 
 @property (nonatomic) UIImage *image;
 @property (nonatomic) UIColor *tintColor;
-@property (nonatomic) CGFloat rotationSpeed;//推荐范围 0..1
+@property (nonatomic) CGFloat rotationSpeed;// 0..1
 
 + (GGLoadingImageStyleView *)create:(void(^)(GGLoadingImageStyleView *view))block;
 

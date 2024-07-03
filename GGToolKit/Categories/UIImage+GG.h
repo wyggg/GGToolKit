@@ -33,8 +33,6 @@ typedef NS_ENUM(NSInteger, GGImageGradientDirection) {
 + (UIImage *)gg_joinImagesVertically:(NSArray<UIImage *> *)images withSpacing:(CGFloat)spacing backgroundColor:(UIColor *)backgroundColor;
 
 
-//保存到路径
-- (BOOL)gg_saveToPath:(NSString *)path;
 
 @end
 

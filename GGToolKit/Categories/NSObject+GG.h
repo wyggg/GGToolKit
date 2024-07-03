@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)gg_classificationWithKey:(NSString *)key;
 //忽略序列 判断数组中数据是否完全相同 (只能判断字符串)
 - (BOOL)isSameArray:(NSArray <NSString *>*)array;
-///performSelector方法传递多参数
+//performSelector方法传递多参数
 - (id)performSelector:(SEL)selector withObjects:(NSArray *)objects;
 
 #pragma mark - 判断类
@@ -35,15 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isClassFormFoundationClasses;
 - (BOOL)isClassFormFoundationClasses;
 
-	///判断对象是否为nil 如果为nil，就返回obj2
-id NOTNIL1(id obji,id obj2);
-	///判断对手是否为nil 如果为nil，就返回Class new一个实例
-id NOTNIL2(id obj1,Class class1);
-
 #pragma mark - 数值转换
-
-//快捷转换数值对象到字符串
-#define kStringNumber(obj) ([NSObject numberStringWithObject:obj roundingMode:NSRoundDown scale:0 multiplier:1 abnormalStr:@"0" unitString:@""])
 
 //对象转换为数值字符串
 + (NSString *)numberStringWithObject:(id)object 
@@ -75,7 +67,7 @@ id NOTNIL2(id obj1,Class class1);
 - (NSArray <NSString *>*)allProperties;
 + (NSArray <NSString *>*)allProperties;
 
-	///获得所有属性名称和值
+//获得所有属性名称和值
 - (NSDictionary *)allPropertiesAndValue;
 
 #pragma mark - 数据转换

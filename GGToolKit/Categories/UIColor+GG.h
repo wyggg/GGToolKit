@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)gg_colorWithHax:(NSString *)hax alpha:(CGFloat)alpha;
 + (UIColor *)gg_colorWithRGB:(CGFloat)R G:(CGFloat)G B:(CGFloat)B A:(CGFloat)A;
 + (UIColor *)gg_colorWithImage:(UIImage *)image precision:(CGFloat)precision;//图片转到颜色 precision：0-1
-
 - (UIImage *)gg_colorToImage;
 - (UIImage *)gg_colorToImageWithWidth:(CGFloat)width height:(CGFloat)height;
 - (NSDictionary *)gg_colorToRGBValues;

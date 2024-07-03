@@ -10,7 +10,37 @@
 @implementation GGScale
 
 + (UIWindow *)mainWindow{
-    return [[UIApplication sharedApplication].delegate window];
+    UIWindow *keywindow = UIApplication.sharedApplication.keyWindow;
+    if (keywindow == nil) {
+        if (@available(iOS 13.0, *)) {
+            for (UIWindowScene *scene in UIApplication.sharedApplication.connectedScenes) {
+                if (scene.activationState == UISceneActivationStateForegroundActive) {
+                    UIWindow *tmpWindow = nil;
+                    if (@available(iOS 15.0, *)) {
+                        tmpWindow = scene.keyWindow;
+                    }
+                    if (tmpWindow == nil) {
+                        for (UIWindow *window in scene.windows) {
+                            if (window.windowLevel == UIWindowLevelNormal && window.hidden == NO &&
+                                CGRectEqualToRect(window.bounds, UIScreen.mainScreen.bounds)) {
+                                tmpWindow = window;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (keywindow == nil) {
+        for (UIWindow *window in UIApplication.sharedApplication.windows) {
+            if (window.windowLevel == UIWindowLevelNormal && window.hidden == NO && CGRectEqualToRect(window.bounds, UIScreen.mainScreen.bounds)) {
+                keywindow = window;
+                break;
+            }
+        }
+    }
+    return keywindow;
 }
 
 + (CGFloat)safeAreaTop{
