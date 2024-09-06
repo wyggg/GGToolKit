@@ -32,6 +32,8 @@
                     radius:(CGFloat)radius;
 - (void)gg_layerCornerRadius:(CGFloat)radius
                masksToBounds:(BOOL)masksToBounds;
+- (void)gg_layerCornerRadius:(CGFloat)cornerRadius
+           byRoundingCorners:(UIRectCorner)byRoundingCorners;
 
 
 @end

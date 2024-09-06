@@ -7,172 +7,168 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D05B7B3E0A606E58421E67CB2DEE53 /* UIButton+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BE505E9A6CDCBD3919DEF620DD254 /* UIButton+GG.m */; };
-		01C40EE25DFEF42238BB54C7B5543FE7 /* UITextField+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0E89E7557C80173A67FEC6027FD5D /* UITextField+GG.m */; };
+		04790B32FCF7DB9E454FE529A97A501B /* NSObject+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2682583066C95DB0A11585275DA8CB /* NSObject+GG.m */; };
+		0560EE2FE2507220F5155391F824D4A8 /* UIButton+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = F85EEF423C4CBBFE145600DDD9811E8A /* UIButton+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0624CF1AF991751033A974D9E30F11CD /* Pods-GGToolKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF9DF3E897DB3235BABA409B3683009 /* Pods-GGToolKit_Tests-dummy.m */; };
-		0A3D58A71403197476D8711A46269EC9 /* GGScale.h in Headers */ = {isa = PBXBuildFile; fileRef = 702A7D8EB6F62FD48BA4B50251007306 /* GGScale.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BB51EFE4E7D74508210B67E6D1905CE /* GGSplicingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6000AC12C165849DB1E100FE4F40AE0B /* GGSplicingView.m */; };
-		1154DD1B1C1B87F9243E6DB539B76ABA /* UIView+GGScrollComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B2C8F5A658F1FE9ADD25894623E509 /* UIView+GGScrollComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B71F7829C60BE3A0D2AAB8E16538B20 /* GGToolsHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DF06F24497EC3F9B85144E25C2E1E0 /* GGToolsHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5F473E786F80A77B07727237AB80DD /* GGExcelTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F72927AA8DB84FF493E2392B62BEB48 /* GGExcelTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E665FC756F1A4E2A257DDAA778E728 /* GGExcelLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 877F18047D13713B9FE8892656202977 /* GGExcelLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1159A1915F936D7B63C738799AE277EC /* GGLoadingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E50619FCA01B06701BC000C041913F6 /* GGLoadingBaseView.m */; };
 		13F3F9341041C9EF95FE9E422CC0CF94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		1BEF0E6A6131977C9535615F0BEFF9F7 /* GGExcelTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C523EBDE71C798713DF8E38811E4886A /* GGExcelTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		210B22F9D464BBD5DB12FEF5A18F115C /* CALayer+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E08A6D04E82FAC22BBEF6F4A0389F26 /* CALayer+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199CAE2FCA4F53590D1267B50426D178 /* NSObject+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = E90EB0F6A92DE6E6E0A34B2CCB7240F8 /* NSObject+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24DD6BA8E30AFBDED7136A0ECF50676D /* UINavigationController+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 053768F9C095BC6F93BA078703481E87 /* UINavigationController+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		262989A01E424DC1B67C94DE5D119DF8 /* Pods-GGToolKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FA488943924F65543B3D53987A8D6 /* Pods-GGToolKit_Example-dummy.m */; };
-		2B71B22F5DEB20BED3C74C047215BAD2 /* UINavigationController+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = DABE4018442A467CB17CC6B3FA06FA6D /* UINavigationController+GG.m */; };
+		2914B9CA1D306424C2CCA309AD7F0D13 /* GGLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AE833CE63828AFCDC0034672EED716 /* GGLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2944C2AEDA16BE7FF7EF617AA97F9B55 /* UIImage+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB40F3CEC02FA6E21AC98D0FEC4F314 /* UIImage+GG.m */; };
+		2E8F0892988215AC39FDA249BD67C2D7 /* GGLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A23AB5609077525BE4BF8C1CF0BAE /* GGLoadingView.m */; };
+		2F9CA02B8F0A90C7D4BDFB5149053EF6 /* CALayer+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E47DD7D14E84D82DE561B62FA0B2D1 /* CALayer+GG.m */; };
+		30859F6DC233918A6C9D3DB069B079C7 /* GGBlankBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1721C52021E3851801BF99C54E678C /* GGBlankBaseView.m */; };
 		344FC8E0F7A510A5A746E93928C2E004 /* Pods-GGToolKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD2F7DBD8AEDC0542D283ADAFF499C9 /* Pods-GGToolKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F146FDFB82558A7EFC131A9B9E37A05 /* GGScrollContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482F9E7D4C643B465A2B16852E6679E /* GGScrollContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52AF7EC10A8C523492C00AAD15DEE753 /* GGGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D5E13886C5CBB4EEA0C54B2723E93 /* GGGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54E9EC2DE7CBDDE311040EA4CC0E9374 /* GGExcelBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A940A01C60F47A853402EA8626B956C /* GGExcelBaseCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54F0A618F40ECABE0DA1160C606CF17E /* UIButton+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C979958CC9F439E5B406B60CEE6999 /* UIButton+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5842FD7E6B26CB70AFD70CE5E6803936 /* GGLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD97F389CAB41DA0AA16C399AE25B61E /* GGLoadingView.m */; };
-		5BF63589241ECE4CEA49B33EE2B41925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		5D44567DADDB0E1A11EDEDD4655ACA62 /* UIView+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05EB469943AF55603DA721C5F26671 /* UIView+GG.m */; };
-		5DEE382D731C388842919621D7198A5F /* GGExcelBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 929E902EAB9F45D7ABAEF41BE55DFFDD /* GGExcelBaseCell.m */; };
-		5F1DF30F3D5382784F586F7983462187 /* UITextField+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4435EE74F0574C23FE7F790A4A0A69 /* UITextField+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		652121A5F2E2A91B900A26CA75B628C1 /* NSObject+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 39ABEE937CDCB92CF76DC54CE275AF67 /* NSObject+GG.m */; };
-		6CF242470644B43525BCD57F9F389346 /* GGLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = A15EC8DC377E34648BC58AB1EDA1F8EF /* GGLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7816D591374F875EAEC7FF2B733593D0 /* GGBlankBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CFDA595E0A6C0EC1A32FD088BE66569 /* GGBlankBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41A04A516100D56EC4580B403EF5EA84 /* UIButton+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C64FB18BC2C3F436EDF5E7B85BEFB6 /* UIButton+GG.m */; };
+		4400FAD842B75D003EF52F45BB57417C /* GGExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 471AEC582176C3427FC29EB9351A5CD8 /* GGExcelView.m */; };
+		550E5FA1A1E44760FDF3860CAAFDC9E6 /* GGExcelBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A0FECAA93E693B6ED7662D853F0E8 /* GGExcelBaseCell.m */; };
+		67F1B225349083378EA501CE76C02116 /* GGSplicingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B304DDB6318E11A496C559B4B0AD803 /* GGSplicingView.m */; };
+		6C48E593F4136DC166FCFF3F830C1895 /* UIView+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8B5967EFDE54B9521E9710AB7C7788 /* UIView+GG.m */; };
+		7132170183581A2855CF29AA9872016C /* CALayer+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = A23A8E686241B238B75CC1485586D250 /* CALayer+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CD2381BA3FA808F23C5A751320B2DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		7DD1F1717A26F99F31060B788731D104 /* GGBlankBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8DD6BDBF97AB970B237F5E5FE9341 /* GGBlankBaseView.m */; };
-		81830E8B89FF086D402A047FDE9896FB /* GGBlankView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB94D443360201C2764D9F85773FB76 /* GGBlankView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8289A8BE76827AA7E913E8FD4435B31C /* GGLoadingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D8BFFA027A3A70BE7E14F48590E640 /* GGLoadingBaseView.m */; };
-		8BB336EE87B0DAB778709FD237549625 /* UINavigationController+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A627DB83795E8BCC84E9EA84C786E1 /* UINavigationController+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D1C0EE369410EAA13BE982A06DA4E13 /* GGExcelView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB07D2D1255D922AB71844D24B40023 /* GGExcelView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D7EBB6E267B04F472FCC20980CF569D /* GGToolsHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB8B581AD1FEF6F8A6D5DDF5132FA93 /* GGToolsHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F76859631651B8309C1F532FD2FB03E /* GGExcelTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51777275C07FAACEF7F51559C47A60D4 /* GGExcelTextCell.m */; };
-		90A16221CACB1B4CBFA2C96AD2C3CA24 /* GGToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC96B22E787110C7F1F246FE848F6D4 /* GGToolKit-dummy.m */; };
-		915B3125A09F4DB7B4EEA40B2AA7651F /* GGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 262B2A7315A0617055817FBA87342C87 /* GGGridView.m */; };
-		9C271583C2A78052DE41084DE0C83C90 /* CALayer+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142150510252A0BFD925E6FEAC249DF /* CALayer+GG.m */; };
-		9DB86246551CA113BFD0AED0872EE329 /* NSObject+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = E115D275D19125F8DBD3877D73D2C996 /* NSObject+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A20FD3CFD18104FEC4E4B10DCEC03EBB /* GGBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368B8A81FD708AB9960579F48904E059 /* GGBlankView.m */; };
-		A2B27247998F18506969098A59E2A380 /* UIView+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D43131ABAEE8B0DD5FF7482A3B7E84 /* UIView+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA45C19427400FD3AC921585EACD2B04 /* GGExcelLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7FEA4E4FA02B7AB4CBA9EA02643F23 /* GGExcelLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE4BE6611FF7D152913A7468660BDDE8 /* UIImage+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610D20394D71477ADA3A75A9469BDCE /* UIImage+GG.m */; };
-		AF91FCB5A6AAAB9540AA548F9674BBF1 /* GGToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F933EC0D74BD6E49C74F2AD609153773 /* GGToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B37C85A3DFE6C7278F1F53FEE11164A0 /* GGScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 174B160320DFEB981342978D27C491A0 /* GGScale.m */; };
-		BC714073DE176C9A265C71D7A3D33DD5 /* GGLoadingBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6894B071FD8F3A14A013FE820D0A9D /* GGLoadingBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE54579E36B0AB6464A746283A22BD6C /* GGExcelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1256EE17686191DFA273705BACD58 /* GGExcelLayout.m */; };
-		C79C4D3E117DF7E4D017797F7C4334BC /* UIColor+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 82DB5B4BC8FF9C861AF9F8062CB7CBA3 /* UIColor+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6DFCBDD3ECEE30AF7373DE4BB7A8A1B /* GGExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBF33ED728448AA6911BC2F9682144 /* GGExcelView.m */; };
-		DEFE46E4784F127E13E67FF90FFC3BC0 /* UIColor+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = D683C75C880A4C5B5F777169449EDB61 /* UIColor+GG.m */; };
-		E08A938D51BD8B619AE9E0BE3AE4E339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		83B9296CB373731A08B45EF7948EB1D3 /* GGScale.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC8F85F20C6611B1C97FB9B1FBD3A95 /* GGScale.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9191632BFD58AFE71F83408BE232967A /* GGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8FBDCD464F25221718795F109BD37A /* GGGridView.m */; };
+		95D74F2D0791CF53810171C994780FF2 /* UIImage+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 172405962F03FBBBF9F4B8F2D935583E /* UIImage+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99653F4AEC663BBA804FC4CE2E4727A6 /* UIView+GGScrollComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A78224D33A94440D21B9032E1CC5B80C /* UIView+GGScrollComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F344E842DDD728CFAF59F27FEBC35B8 /* UIView+GGScrollComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38E8DB7AE1F0CD067ABFBBE7386E88 /* UIView+GGScrollComponent.m */; };
+		A3591BB1FF0A8DC1F4E7CC1F7194177A /* GGToolKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54ACF8CE97DE6450BD7C7AC9856E6F49 /* GGToolKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA81F094C50216B8610176B7F09FB18C /* GGBlankBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84017A785E767C0DF2628CAB715EEB0E /* GGBlankBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1371C4FBF86512764A830A387BD876 /* UIView+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = 11741802860C93A9DBC2109396F685B5 /* UIView+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01A4E297AFA2A2E9CA90358A8C0072D /* UIColor+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = A14AB2C94D611D2CE64E61A7F70824C8 /* UIColor+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4DAAE237E30CA9D0737C56A41E87ED2 /* GGExcelView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AAC13A654A4DEBEEBB2F14046C35432 /* GGExcelView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCFC4CB36A8B947011C3EEBE807625ED /* GGToolKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFC565DBE1335945986A49DB1AD666E /* GGToolKit-dummy.m */; };
+		BFBBF41E0C3611EBB4028163B86D5E7D /* UIColor+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1D42FB2126625940C2FEA18BD54777 /* UIColor+GG.m */; };
+		BFE8B424BE222B969471F41AA0B22453 /* GGBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BE26EB38231F46A5CE5F15FA5CAE41 /* GGBlankView.m */; };
+		BFEEC0B294F08DEBEC82770CCB79897E /* GGScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6EE3C9699217AD1FD4511268FE0F7D /* GGScale.m */; };
+		C0F4678A6ED5E34F0127B702434FF893 /* GGGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = C29A0CA8822F3D4AA3AE1F08C427C6A4 /* GGGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7B78D729723E8B1A1A1542B20BFF2A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		CBBCAC964DDD07B0D95D762406A69D5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		D1AF3034ECAE39007872F36B3CB48F0C /* GGExcelBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D78DD8DB6A4A071C95669138BBB592 /* GGExcelBaseCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4471D91506588D54A080EBF21E4CF5B /* GGLoadingBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C56897DDF705E8655F05826AF91A202 /* GGLoadingBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8722656CE06EBCC7544F36719553100 /* UINavigationController+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CFBE029DA19917ED3AAC3C49522FE4 /* UINavigationController+GG.m */; };
 		E706BCF5D063C458C9A96B8C5CE03EA5 /* Pods-GGToolKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53183BBBC389DA3BB048EE2C503DF09C /* Pods-GGToolKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEF6AE7ADE9F035008FE3236E4DB6792 /* UIImage+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = FC74AA2CD7C2A52EBF9919A6EF0C5384 /* UIImage+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F004D50EB0645D96F69630C79B2E7999 /* UIView+GGScrollComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF9FCA660C56F1778BF9DC48BC98B9 /* UIView+GGScrollComponent.m */; };
-		FB7844027EF8DE18BC76B64E581410F0 /* GGScrollContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11142C35E1586F2F3BE8A65DF0BF133F /* GGScrollContainer.m */; };
-		FD2FFEF44B36D8B41BC242153107367B /* GGSplicingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F1FC571451C8792AE74CE065DABA5D8D /* GGSplicingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECEAB6D207F0E0D86512F447CD59FB06 /* UITextField+GG.h in Headers */ = {isa = PBXBuildFile; fileRef = D7FD4C8E921A02AF7413E0ADD6AC4112 /* UITextField+GG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFD6D73BBFF229F506129C025208631E /* GGBlankView.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FC357A510EAA902CC90EF1897AE5B9 /* GGBlankView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1ED2C9F848C851C2DD01B1F1DBBAC5C /* GGSplicingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DAA2B1A61667EC8E6963C74D1F9D372 /* GGSplicingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F510B416BE41D87A98B2A9A80CEEF7BF /* UITextField+GG.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0B7E1AB75531D1D60E8995279F785 /* UITextField+GG.m */; };
+		F90BB226954DC35E7D1212925624484B /* GGExcelTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF472AE972F8604F2661F9FE987DCFC /* GGExcelTextCell.m */; };
+		FD79220E4A9341F7A5E0AC7E6A87FE83 /* GGExcelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F81B695E073D0FED310D9AFF96261232 /* GGExcelLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		67B86CD746ED8E104A9ACE26870CD2D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3654A516977DD4AA7EB0CE630E057427;
-			remoteInfo = GGToolKit;
-		};
-		CCE6AAEFCADB843A632B7A68F8F34C46 /* PBXContainerItemProxy */ = {
+		3B2193F230BDCA72AB46B073221538F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E09D2C24D8F27730B4E8F2BCBC3A91DB;
 			remoteInfo = "Pods-GGToolKit_Example";
 		};
+		DCB37CE60D864813C26AA3F6D9F3CDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3654A516977DD4AA7EB0CE630E057427;
+			remoteInfo = GGToolKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02C2FD731ECF3D68AC1A87F4B9B11237 /* Pods-GGToolKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGToolKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0482F9E7D4C643B465A2B16852E6679E /* GGScrollContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGScrollContainer.h; sourceTree = "<group>"; };
-		0A940A01C60F47A853402EA8626B956C /* GGExcelBaseCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelBaseCell.h; sourceTree = "<group>"; };
-		0B3BE505E9A6CDCBD3919DEF620DD254 /* UIButton+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GG.m"; sourceTree = "<group>"; };
-		0C1450322EE11F282537841AC8A22D75 /* GGToolKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.release.xcconfig; sourceTree = "<group>"; };
-		0C7FEA4E4FA02B7AB4CBA9EA02643F23 /* GGExcelLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelLayout.h; sourceTree = "<group>"; };
-		11142C35E1586F2F3BE8A65DF0BF133F /* GGScrollContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGScrollContainer.m; sourceTree = "<group>"; };
-		174B160320DFEB981342978D27C491A0 /* GGScale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGScale.m; sourceTree = "<group>"; };
-		19D8BFFA027A3A70BE7E14F48590E640 /* GGLoadingBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGLoadingBaseView.m; sourceTree = "<group>"; };
-		2142150510252A0BFD925E6FEAC249DF /* CALayer+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GG.m"; sourceTree = "<group>"; };
-		262B2A7315A0617055817FBA87342C87 /* GGGridView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGGridView.m; sourceTree = "<group>"; };
-		2DB8B581AD1FEF6F8A6D5DDF5132FA93 /* GGToolsHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGToolsHeader.h; path = GGToolKit/GGToolsHeader.h; sourceTree = "<group>"; };
-		3610D20394D71477ADA3A75A9469BDCE /* UIImage+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GG.m"; sourceTree = "<group>"; };
-		368B8A81FD708AB9960579F48904E059 /* GGBlankView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGBlankView.m; sourceTree = "<group>"; };
-		39ABEE937CDCB92CF76DC54CE275AF67 /* NSObject+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GG.m"; sourceTree = "<group>"; };
-		3B4435EE74F0574C23FE7F790A4A0A69 /* UITextField+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+GG.h"; sourceTree = "<group>"; };
-		428BB48D7050D94CFED1141A98F952F3 /* GGToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGToolKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46D0E89E7557C80173A67FEC6027FD5D /* UITextField+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GG.m"; sourceTree = "<group>"; };
-		47B1256EE17686191DFA273705BACD58 /* GGExcelLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelLayout.m; sourceTree = "<group>"; };
+		053768F9C095BC6F93BA078703481E87 /* UINavigationController+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GG.h"; sourceTree = "<group>"; };
+		074A0FECAA93E693B6ED7662D853F0E8 /* GGExcelBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelBaseCell.m; sourceTree = "<group>"; };
+		0F1721C52021E3851801BF99C54E678C /* GGBlankBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGBlankBaseView.m; sourceTree = "<group>"; };
+		11741802860C93A9DBC2109396F685B5 /* UIView+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GG.h"; sourceTree = "<group>"; };
+		14C0B7E1AB75531D1D60E8995279F785 /* UITextField+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GG.m"; sourceTree = "<group>"; };
+		172405962F03FBBBF9F4B8F2D935583E /* UIImage+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+GG.h"; sourceTree = "<group>"; };
+		2A0A1AD9E8F6EA8EF08596E75CA256E4 /* GGToolKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.debug.xcconfig; sourceTree = "<group>"; };
+		2CC8F85F20C6611B1C97FB9B1FBD3A95 /* GGScale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGScale.h; sourceTree = "<group>"; };
+		3E6EE3C9699217AD1FD4511268FE0F7D /* GGScale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGScale.m; sourceTree = "<group>"; };
+		46FC357A510EAA902CC90EF1897AE5B9 /* GGBlankView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGBlankView.h; sourceTree = "<group>"; };
+		471AEC582176C3427FC29EB9351A5CD8 /* GGExcelView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelView.m; sourceTree = "<group>"; };
+		4777C8416C0593C0E1DAA9919C21B92C /* GGToolKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGToolKit-Info.plist"; sourceTree = "<group>"; };
 		4E28D6FD96F61233144B9B122B9AF7F0 /* GGToolKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGToolKit; path = GGToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51777275C07FAACEF7F51559C47A60D4 /* GGExcelTextCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelTextCell.m; sourceTree = "<group>"; };
 		52F3B1F6C4C57B6F9C746811BFA124C3 /* Pods-GGToolKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Example-Info.plist"; sourceTree = "<group>"; };
 		53183BBBC389DA3BB048EE2C503DF09C /* Pods-GGToolKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGToolKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		5AFBF33ED728448AA6911BC2F9682144 /* GGExcelView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelView.m; sourceTree = "<group>"; };
+		54ACF8CE97DE6450BD7C7AC9856E6F49 /* GGToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-umbrella.h"; sourceTree = "<group>"; };
+		5AAC13A654A4DEBEEBB2F14046C35432 /* GGExcelView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelView.h; sourceTree = "<group>"; };
 		5B02D7B5F279E6E2AFE34412D6D91590 /* Pods-GGToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5CFDA595E0A6C0EC1A32FD088BE66569 /* GGBlankBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGBlankBaseView.h; sourceTree = "<group>"; };
-		5E08A6D04E82FAC22BBEF6F4A0389F26 /* CALayer+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+GG.h"; sourceTree = "<group>"; };
+		5DAA2B1A61667EC8E6963C74D1F9D372 /* GGSplicingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGSplicingView.h; sourceTree = "<group>"; };
+		5E2682583066C95DB0A11585275DA8CB /* NSObject+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GG.m"; sourceTree = "<group>"; };
+		5E2A23AB5609077525BE4BF8C1CF0BAE /* GGLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGLoadingView.m; sourceTree = "<group>"; };
 		5FB1D552DCE390B7E59B2C7DFE3E43D2 /* Pods-GGToolKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		6000AC12C165849DB1E100FE4F40AE0B /* GGSplicingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGSplicingView.m; sourceTree = "<group>"; };
-		657D5E13886C5CBB4EEA0C54B2723E93 /* GGGridView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGGridView.h; sourceTree = "<group>"; };
-		68D43131ABAEE8B0DD5FF7482A3B7E84 /* UIView+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GG.h"; sourceTree = "<group>"; };
-		702A7D8EB6F62FD48BA4B50251007306 /* GGScale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGScale.h; sourceTree = "<group>"; };
+		60FD8B5296E83773494429D3C3BE9E21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		61BE26EB38231F46A5CE5F15FA5CAE41 /* GGBlankView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGBlankView.m; sourceTree = "<group>"; };
+		6B38E8DB7AE1F0CD067ABFBBE7386E88 /* UIView+GGScrollComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGScrollComponent.m"; sourceTree = "<group>"; };
+		6F8FBDCD464F25221718795F109BD37A /* GGGridView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGGridView.m; sourceTree = "<group>"; };
 		71BB4BFDA42B738C22865B9D55E4EF09 /* Pods-GGToolKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7C05EB469943AF55603DA721C5F26671 /* UIView+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GG.m"; sourceTree = "<group>"; };
+		72CFBE029DA19917ED3AAC3C49522FE4 /* UINavigationController+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GG.m"; sourceTree = "<group>"; };
+		7815BC6C528C782D013092FC065BB020 /* GGToolKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.release.xcconfig; sourceTree = "<group>"; };
+		7B304DDB6318E11A496C559B4B0AD803 /* GGSplicingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGSplicingView.m; sourceTree = "<group>"; };
+		7C56897DDF705E8655F05826AF91A202 /* GGLoadingBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGLoadingBaseView.h; sourceTree = "<group>"; };
 		7DBDDE2E99B340E4858BB35B7CC0EB23 /* Pods-GGToolKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7F72927AA8DB84FF493E2392B62BEB48 /* GGExcelTextCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelTextCell.h; sourceTree = "<group>"; };
 		7FB4D16CFBFB266BB31E13B9F5F5394A /* Pods-GGToolKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGToolKit_Example"; path = Pods_GGToolKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80B2C8F5A658F1FE9ADD25894623E509 /* UIView+GGScrollComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GGScrollComponent.h"; sourceTree = "<group>"; };
-		81C979958CC9F439E5B406B60CEE6999 /* UIButton+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+GG.h"; sourceTree = "<group>"; };
-		82DB5B4BC8FF9C861AF9F8062CB7CBA3 /* UIColor+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+GG.h"; sourceTree = "<group>"; };
-		85E47F43AA03E56A7F3932386DC7E24B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		84017A785E767C0DF2628CAB715EEB0E /* GGBlankBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGBlankBaseView.h; sourceTree = "<group>"; };
+		877F18047D13713B9FE8892656202977 /* GGExcelLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelLayout.h; sourceTree = "<group>"; };
 		87B8AA71E37CE4D203AFCDFB4514E07B /* Pods-GGToolKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGToolKit_Tests.modulemap"; sourceTree = "<group>"; };
-		8BB94D443360201C2764D9F85773FB76 /* GGBlankView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGBlankView.h; sourceTree = "<group>"; };
+		8870885E2B8083221334114AC4FB74A2 /* GGToolKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGToolKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		89DF06F24497EC3F9B85144E25C2E1E0 /* GGToolsHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGToolsHeader.h; path = GGToolKit/GGToolsHeader.h; sourceTree = "<group>"; };
 		8BD2F7DBD8AEDC0542D283ADAFF499C9 /* Pods-GGToolKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGToolKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8CC96B22E787110C7F1F246FE848F6D4 /* GGToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGToolKit-dummy.m"; sourceTree = "<group>"; };
-		929E902EAB9F45D7ABAEF41BE55DFFDD /* GGExcelBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelBaseCell.m; sourceTree = "<group>"; };
+		93D78DD8DB6A4A071C95669138BBB592 /* GGExcelBaseCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelBaseCell.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E4FA488943924F65543B3D53987A8D6 /* Pods-GGToolKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGToolKit_Example-dummy.m"; sourceTree = "<group>"; };
-		A15EC8DC377E34648BC58AB1EDA1F8EF /* GGLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGLoadingView.h; sourceTree = "<group>"; };
-		A75792B25C36BF1DD7150C03D46D2B5B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		AAE8DD6BDBF97AB970B237F5E5FE9341 /* GGBlankBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGBlankBaseView.m; sourceTree = "<group>"; };
-		AE72CB41214828106ABFD536702F6701 /* GGToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGToolKit.modulemap; sourceTree = "<group>"; };
-		B628D0CA4EA94FE8969E6D2017333DAB /* GGToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-prefix.pch"; sourceTree = "<group>"; };
+		9E50619FCA01B06701BC000C041913F6 /* GGLoadingBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGLoadingBaseView.m; sourceTree = "<group>"; };
+		A14AB2C94D611D2CE64E61A7F70824C8 /* UIColor+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+GG.h"; sourceTree = "<group>"; };
+		A23A8E686241B238B75CC1485586D250 /* CALayer+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+GG.h"; sourceTree = "<group>"; };
+		A78224D33A94440D21B9032E1CC5B80C /* UIView+GGScrollComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GGScrollComponent.h"; sourceTree = "<group>"; };
+		B2C64FB18BC2C3F436EDF5E7B85BEFB6 /* UIButton+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GG.m"; sourceTree = "<group>"; };
 		BCF9DF3E897DB3235BABA409B3683009 /* Pods-GGToolKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGToolKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		BD97F389CAB41DA0AA16C399AE25B61E /* GGLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGLoadingView.m; sourceTree = "<group>"; };
+		BEDB3EA9C67F2F0B75902944D4D63D99 /* GGToolKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGToolKit.modulemap; sourceTree = "<group>"; };
 		BF67DD8FA4B46985563D3EB9CAC9DB12 /* Pods-GGToolKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGToolKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF8B5967EFDE54B9521E9710AB7C7788 /* UIView+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GG.m"; sourceTree = "<group>"; };
+		BFE56528840060E08AF6D439C0691622 /* GGToolKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-prefix.pch"; sourceTree = "<group>"; };
+		C29A0CA8822F3D4AA3AE1F08C427C6A4 /* GGGridView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGGridView.h; sourceTree = "<group>"; };
 		C35498CD8805A39D56A297A7FA60111F /* Pods-GGToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C523EBDE71C798713DF8E38811E4886A /* GGExcelTextCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelTextCell.h; sourceTree = "<group>"; };
 		C7436EB21ECD9073A34FBB9AEDE6976D /* Pods-GGToolKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGToolKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CE6894B071FD8F3A14A013FE820D0A9D /* GGLoadingBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGLoadingBaseView.h; sourceTree = "<group>"; };
+		C9AE833CE63828AFCDC0034672EED716 /* GGLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGLoadingView.h; sourceTree = "<group>"; };
+		CEB40F3CEC02FA6E21AC98D0FEC4F314 /* UIImage+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GG.m"; sourceTree = "<group>"; };
+		CEFC565DBE1335945986A49DB1AD666E /* GGToolKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGToolKit-dummy.m"; sourceTree = "<group>"; };
+		D0E47DD7D14E84D82DE561B62FA0B2D1 /* CALayer+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GG.m"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D683C75C880A4C5B5F777169449EDB61 /* UIColor+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GG.m"; sourceTree = "<group>"; };
-		D81F0B35ED2B2240B29DA655950C77A4 /* GGToolKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGToolKit.debug.xcconfig; sourceTree = "<group>"; };
-		DABE4018442A467CB17CC6B3FA06FA6D /* UINavigationController+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GG.m"; sourceTree = "<group>"; };
+		D301AD412AC725B47CA19B2DBED47249 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D7FD4C8E921A02AF7413E0ADD6AC4112 /* UITextField+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+GG.h"; sourceTree = "<group>"; };
+		DBF472AE972F8604F2661F9FE987DCFC /* GGExcelTextCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelTextCell.m; sourceTree = "<group>"; };
 		DE8D5F4C5046EF8437DBC38C413D99C1 /* Pods-GGToolKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGToolKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E115D275D19125F8DBD3877D73D2C996 /* NSObject+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+GG.h"; sourceTree = "<group>"; };
-		E5A627DB83795E8BCC84E9EA84C786E1 /* UINavigationController+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GG.h"; sourceTree = "<group>"; };
+		E90EB0F6A92DE6E6E0A34B2CCB7240F8 /* NSObject+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+GG.h"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		ECB07D2D1255D922AB71844D24B40023 /* GGExcelView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGExcelView.h; sourceTree = "<group>"; };
-		F1FC571451C8792AE74CE065DABA5D8D /* GGSplicingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GGSplicingView.h; sourceTree = "<group>"; };
+		EB1D42FB2126625940C2FEA18BD54777 /* UIColor+GG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GG.m"; sourceTree = "<group>"; };
 		F2F22717DF3B34998DCF4CCA30963CD4 /* Pods-GGToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F586967780DC65C427EC6DC0531D51DE /* Pods-GGToolKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGToolKit_Example.modulemap"; sourceTree = "<group>"; };
-		F933EC0D74BD6E49C74F2AD609153773 /* GGToolKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGToolKit-umbrella.h"; sourceTree = "<group>"; };
-		FACF9FCA660C56F1778BF9DC48BC98B9 /* UIView+GGScrollComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGScrollComponent.m"; sourceTree = "<group>"; };
-		FC74AA2CD7C2A52EBF9919A6EF0C5384 /* UIImage+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+GG.h"; sourceTree = "<group>"; };
-		FD2CB191919C6D834F9740E8D1204919 /* GGToolKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGToolKit-Info.plist"; sourceTree = "<group>"; };
+		F81B695E073D0FED310D9AFF96261232 /* GGExcelLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GGExcelLayout.m; sourceTree = "<group>"; };
+		F85EEF423C4CBBFE145600DDD9811E8A /* UIButton+GG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+GG.h"; sourceTree = "<group>"; };
 		FE3412A561E501A6DC0D4C8E2D327148 /* Pods-GGToolKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGToolKit_Tests"; path = Pods_GGToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2FD76EC457F44885B09344AB29B2D74F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E08A938D51BD8B619AE9E0BE3AE4E339 /* Foundation.framework in Frameworks */,
-				5BF63589241ECE4CEA49B33EE2B41925 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		35E0B16253010E90F5DC1BD4E0CF1650 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				78CD2381BA3FA808F23C5A751320B2DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6652FD87D4183C90DBA02A59830E8AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBBCAC964DDD07B0D95D762406A69D5C /* Foundation.framework in Frameworks */,
+				C7B78D729723E8B1A1A1542B20BFF2A7 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,40 +183,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C88E509A9C2CDE4FB24054BD278F9A /* SplicingView */ = {
+		0F90842C08C1629D1B18469C840610A4 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
-				F1FC571451C8792AE74CE065DABA5D8D /* GGSplicingView.h */,
-				6000AC12C165849DB1E100FE4F40AE0B /* GGSplicingView.m */,
+				7C56897DDF705E8655F05826AF91A202 /* GGLoadingBaseView.h */,
+				9E50619FCA01B06701BC000C041913F6 /* GGLoadingBaseView.m */,
+				C9AE833CE63828AFCDC0034672EED716 /* GGLoadingView.h */,
+				5E2A23AB5609077525BE4BF8C1CF0BAE /* GGLoadingView.m */,
 			);
-			name = SplicingView;
-			path = SplicingView;
+			name = Loading;
+			path = Loading;
 			sourceTree = "<group>";
 		};
-		101B14925A6F897E23921CC8F106A0FA /* Categories */ = {
+		10599F52B785F80D5579A9E0534A9B80 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				5E08A6D04E82FAC22BBEF6F4A0389F26 /* CALayer+GG.h */,
-				2142150510252A0BFD925E6FEAC249DF /* CALayer+GG.m */,
-				E115D275D19125F8DBD3877D73D2C996 /* NSObject+GG.h */,
-				39ABEE937CDCB92CF76DC54CE275AF67 /* NSObject+GG.m */,
-				81C979958CC9F439E5B406B60CEE6999 /* UIButton+GG.h */,
-				0B3BE505E9A6CDCBD3919DEF620DD254 /* UIButton+GG.m */,
-				82DB5B4BC8FF9C861AF9F8062CB7CBA3 /* UIColor+GG.h */,
-				D683C75C880A4C5B5F777169449EDB61 /* UIColor+GG.m */,
-				FC74AA2CD7C2A52EBF9919A6EF0C5384 /* UIImage+GG.h */,
-				3610D20394D71477ADA3A75A9469BDCE /* UIImage+GG.m */,
-				E5A627DB83795E8BCC84E9EA84C786E1 /* UINavigationController+GG.h */,
-				DABE4018442A467CB17CC6B3FA06FA6D /* UINavigationController+GG.m */,
-				3B4435EE74F0574C23FE7F790A4A0A69 /* UITextField+GG.h */,
-				46D0E89E7557C80173A67FEC6027FD5D /* UITextField+GG.m */,
-				68D43131ABAEE8B0DD5FF7482A3B7E84 /* UIView+GG.h */,
-				7C05EB469943AF55603DA721C5F26671 /* UIView+GG.m */,
-				80B2C8F5A658F1FE9ADD25894623E509 /* UIView+GGScrollComponent.h */,
-				FACF9FCA660C56F1778BF9DC48BC98B9 /* UIView+GGScrollComponent.m */,
+				2CC8F85F20C6611B1C97FB9B1FBD3A95 /* GGScale.h */,
+				3E6EE3C9699217AD1FD4511268FE0F7D /* GGScale.m */,
 			);
-			name = Categories;
-			path = GGToolKit/Categories;
+			name = Tools;
+			path = GGToolKit/Tools;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -231,14 +213,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		166DB816EE6A76F99DDD92AD550BB114 /* Tools */ = {
+		25AAAF7D62F12842A4A8C4F96342B30D /* GGToolKit */ = {
 			isa = PBXGroup;
 			children = (
-				702A7D8EB6F62FD48BA4B50251007306 /* GGScale.h */,
-				174B160320DFEB981342978D27C491A0 /* GGScale.m */,
+				89DF06F24497EC3F9B85144E25C2E1E0 /* GGToolsHeader.h */,
+				AEFA90B61F0A4DBBEE7802C2BBED4D3E /* Categories */,
+				CBFF6B8E9690565D9F1444529C7B2385 /* CustomViews */,
+				3C9D9C3C4D7EC3977A379DDB097E5681 /* Pod */,
+				5A4F5F6A26C54653D30FF91A5EA7D027 /* Support Files */,
+				10599F52B785F80D5579A9E0534A9B80 /* Tools */,
 			);
-			name = Tools;
-			path = GGToolKit/Tools;
+			name = GGToolKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		265AD37A0DA821BB0FF36E6162BD04F2 /* ExcelView */ = {
+			isa = PBXGroup;
+			children = (
+				93D78DD8DB6A4A071C95669138BBB592 /* GGExcelBaseCell.h */,
+				074A0FECAA93E693B6ED7662D853F0E8 /* GGExcelBaseCell.m */,
+				877F18047D13713B9FE8892656202977 /* GGExcelLayout.h */,
+				F81B695E073D0FED310D9AFF96261232 /* GGExcelLayout.m */,
+				7F72927AA8DB84FF493E2392B62BEB48 /* GGExcelTextCell.h */,
+				DBF472AE972F8604F2661F9FE987DCFC /* GGExcelTextCell.m */,
+				5AAC13A654A4DEBEEBB2F14046C35432 /* GGExcelView.h */,
+				471AEC582176C3427FC29EB9351A5CD8 /* GGExcelView.m */,
+			);
+			name = ExcelView;
+			path = ExcelView;
 			sourceTree = "<group>";
 		};
 		2A4C1DE0F174B8731DD8717E4A256873 /* Pods-GGToolKit_Example */ = {
@@ -274,39 +276,24 @@
 			path = "Target Support Files/Pods-GGToolKit_Tests";
 			sourceTree = "<group>";
 		};
-		4374AD438310A35EEC0E6AC755ED05A9 /* Pod */ = {
+		3C9D9C3C4D7EC3977A379DDB097E5681 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				428BB48D7050D94CFED1141A98F952F3 /* GGToolKit.podspec */,
-				85E47F43AA03E56A7F3932386DC7E24B /* LICENSE */,
-				A75792B25C36BF1DD7150C03D46D2B5B /* README.md */,
+				8870885E2B8083221334114AC4FB74A2 /* GGToolKit.podspec */,
+				60FD8B5296E83773494429D3C3BE9E21 /* LICENSE */,
+				D301AD412AC725B47CA19B2DBED47249 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		48F22366E742953EFA0A7AD7172A3E8D /* GridView */ = {
+		4466CC03F2632A4ADB776C980ACDAF64 /* SplicingView */ = {
 			isa = PBXGroup;
 			children = (
-				657D5E13886C5CBB4EEA0C54B2723E93 /* GGGridView.h */,
-				262B2A7315A0617055817FBA87342C87 /* GGGridView.m */,
+				5DAA2B1A61667EC8E6963C74D1F9D372 /* GGSplicingView.h */,
+				7B304DDB6318E11A496C559B4B0AD803 /* GGSplicingView.m */,
 			);
-			name = GridView;
-			path = GridView;
-			sourceTree = "<group>";
-		};
-		596AA8AD5307A96C8ADC1D9931AE66FE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE72CB41214828106ABFD536702F6701 /* GGToolKit.modulemap */,
-				8CC96B22E787110C7F1F246FE848F6D4 /* GGToolKit-dummy.m */,
-				FD2CB191919C6D834F9740E8D1204919 /* GGToolKit-Info.plist */,
-				B628D0CA4EA94FE8969E6D2017333DAB /* GGToolKit-prefix.pch */,
-				F933EC0D74BD6E49C74F2AD609153773 /* GGToolKit-umbrella.h */,
-				D81F0B35ED2B2240B29DA655950C77A4 /* GGToolKit.debug.xcconfig */,
-				0C1450322EE11F282537841AC8A22D75 /* GGToolKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GGToolKit";
+			name = SplicingView;
+			path = SplicingView;
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -318,26 +305,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6F6168C17DD39D0B28922273DD8B52E1 /* ScrollContainer */ = {
+		5A4F5F6A26C54653D30FF91A5EA7D027 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0482F9E7D4C643B465A2B16852E6679E /* GGScrollContainer.h */,
-				11142C35E1586F2F3BE8A65DF0BF133F /* GGScrollContainer.m */,
+				BEDB3EA9C67F2F0B75902944D4D63D99 /* GGToolKit.modulemap */,
+				CEFC565DBE1335945986A49DB1AD666E /* GGToolKit-dummy.m */,
+				4777C8416C0593C0E1DAA9919C21B92C /* GGToolKit-Info.plist */,
+				BFE56528840060E08AF6D439C0691622 /* GGToolKit-prefix.pch */,
+				54ACF8CE97DE6450BD7C7AC9856E6F49 /* GGToolKit-umbrella.h */,
+				2A0A1AD9E8F6EA8EF08596E75CA256E4 /* GGToolKit.debug.xcconfig */,
+				7815BC6C528C782D013092FC065BB020 /* GGToolKit.release.xcconfig */,
 			);
-			name = ScrollContainer;
-			path = ScrollContainer;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GGToolKit";
 			sourceTree = "<group>";
 		};
-		7F013D3556D85AC63446964C8C7E60EF /* Loading */ = {
+		6B2102523A36730548B58F961F588AE2 /* GridView */ = {
 			isa = PBXGroup;
 			children = (
-				CE6894B071FD8F3A14A013FE820D0A9D /* GGLoadingBaseView.h */,
-				19D8BFFA027A3A70BE7E14F48590E640 /* GGLoadingBaseView.m */,
-				A15EC8DC377E34648BC58AB1EDA1F8EF /* GGLoadingView.h */,
-				BD97F389CAB41DA0AA16C399AE25B61E /* GGLoadingView.m */,
+				C29A0CA8822F3D4AA3AE1F08C427C6A4 /* GGGridView.h */,
+				6F8FBDCD464F25221718795F109BD37A /* GGGridView.m */,
 			);
-			name = Loading;
-			path = Loading;
+			name = GridView;
+			path = GridView;
 			sourceTree = "<group>";
 		};
 		83EB931E375326824DCCE151D81F457B /* Products */ = {
@@ -348,20 +338,6 @@
 				FE3412A561E501A6DC0D4C8E2D327148 /* Pods-GGToolKit_Tests */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9221CF28CD99404582F27982614CA08C /* GGToolKit */ = {
-			isa = PBXGroup;
-			children = (
-				2DB8B581AD1FEF6F8A6D5DDF5132FA93 /* GGToolsHeader.h */,
-				101B14925A6F897E23921CC8F106A0FA /* Categories */,
-				E859EDEBE75A778A1AA6A90EB8AA39D4 /* CustomViews */,
-				4374AD438310A35EEC0E6AC755ED05A9 /* Pod */,
-				596AA8AD5307A96C8ADC1D9931AE66FE /* Support Files */,
-				166DB816EE6A76F99DDD92AD550BB114 /* Tools */,
-			);
-			name = GGToolKit;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		96CFCCCD50EBA15A8F0C742DF86332C0 /* Targets Support Files */ = {
@@ -376,37 +352,60 @@
 		97C4EA6E51EEEAE765B4AF5E1A368E4E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9221CF28CD99404582F27982614CA08C /* GGToolKit */,
+				25AAAF7D62F12842A4A8C4F96342B30D /* GGToolKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		9B68E4C659FB45B4D0C396CB9DEFFE72 /* ExcelView */ = {
+		AEFA90B61F0A4DBBEE7802C2BBED4D3E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				0A940A01C60F47A853402EA8626B956C /* GGExcelBaseCell.h */,
-				929E902EAB9F45D7ABAEF41BE55DFFDD /* GGExcelBaseCell.m */,
-				0C7FEA4E4FA02B7AB4CBA9EA02643F23 /* GGExcelLayout.h */,
-				47B1256EE17686191DFA273705BACD58 /* GGExcelLayout.m */,
-				C523EBDE71C798713DF8E38811E4886A /* GGExcelTextCell.h */,
-				51777275C07FAACEF7F51559C47A60D4 /* GGExcelTextCell.m */,
-				ECB07D2D1255D922AB71844D24B40023 /* GGExcelView.h */,
-				5AFBF33ED728448AA6911BC2F9682144 /* GGExcelView.m */,
+				A23A8E686241B238B75CC1485586D250 /* CALayer+GG.h */,
+				D0E47DD7D14E84D82DE561B62FA0B2D1 /* CALayer+GG.m */,
+				E90EB0F6A92DE6E6E0A34B2CCB7240F8 /* NSObject+GG.h */,
+				5E2682583066C95DB0A11585275DA8CB /* NSObject+GG.m */,
+				F85EEF423C4CBBFE145600DDD9811E8A /* UIButton+GG.h */,
+				B2C64FB18BC2C3F436EDF5E7B85BEFB6 /* UIButton+GG.m */,
+				A14AB2C94D611D2CE64E61A7F70824C8 /* UIColor+GG.h */,
+				EB1D42FB2126625940C2FEA18BD54777 /* UIColor+GG.m */,
+				172405962F03FBBBF9F4B8F2D935583E /* UIImage+GG.h */,
+				CEB40F3CEC02FA6E21AC98D0FEC4F314 /* UIImage+GG.m */,
+				053768F9C095BC6F93BA078703481E87 /* UINavigationController+GG.h */,
+				72CFBE029DA19917ED3AAC3C49522FE4 /* UINavigationController+GG.m */,
+				D7FD4C8E921A02AF7413E0ADD6AC4112 /* UITextField+GG.h */,
+				14C0B7E1AB75531D1D60E8995279F785 /* UITextField+GG.m */,
+				11741802860C93A9DBC2109396F685B5 /* UIView+GG.h */,
+				BF8B5967EFDE54B9521E9710AB7C7788 /* UIView+GG.m */,
+				A78224D33A94440D21B9032E1CC5B80C /* UIView+GGScrollComponent.h */,
+				6B38E8DB7AE1F0CD067ABFBBE7386E88 /* UIView+GGScrollComponent.m */,
 			);
-			name = ExcelView;
-			path = ExcelView;
+			name = Categories;
+			path = GGToolKit/Categories;
 			sourceTree = "<group>";
 		};
-		C16B8D379ECC4D59AAB343DD50287013 /* BlankPage */ = {
+		C8230D70B7450A942168B5DAA9C60E4C /* BlankPage */ = {
 			isa = PBXGroup;
 			children = (
-				5CFDA595E0A6C0EC1A32FD088BE66569 /* GGBlankBaseView.h */,
-				AAE8DD6BDBF97AB970B237F5E5FE9341 /* GGBlankBaseView.m */,
-				8BB94D443360201C2764D9F85773FB76 /* GGBlankView.h */,
-				368B8A81FD708AB9960579F48904E059 /* GGBlankView.m */,
+				84017A785E767C0DF2628CAB715EEB0E /* GGBlankBaseView.h */,
+				0F1721C52021E3851801BF99C54E678C /* GGBlankBaseView.m */,
+				46FC357A510EAA902CC90EF1897AE5B9 /* GGBlankView.h */,
+				61BE26EB38231F46A5CE5F15FA5CAE41 /* GGBlankView.m */,
 			);
 			name = BlankPage;
 			path = BlankPage;
+			sourceTree = "<group>";
+		};
+		CBFF6B8E9690565D9F1444529C7B2385 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C8230D70B7450A942168B5DAA9C60E4C /* BlankPage */,
+				265AD37A0DA821BB0FF36E6162BD04F2 /* ExcelView */,
+				6B2102523A36730548B58F961F588AE2 /* GridView */,
+				0F90842C08C1629D1B18469C840610A4 /* Loading */,
+				4466CC03F2632A4ADB776C980ACDAF64 /* SplicingView */,
+			);
+			name = CustomViews;
+			path = GGToolKit/CustomViews;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -420,23 +419,38 @@
 			);
 			sourceTree = "<group>";
 		};
-		E859EDEBE75A778A1AA6A90EB8AA39D4 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				C16B8D379ECC4D59AAB343DD50287013 /* BlankPage */,
-				9B68E4C659FB45B4D0C396CB9DEFFE72 /* ExcelView */,
-				48F22366E742953EFA0A7AD7172A3E8D /* GridView */,
-				7F013D3556D85AC63446964C8C7E60EF /* Loading */,
-				6F6168C17DD39D0B28922273DD8B52E1 /* ScrollContainer */,
-				03C88E509A9C2CDE4FB24054BD278F9A /* SplicingView */,
-			);
-			name = CustomViews;
-			path = GGToolKit/CustomViews;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		029D9B3899828D176562B0091EB16DD4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7132170183581A2855CF29AA9872016C /* CALayer+GG.h in Headers */,
+				AA81F094C50216B8610176B7F09FB18C /* GGBlankBaseView.h in Headers */,
+				EFD6D73BBFF229F506129C025208631E /* GGBlankView.h in Headers */,
+				D1AF3034ECAE39007872F36B3CB48F0C /* GGExcelBaseCell.h in Headers */,
+				10E665FC756F1A4E2A257DDAA778E728 /* GGExcelLayout.h in Headers */,
+				0D5F473E786F80A77B07727237AB80DD /* GGExcelTextCell.h in Headers */,
+				B4DAAE237E30CA9D0737C56A41E87ED2 /* GGExcelView.h in Headers */,
+				C0F4678A6ED5E34F0127B702434FF893 /* GGGridView.h in Headers */,
+				D4471D91506588D54A080EBF21E4CF5B /* GGLoadingBaseView.h in Headers */,
+				2914B9CA1D306424C2CCA309AD7F0D13 /* GGLoadingView.h in Headers */,
+				83B9296CB373731A08B45EF7948EB1D3 /* GGScale.h in Headers */,
+				F1ED2C9F848C851C2DD01B1F1DBBAC5C /* GGSplicingView.h in Headers */,
+				A3591BB1FF0A8DC1F4E7CC1F7194177A /* GGToolKit-umbrella.h in Headers */,
+				0B71F7829C60BE3A0D2AAB8E16538B20 /* GGToolsHeader.h in Headers */,
+				199CAE2FCA4F53590D1267B50426D178 /* NSObject+GG.h in Headers */,
+				0560EE2FE2507220F5155391F824D4A8 /* UIButton+GG.h in Headers */,
+				B01A4E297AFA2A2E9CA90358A8C0072D /* UIColor+GG.h in Headers */,
+				95D74F2D0791CF53810171C994780FF2 /* UIImage+GG.h in Headers */,
+				24DD6BA8E30AFBDED7136A0ECF50676D /* UINavigationController+GG.h in Headers */,
+				ECEAB6D207F0E0D86512F447CD59FB06 /* UITextField+GG.h in Headers */,
+				AE1371C4FBF86512764A830A387BD876 /* UIView+GG.h in Headers */,
+				99653F4AEC663BBA804FC4CE2E4727A6 /* UIView+GGScrollComponent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59976249EDD0FA7A59DD001AFDCA87DB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,47 +467,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EED478FC2BBD7DB98C78E1BDB6C870F2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				210B22F9D464BBD5DB12FEF5A18F115C /* CALayer+GG.h in Headers */,
-				7816D591374F875EAEC7FF2B733593D0 /* GGBlankBaseView.h in Headers */,
-				81830E8B89FF086D402A047FDE9896FB /* GGBlankView.h in Headers */,
-				54E9EC2DE7CBDDE311040EA4CC0E9374 /* GGExcelBaseCell.h in Headers */,
-				AA45C19427400FD3AC921585EACD2B04 /* GGExcelLayout.h in Headers */,
-				1BEF0E6A6131977C9535615F0BEFF9F7 /* GGExcelTextCell.h in Headers */,
-				8D1C0EE369410EAA13BE982A06DA4E13 /* GGExcelView.h in Headers */,
-				52AF7EC10A8C523492C00AAD15DEE753 /* GGGridView.h in Headers */,
-				BC714073DE176C9A265C71D7A3D33DD5 /* GGLoadingBaseView.h in Headers */,
-				6CF242470644B43525BCD57F9F389346 /* GGLoadingView.h in Headers */,
-				0A3D58A71403197476D8711A46269EC9 /* GGScale.h in Headers */,
-				4F146FDFB82558A7EFC131A9B9E37A05 /* GGScrollContainer.h in Headers */,
-				FD2FFEF44B36D8B41BC242153107367B /* GGSplicingView.h in Headers */,
-				AF91FCB5A6AAAB9540AA548F9674BBF1 /* GGToolKit-umbrella.h in Headers */,
-				8D7EBB6E267B04F472FCC20980CF569D /* GGToolsHeader.h in Headers */,
-				9DB86246551CA113BFD0AED0872EE329 /* NSObject+GG.h in Headers */,
-				54F0A618F40ECABE0DA1160C606CF17E /* UIButton+GG.h in Headers */,
-				C79C4D3E117DF7E4D017797F7C4334BC /* UIColor+GG.h in Headers */,
-				EEF6AE7ADE9F035008FE3236E4DB6792 /* UIImage+GG.h in Headers */,
-				8BB336EE87B0DAB778709FD237549625 /* UINavigationController+GG.h in Headers */,
-				5F1DF30F3D5382784F586F7983462187 /* UITextField+GG.h in Headers */,
-				A2B27247998F18506969098A59E2A380 /* UIView+GG.h in Headers */,
-				1154DD1B1C1B87F9243E6DB539B76ABA /* UIView+GGScrollComponent.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3654A516977DD4AA7EB0CE630E057427 /* GGToolKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3006E462F299E8FBA74688874469D812 /* Build configuration list for PBXNativeTarget "GGToolKit" */;
+			buildConfigurationList = 7A10A9F86A9D2ABB0F9A545E17F11EE2 /* Build configuration list for PBXNativeTarget "GGToolKit" */;
 			buildPhases = (
-				EED478FC2BBD7DB98C78E1BDB6C870F2 /* Headers */,
-				8E00415B69AAC88D2F98BAB90F5B51A8 /* Sources */,
-				2FD76EC457F44885B09344AB29B2D74F /* Frameworks */,
-				17F5CCBE9D525C6369001F6BCB821259 /* Resources */,
+				029D9B3899828D176562B0091EB16DD4 /* Headers */,
+				1A3A505D27C758F16FA80B7A9CF5FCF0 /* Sources */,
+				6652FD87D4183C90DBA02A59830E8AFA /* Frameworks */,
+				46612AF9948A610DBE92D3FC413A9B50 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -516,7 +500,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4BABFB312C06389127501E0078073774 /* PBXTargetDependency */,
+				210A9BAA409D546020DDC9D10F6B2154 /* PBXTargetDependency */,
 			);
 			name = "Pods-GGToolKit_Tests";
 			productName = Pods_GGToolKit_Tests;
@@ -535,7 +519,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F5A74CD1E71F6F413093CC8E332B8568 /* PBXTargetDependency */,
+				CB68209657D09DE0AF7DEC138A73CA2A /* PBXTargetDependency */,
 			);
 			name = "Pods-GGToolKit_Example";
 			productName = Pods_GGToolKit_Example;
@@ -572,14 +556,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		17F5CCBE9D525C6369001F6BCB821259 /* Resources */ = {
+		41BC9F2E111D9AEE4A15B26539B7FE3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41BC9F2E111D9AEE4A15B26539B7FE3F /* Resources */ = {
+		46612AF9948A610DBE92D3FC413A9B50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -596,32 +580,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8E00415B69AAC88D2F98BAB90F5B51A8 /* Sources */ = {
+		1A3A505D27C758F16FA80B7A9CF5FCF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C271583C2A78052DE41084DE0C83C90 /* CALayer+GG.m in Sources */,
-				7DD1F1717A26F99F31060B788731D104 /* GGBlankBaseView.m in Sources */,
-				A20FD3CFD18104FEC4E4B10DCEC03EBB /* GGBlankView.m in Sources */,
-				5DEE382D731C388842919621D7198A5F /* GGExcelBaseCell.m in Sources */,
-				BE54579E36B0AB6464A746283A22BD6C /* GGExcelLayout.m in Sources */,
-				8F76859631651B8309C1F532FD2FB03E /* GGExcelTextCell.m in Sources */,
-				D6DFCBDD3ECEE30AF7373DE4BB7A8A1B /* GGExcelView.m in Sources */,
-				915B3125A09F4DB7B4EEA40B2AA7651F /* GGGridView.m in Sources */,
-				8289A8BE76827AA7E913E8FD4435B31C /* GGLoadingBaseView.m in Sources */,
-				5842FD7E6B26CB70AFD70CE5E6803936 /* GGLoadingView.m in Sources */,
-				B37C85A3DFE6C7278F1F53FEE11164A0 /* GGScale.m in Sources */,
-				FB7844027EF8DE18BC76B64E581410F0 /* GGScrollContainer.m in Sources */,
-				0BB51EFE4E7D74508210B67E6D1905CE /* GGSplicingView.m in Sources */,
-				90A16221CACB1B4CBFA2C96AD2C3CA24 /* GGToolKit-dummy.m in Sources */,
-				652121A5F2E2A91B900A26CA75B628C1 /* NSObject+GG.m in Sources */,
-				00D05B7B3E0A606E58421E67CB2DEE53 /* UIButton+GG.m in Sources */,
-				DEFE46E4784F127E13E67FF90FFC3BC0 /* UIColor+GG.m in Sources */,
-				AE4BE6611FF7D152913A7468660BDDE8 /* UIImage+GG.m in Sources */,
-				2B71B22F5DEB20BED3C74C047215BAD2 /* UINavigationController+GG.m in Sources */,
-				01C40EE25DFEF42238BB54C7B5543FE7 /* UITextField+GG.m in Sources */,
-				5D44567DADDB0E1A11EDEDD4655ACA62 /* UIView+GG.m in Sources */,
-				F004D50EB0645D96F69630C79B2E7999 /* UIView+GGScrollComponent.m in Sources */,
+				2F9CA02B8F0A90C7D4BDFB5149053EF6 /* CALayer+GG.m in Sources */,
+				30859F6DC233918A6C9D3DB069B079C7 /* GGBlankBaseView.m in Sources */,
+				BFE8B424BE222B969471F41AA0B22453 /* GGBlankView.m in Sources */,
+				550E5FA1A1E44760FDF3860CAAFDC9E6 /* GGExcelBaseCell.m in Sources */,
+				FD79220E4A9341F7A5E0AC7E6A87FE83 /* GGExcelLayout.m in Sources */,
+				F90BB226954DC35E7D1212925624484B /* GGExcelTextCell.m in Sources */,
+				4400FAD842B75D003EF52F45BB57417C /* GGExcelView.m in Sources */,
+				9191632BFD58AFE71F83408BE232967A /* GGGridView.m in Sources */,
+				1159A1915F936D7B63C738799AE277EC /* GGLoadingBaseView.m in Sources */,
+				2E8F0892988215AC39FDA249BD67C2D7 /* GGLoadingView.m in Sources */,
+				BFEEC0B294F08DEBEC82770CCB79897E /* GGScale.m in Sources */,
+				67F1B225349083378EA501CE76C02116 /* GGSplicingView.m in Sources */,
+				BCFC4CB36A8B947011C3EEBE807625ED /* GGToolKit-dummy.m in Sources */,
+				04790B32FCF7DB9E454FE529A97A501B /* NSObject+GG.m in Sources */,
+				41A04A516100D56EC4580B403EF5EA84 /* UIButton+GG.m in Sources */,
+				BFBBF41E0C3611EBB4028163B86D5E7D /* UIColor+GG.m in Sources */,
+				2944C2AEDA16BE7FF7EF617AA97F9B55 /* UIImage+GG.m in Sources */,
+				D8722656CE06EBCC7544F36719553100 /* UINavigationController+GG.m in Sources */,
+				F510B416BE41D87A98B2A9A80CEEF7BF /* UITextField+GG.m in Sources */,
+				6C48E593F4136DC166FCFF3F830C1895 /* UIView+GG.m in Sources */,
+				9F344E842DDD728CFAF59F27FEBC35B8 /* UIView+GGScrollComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,17 +627,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4BABFB312C06389127501E0078073774 /* PBXTargetDependency */ = {
+		210A9BAA409D546020DDC9D10F6B2154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GGToolKit_Example";
 			target = E09D2C24D8F27730B4E8F2BCBC3A91DB /* Pods-GGToolKit_Example */;
-			targetProxy = CCE6AAEFCADB843A632B7A68F8F34C46 /* PBXContainerItemProxy */;
+			targetProxy = 3B2193F230BDCA72AB46B073221538F0 /* PBXContainerItemProxy */;
 		};
-		F5A74CD1E71F6F413093CC8E332B8568 /* PBXTargetDependency */ = {
+		CB68209657D09DE0AF7DEC138A73CA2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GGToolKit;
 			target = 3654A516977DD4AA7EB0CE630E057427 /* GGToolKit */;
-			targetProxy = 67B86CD746ED8E104A9ACE26870CD2D5 /* PBXContainerItemProxy */;
+			targetProxy = DCB37CE60D864813C26AA3F6D9F3CDAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -752,6 +735,69 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4868BE55CBD16449E5FA2B4EFB22C624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0A1AD9E8F6EA8EF08596E75CA256E4 /* GGToolKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
+				PRODUCT_MODULE_NAME = GGToolKit;
+				PRODUCT_NAME = GGToolKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74F4F3FCE5B4C8CFD7E9BCBF5A8FF244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7815BC6C528C782D013092FC065BB020 /* GGToolKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
+				PRODUCT_MODULE_NAME = GGToolKit;
+				PRODUCT_NAME = GGToolKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -921,86 +967,23 @@
 			};
 			name = Debug;
 		};
-		E7C8421993673EEC927B92B155B98A7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D81F0B35ED2B2240B29DA655950C77A4 /* GGToolKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
-				PRODUCT_MODULE_NAME = GGToolKit;
-				PRODUCT_NAME = GGToolKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FE9AA96C106228A5043FB7191FD8DD8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1450322EE11F282537841AC8A22D75 /* GGToolKit.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGToolKit/GGToolKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGToolKit/GGToolKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGToolKit/GGToolKit.modulemap";
-				PRODUCT_MODULE_NAME = GGToolKit;
-				PRODUCT_NAME = GGToolKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3006E462F299E8FBA74688874469D812 /* Build configuration list for PBXNativeTarget "GGToolKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7C8421993673EEC927B92B155B98A7B /* Debug */,
-				FE9AA96C106228A5043FB7191FD8DD8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
 				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A10A9F86A9D2ABB0F9A545E17F11EE2 /* Build configuration list for PBXNativeTarget "GGToolKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4868BE55CBD16449E5FA2B4EFB22C624 /* Debug */,
+				74F4F3FCE5B4C8CFD7E9BCBF5A8FF244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
